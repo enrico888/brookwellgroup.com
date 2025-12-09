@@ -1,0 +1,63 @@
+import { motion } from "framer-motion";
+import { Card } from "@/components/ui/card";
+import { FileWarning, Clock, Users } from "lucide-react";
+
+const painPoints = [
+  {
+    icon: FileWarning,
+    title: "Data fragmentation",
+    description: "Client data scattered across multiple systems, custodians, and platforms makes transitions chaotic and error-prone.",
+  },
+  {
+    icon: Clock,
+    title: "Time-consuming processes",
+    description: "Manual data mapping, paperwork, and coordination consume weeks of valuable time and resources.",
+  },
+  {
+    icon: Users,
+    title: "Client anxiety",
+    description: "Poor communication and delays during transitions erode client trust and increase attrition risk.",
+  },
+];
+
+export default function PainPoints() {
+  return (
+    <section className="py-20 px-6 md:px-12 lg:px-16" data-testid="section-pain-points">
+      <div className="max-w-[1280px] mx-auto">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="mb-12"
+        >
+          <h3 className="text-xl font-semibold mb-2">The pain points</h3>
+          <p className="text-muted-foreground">
+            Transitions are difficult. Here's what firms typically struggle with.
+          </p>
+        </motion.div>
+
+        <div className="grid md:grid-cols-3 gap-6">
+          {painPoints.map((point, index) => (
+            <motion.div
+              key={point.title}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: index * 0.1 }}
+            >
+              <Card className="p-6 h-full" data-testid={`card-pain-${index}`}>
+                <div className="w-10 h-10 rounded-lg bg-muted flex items-center justify-center mb-4">
+                  <point.icon className="h-5 w-5 text-muted-foreground" />
+                </div>
+                <h4 className="font-medium mb-2">{point.title}</h4>
+                <p className="text-sm text-muted-foreground leading-relaxed">
+                  {point.description}
+                </p>
+              </Card>
+            </motion.div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}

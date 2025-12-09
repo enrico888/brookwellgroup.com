@@ -1,0 +1,208 @@
+import { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import { Card } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import { Label } from "@/components/ui/label";
+import { Mail, CheckCircle2 } from "lucide-react";
+
+interface FormData {
+  name: string;
+  email: string;
+  company: string;
+  message: string;
+}
+
+interface FormErrors {
+  name?: string;
+  email?: string;
+  message?: string;
+}
+
+export default function Contact() {
+  const [formData, setFormData] = useState<FormData>({
+    name: "",
+    email: "",
+    company: "",
+    message: "",
+  });
+  const [errors, setErrors] = useState<FormErrors>({});
+  const [isSubmitted, setIsSubmitted] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
+  const validateForm = (): boolean => {
+    const newErrors: FormErrors = {};
+
+    if (!formData.name.trim()) {
+      newErrors.name = "Name is required";
+    }
+
+    if (!formData.email.trim()) {
+      newErrors.email = "Email is required";
+    } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) {
+      newErrors.email = "Please enter a valid email";
+    }
+
+    if (!formData.message.trim()) {
+      newErrors.message = "Message is required";
+    }
+
+    setErrors(newErrors);
+    return Object.keys(newErrors).length === 0;
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+
+    if (!validateForm()) return;
+
+    setIsSubmitting(true);
+    
+    await new Promise((resolve) => setTimeout(resolve, 1000));
+    
+    console.log("Form submitted:", formData);
+    setIsSubmitting(false);
+    setIsSubmitted(true);
+  };
+
+  const handleChange = (field: keyof FormData, value: string) => {
+    setFormData((prev) => ({ ...prev, [field]: value }));
+    if (errors[field as keyof FormErrors]) {
+      setErrors((prev) => ({ ...prev, [field]: undefined }));
+    }
+  };
+
+  return (
+    <section id="contact" className="py-32 px-6 md:px-12 lg:px-16 bg-muted/30" data-testid="section-contact">
+      <div className="max-w-[1280px] mx-auto">
+        <div className="grid lg:grid-cols-2 gap-16">
+          <motion.div
+            initial={{ opacity: 0, x: -20 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+          >
+            <p className="text-xs uppercase tracking-[0.2em] text-muted-foreground mb-4">
+              Contact
+            </p>
+            <h2 className="text-3xl md:text-4xl font-semibold tracking-tight mb-6">
+              Let's talk
+            </h2>
+            <p className="text-muted-foreground leading-relaxed mb-8">
+              Ready to transform your operations with AI? Get in touch to discuss 
+              how we can help your firm work smarter.
+            </p>
+            <div className="flex items-center gap-3 text-muted-foreground">
+              <Mail className="h-5 w-5" />
+              <a href="mailto:hello@brookwell.ai" className="hover:text-foreground transition-colors">
+                hello@brookwell.ai
+              </a>
+            </div>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, x: 20 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+          >
+            <Card className="p-8">
+              <AnimatePresence mode="wait">
+                {isSubmitted ? (
+                  <motion.div
+                    key="success"
+                    initial={{ opacity: 0, scale: 0.95 }}
+                    animate={{ opacity: 1, scale: 1 }}
+                    className="text-center py-8"
+                  >
+                    <div className="w-12 h-12 rounded-full bg-muted flex items-center justify-center mx-auto mb-4">
+                      <CheckCircle2 className="h-6 w-6 text-foreground" />
+                    </div>
+                    <h3 className="text-xl font-semibold mb-2">Thank you!</h3>
+                    <p className="text-muted-foreground">
+                      We'll be in touch within 24 hours.
+                    </p>
+                  </motion.div>
+                ) : (
+                  <motion.form
+                    key="form"
+                    initial={{ opacity: 1 }}
+                    exit={{ opacity: 0 }}
+                    onSubmit={handleSubmit}
+                    className="space-y-6"
+                  >
+                    <div className="space-y-2">
+                      <Label htmlFor="name">Name</Label>
+                      <Input
+                        id="name"
+                        value={formData.name}
+                        onChange={(e) => handleChange("name", e.target.value)}
+                        placeholder="Your name"
+                        className={errors.name ? "border-destructive" : ""}
+                        data-testid="input-name"
+                      />
+                      {errors.name && (
+                        <p className="text-xs text-destructive">{errors.name}</p>
+                      )}
+                    </div>
+
+                    <div className="space-y-2">
+                      <Label htmlFor="email">Email</Label>
+                      <Input
+                        id="email"
+                        type="email"
+                        value={formData.email}
+                        onChange={(e) => handleChange("email", e.target.value)}
+                        placeholder="you@company.com"
+                        className={errors.email ? "border-destructive" : ""}
+                        data-testid="input-email"
+                      />
+                      {errors.email && (
+                        <p className="text-xs text-destructive">{errors.email}</p>
+                      )}
+                    </div>
+
+                    <div className="space-y-2">
+                      <Label htmlFor="company">Company (optional)</Label>
+                      <Input
+                        id="company"
+                        value={formData.company}
+                        onChange={(e) => handleChange("company", e.target.value)}
+                        placeholder="Your company"
+                        data-testid="input-company"
+                      />
+                    </div>
+
+                    <div className="space-y-2">
+                      <Label htmlFor="message">Message</Label>
+                      <Textarea
+                        id="message"
+                        value={formData.message}
+                        onChange={(e) => handleChange("message", e.target.value)}
+                        placeholder="Tell us about your needs..."
+                        rows={4}
+                        className={errors.message ? "border-destructive" : ""}
+                        data-testid="input-message"
+                      />
+                      {errors.message && (
+                        <p className="text-xs text-destructive">{errors.message}</p>
+                      )}
+                    </div>
+
+                    <Button
+                      type="submit"
+                      className="w-full rounded-full"
+                      disabled={isSubmitting}
+                      data-testid="button-submit-contact"
+                    >
+                      {isSubmitting ? "Sending..." : "Send Message"}
+                    </Button>
+                  </motion.form>
+                )}
+              </AnimatePresence>
+            </Card>
+          </motion.div>
+        </div>
+      </div>
+    </section>
+  );
+}
