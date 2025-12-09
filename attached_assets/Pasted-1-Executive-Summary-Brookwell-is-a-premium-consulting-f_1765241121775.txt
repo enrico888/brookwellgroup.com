@@ -1,0 +1,591 @@
+1. Executive Summary
+Brookwell is a premium consulting firm specializing in AI-powered solutions for financial services. This PRD defines the design system, component architecture, and interaction patterns for a landing page that embodies sophistication through restraint—leveraging generous whitespace, monochromatic palettes, subtle textures, and purposeful animation to communicate expertise and trust.
+
+The design philosophy draws inspiration from Attio's masterful use of negative space and Fyxer's refined minimalism, creating an experience that feels both cutting-edge and reassuringly professional.
+
+2. Design Philosophy & Principles
+2.1 Core Aesthetic Tenets
+Restraint as Luxury: Every element must earn its place. Color is used sparingly—primarily through subtle gradients and the occasional accent. The absence of visual noise signals confidence and expertise.
+
+Purposeful Motion: Animations serve function, not decoration. Elements fade in as users scroll, creating a sense of discovery. Lottie animations within bento cards provide visual interest without overwhelming.
+
+Tactile Depth: Subtle noise textures, soft shadows, and layered surfaces create a sense of materiality. The page should feel like high-quality paper stock—substantial but not heavy.
+
+Spatial Harmony: Generous margins and padding create breathing room. Content blocks are separated by significant vertical rhythm (120-200px between major sections). Grid systems provide invisible structure.
+
+2.2 Design Tokens
+Color Palette (HSL Format)
+// Background Hierarchy
+--background: 0 0% 100%              // Pure white base
+--background-subtle: 0 0% 98%        // Off-white for sections
+--background-muted: 0 0% 96%         // Card backgrounds
+--background-elevated: 0 0% 99%      // Elevated surfaces
+
+// Foreground Hierarchy  
+--foreground: 0 0% 8%                // Primary text - near black
+--foreground-muted: 0 0% 45%         // Secondary text
+--foreground-subtle: 0 0% 65%        // Tertiary/caption text
+
+// Border & Divider
+--border: 0 0% 90%                   // Subtle borders
+--border-muted: 0 0% 94%             // Even subtler
+--ring: 0 0% 85%                     // Focus rings
+
+// Accent (Used Sparingly)
+--accent: 0 0% 12%                   // Dark accent for CTAs
+--accent-foreground: 0 0% 98%        // Text on accent
+
+// Surface Effects
+--noise-opacity: 0.03                // Background texture intensity
+--shadow-subtle: 0 0% 0% / 0.04      // Soft shadows
+--shadow-medium: 0 0% 0% / 0.08      // Medium shadows
+Typography System
+Font Stack: Inter (Google Fonts) with system fallbacks
+
+// Scale
+--text-xs: 0.75rem / 1.5       // 12px - Labels, captions
+--text-sm: 0.875rem / 1.6      // 14px - Body small
+--text-base: 1rem / 1.7        // 16px - Body default
+--text-lg: 1.125rem / 1.6      // 18px - Body large
+--text-xl: 1.25rem / 1.5       // 20px - Subheadings
+--text-2xl: 1.5rem / 1.4       // 24px - Section headers
+--text-3xl: 1.875rem / 1.3     // 30px - Feature titles
+--text-4xl: 2.25rem / 1.2      // 36px - Page headers
+--text-5xl: 3rem / 1.1         // 48px - Hero subtitle
+--text-6xl: 3.75rem / 1.05     // 60px - Hero headline
+--text-7xl: 4.5rem / 1         // 72px - Display
+
+// Weights
+--font-normal: 400
+--font-medium: 500
+--font-semibold: 600
+
+// Letter Spacing
+--tracking-tight: -0.02em      // Headlines
+--tracking-normal: 0           // Body
+--tracking-wide: 0.02em        // Labels, buttons
+Spacing System
+// Base unit: 4px
+--space-1: 0.25rem    // 4px
+--space-2: 0.5rem     // 8px
+--space-3: 0.75rem    // 12px
+--space-4: 1rem       // 16px
+--space-5: 1.25rem    // 20px
+--space-6: 1.5rem     // 24px
+--space-8: 2rem       // 32px
+--space-10: 2.5rem    // 40px
+--space-12: 3rem      // 48px
+--space-16: 4rem      // 64px
+--space-20: 5rem      // 80px
+--space-24: 6rem      // 96px
+--space-32: 8rem      // 128px
+--space-40: 10rem     // 160px
+--space-48: 12rem     // 192px
+
+// Section Spacing
+--section-gap: 160px           // Between major sections
+--section-gap-lg: 200px        // Hero to first section
+Border Radius
+--radius-sm: 6px
+--radius-md: 8px
+--radius-lg: 12px
+--radius-xl: 16px
+--radius-2xl: 24px
+--radius-full: 9999px
+3. Global Components
+3.1 Navigation Header
+Structure:
+
+Fixed position with backdrop blur on scroll
+Height: 72px desktop, 64px mobile
+Logo left-aligned
+Primary nav center-aligned (hidden on mobile)
+CTA button right-aligned
+Behavior:
+
+Transparent on page load when hero is visible
+Transitions to frosted glass (backdrop-blur-xl, background-white/80) on scroll
+Subtle shadow appears after scroll threshold
+Mobile: hamburger menu triggers slide-in drawer
+Navigation Items:
+
+AI Workflows
+AI Transitions
+Client Stories
+About
+Contact (CTA button)
+Transitions:
+
+Background: 300ms ease-out
+Shadow: 200ms ease-out
+Menu items: 150ms hover state
+3.2 Buttons
+Primary (Dark):
+
+Background: --accent (near black)
+Text: --accent-foreground (off-white)
+Padding: 12px 24px
+Border-radius: --radius-full (pill shape)
+Font: 14px, medium weight, wide tracking
+Hover: Scale 1.02, subtle shadow lift
+Active: Scale 0.98
+Secondary (Outline):
+
+Background: transparent
+Border: 1px solid --border
+Text: --foreground
+Hover: Background --background-muted
+Ghost:
+
+No background or border
+Text: --foreground-muted
+Hover: Text --foreground
+Arrow Variant:
+
+Append animated arrow icon
+Arrow slides right 4px on hover
+3.3 Cards (Bento System)
+Base Card:
+
+Background: --background-muted
+Border: 1px solid --border-muted
+Border-radius: --radius-xl
+Padding: 32px
+Subtle noise texture overlay (3% opacity)
+Card Sizes:
+
+Small: 1 column span
+Medium: 2 column span
+Large: 3 column span (full width)
+Tall: 2 row span
+Card Variants:
+
+Standard: Content only
+Lottie: Embedded Lottie animation container
+Interactive: Hover state reveals additional content
+Metric: Large number display with supporting text
+Card Animation:
+
+Fade in + slight upward movement (20px) on scroll into view
+Stagger animation delay between cards (100ms)
+Hover: Subtle lift (translateY -2px) + shadow enhancement
+3.4 Section Container
+Max-width: 1280px (container) Padding:
+
+Desktop: 0 64px
+Tablet: 0 48px
+Mobile: 0 24px
+Section Header Pattern:
+
+Eyebrow text (uppercase, small, muted, wide tracking)
+Main headline (large, tight tracking)
+Supporting paragraph (muted, max-width 640px)
+All center-aligned for major sections
+4. Page Sections - Detailed Specifications
+4.1 Hero Section
+Layout: Full viewport height minus nav, centered content
+
+Background:
+
+Base: Pure white
+Texture: Subtle dot grid pattern (2% opacity)
+Optional: Soft radial gradient from center (white to off-white)
+Content Structure:
+
+[Eyebrow: "AI-Powered Financial Consulting"]
+[Headline: "Intelligent workflows.\nSeamless transitions."]
+[Subheadline: 2-line description, muted text]
+[CTA Group: Primary + Ghost buttons]
+Typography:
+
+Eyebrow: 13px, uppercase, tracking-wide, muted
+Headline: 60-72px, semibold, tracking-tight, line-height 1.05
+Subheadline: 18px, normal, muted, max-width 480px
+Animation Sequence:
+
+Eyebrow fades in (0ms delay)
+Headline words animate in staggered (100ms delay)
+Subheadline fades in (300ms delay)
+CTAs slide up and fade in (400ms delay)
+Scroll Indicator:
+
+Subtle bouncing chevron at bottom
+Fades out as user begins scrolling
+4.2 Logo Carousel
+Position: Immediately below hero fold
+
+Layout:
+
+Full-width horizontal scroll container
+Logos separated by 80px
+Continuous infinite scroll animation (60s full loop)
+Gradient fade on left/right edges
+Logos (grayscale, consistent height 24-32px):
+
+Albridge
+RightBridge
+Broadridge
+Docupace
+Pershing
+NFS
+Animation:
+
+Continuous horizontal scroll, left direction
+Pause on hover
+Smooth cubic-bezier easing
+Styling:
+
+Logos at 40% opacity, hover to 100%
+Grayscale filter (desaturate to match monochrome palette)
+4.3 Service Toggle / Navigation
+Purpose: Allow users to switch between the two main service areas
+
+Layout:
+
+Two large clickable cards side by side
+Equal width, separated by 24px gap
+Positioned after logo carousel
+Card Structure:
+
+[Icon/Illustration - Lottie]
+[Service Title]
+[Brief description, 2 lines max]
+[Arrow indicator]
+Behavior:
+
+Click scrolls to respective section
+Active state shows subtle border/highlight
+Cards have hover lift animation
+5. Section: AI Workflows
+5.1 Section Intro
+Content:
+
+Eyebrow: "Build AI Workflows"
+Headline: "Automate the complex. Amplify your team."
+Description: 2-3 sentences about AI workflow automation
+Animation: Standard fade-in on scroll
+
+5.2 Client Stories - Interactive Problem/Solution/Results
+Layout:
+
+Full-width container with 3 clickable tabs/cards
+Each tab represents a client story
+Tab Structure:
+
+[Company/Persona Indicator]
+[Story Title/Problem Statement]
+Content Panel (reveals on tab selection):
+
+Problem Section:
+
+Icon: Warning/pain indicator
+Headline: The challenge
+Description: 2-3 sentences
+Solution Section:
+
+Icon: Lightbulb/workflow
+Headline: Our approach
+Description: 2-3 sentences
+Optional: Lottie animation showing workflow
+Results Section:
+
+Icon: Chart/success
+Metrics: 2-3 large numbers with labels
+Testimonial quote (optional)
+Animation:
+
+Tab change: Content fades out (150ms), new content fades in (200ms)
+Metrics: Count-up animation when section enters view
+Lottie: Plays on loop while visible, pauses when not
+Styling:
+
+Active tab: Dark background, light text
+Inactive tabs: Light background, dark text, subtle border
+Content panel: Large padding, card-style background
+5.3 Who We Serve - Bento Grid
+Layout: 2-column bento grid
+
+Card 1 - RIAs (tall, 2 rows):
+
+Lottie animation of wealth management visualization
+"Registered Investment Advisors"
+3-4 bullet points of specific value props
+Subtle hover animation on bullets
+Card 2 - Broker Dealers (tall, 2 rows):
+
+Lottie animation of compliance/workflow
+"Broker-Dealers"
+3-4 bullet points of specific value props
+Card 3 - Stat Card (small):
+
+Large number metric
+Supporting context
+Card 4 - Stat Card (small):
+
+Large number metric
+Supporting context
+5.4 Testimonials Carousel
+Layout:
+
+Single testimonial visible at a time
+Left/right navigation arrows
+Dot indicators below
+Testimonial Structure:
+
+[Large quotation mark graphic - subtle, decorative]
+[Quote text - 2-4 sentences, large text, tight line height]
+[Author name - medium weight]
+[Author title, Company - muted]
+[Company logo - small, grayscale]
+Animation:
+
+Slide transition between testimonials (400ms)
+Auto-advance every 8 seconds
+Pause on hover
+Touch/swipe support on mobile
+Styling:
+
+Quote text: 24-28px, slightly tight line-height
+Quotation mark: Very large (120px), 5% opacity, positioned as background element
+6. Section: AI Advisor Transitions
+6.1 Section Intro
+Content:
+
+Eyebrow: "AI-Powered Transitions"
+Headline: "Move books. Not mountains."
+Description: Brief intro to transition services
+6.2 Why Transitions Suck
+Layout: Editorial-style with alternating text/visual blocks
+
+Structure:
+
+[Section Header: "The pain points"]
+[Pain Point 1]
+  - Icon
+  - Title
+  - Description
+[Pain Point 2]
+  - Icon  
+  - Title
+  - Description
+[Pain Point 3]
+  - Icon
+  - Title
+  - Description
+Visual Treatment:
+
+Icons: Line-style, monochrome
+Subtle connecting lines between pain points (visual hierarchy)
+Optional: Lottie animation showing chaotic/fragmented workflow
+6.3 How We Make It Suck Less
+Layout: Process/timeline visualization
+
+Structure:
+
+[Step 1: Analysis]
+  - Lottie icon animation
+  - Title
+  - Brief description
+
+[Connector line with animated dot]
+
+[Step 2: Planning]
+  - Lottie icon animation
+  - Title
+  - Brief description
+
+[Connector line with animated dot]
+
+[Step 3: Execution]
+  - Lottie icon animation
+  - Title
+  - Brief description
+
+[Connector line with animated dot]
+
+[Step 4: Validation]
+  - Lottie icon animation
+  - Title
+  - Brief description
+Animation:
+
+Steps fade in sequentially as user scrolls
+Connector dots animate along path
+Lottie icons play when their step is in view
+6.4 The Result
+Layout: Full-width results showcase
+
+Content:
+
+Large headline emphasizing outcome
+3 metric cards (bento-style):
+Time saved
+Error reduction
+Client satisfaction
+Supporting testimonial or case study reference
+Animation:
+
+Metrics count up when in view
+Cards have staggered fade-in
+7. Global Sections
+7.1 About Us
+Layout: Two-column with image
+
+Column 1 (text):
+
+Headline: "Built by practitioners"
+2-3 paragraphs about company history/values
+Team or founder highlight
+Column 2 (visual):
+
+Abstract geometric illustration or team photo
+Alternatively: Lottie animation representing collaboration
+7.2 Contact / Drop Us a Line
+Layout: Two-column
+
+Column 1:
+
+Headline: "Let's talk"
+Subheadline: Brief invitation text
+Contact details (email, optional phone)
+Column 2 (form):
+
+Fields: Name, Email, Company, Message
+Submit button (primary style)
+Minimal styling, generous input padding
+Form Validation:
+
+Inline validation messages
+Success state: Form fades out, thank you message fades in
+7.3 Footer
+Layout:
+
+4-column grid on desktop
+Stacked on mobile
+Columns:
+
+Logo + brief tagline
+Services links
+Company links (About, Contact, Privacy)
+Social links + newsletter signup
+Styling:
+
+Background: --background-subtle
+Subtle top border
+Generous padding (80px vertical)
+8. Animation Specifications
+8.1 Scroll-Triggered Animations
+Fade-In Up:
+
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+Duration: 600ms
+Easing: cubic-bezier(0.25, 0.46, 0.45, 0.94)
+Trigger: When element is 20% visible
+Stagger Pattern:
+
+Base delay: 0ms
+Increment: 100ms per element
+Max delay: 400ms (to avoid long waits)
+8.2 Lottie Animation Guidelines
+Placement:
+
+Hero: Optional ambient background animation
+Bento cards: Centered, 200-300px dimensions
+Process steps: 80-100px icon size
+Behavior:
+
+Autoplay when in viewport
+Loop for ambient/background
+Play-once for process steps (replay on scroll back)
+Pause when tab is not active (performance)
+File Requirements:
+
+Max file size: 100KB per animation
+Frame rate: 30fps
+Optimize with bodymovin settings
+8.3 Micro-interactions
+Button Hover:
+
+Scale: 1.02
+Duration: 200ms
+Shadow lift
+Card Hover:
+
+TranslateY: -2px
+Shadow: Increase spread and opacity
+Duration: 250ms
+Link Hover:
+
+Underline slides in from left
+Duration: 200ms
+Form Focus:
+
+Border color transition
+Subtle shadow glow
+Duration: 150ms
+9. Responsive Breakpoints
+sm: 640px    // Large phones
+md: 768px    // Tablets
+lg: 1024px   // Small laptops
+xl: 1280px   // Desktops
+2xl: 1536px  // Large screens
+Key Responsive Behaviors:
+Navigation:
+
+< 1024px: Hamburger menu
+= 1024px: Full horizontal nav
+
+Hero:
+
+< 768px: Stack all content, reduce headline size
+= 768px: Standard layout
+
+Bento Grids:
+
+< 768px: Single column
+768-1024px: 2 columns
+= 1024px: Full grid
+
+Typography Scaling:
+
+Headline: 72px → 48px → 36px (xl → md → sm)
+Body: Maintains 16px base, line-height increases on mobile
+10. Performance Requirements
+Target Metrics:
+First Contentful Paint: < 1.5s
+Largest Contentful Paint: < 2.5s
+Cumulative Layout Shift: < 0.1
+Time to Interactive: < 3.5s
+Optimization Strategies:
+Lazy load images and Lottie files below fold
+Use Intersection Observer for scroll animations
+Preload critical fonts (Inter 400, 500, 600)
+Optimize Lottie files (remove unused layers)
+Use CSS transforms for animations (GPU acceleration)
+Implement proper image srcset for responsive images
+11. Accessibility Requirements
+Color contrast: Minimum 4.5:1 for body text
+Focus states: Visible outline on all interactive elements
+Animation: Respect prefers-reduced-motion
+Semantic HTML: Proper heading hierarchy
+ARIA labels: On all interactive components
+Keyboard navigation: Full support
+Screen reader: All images have descriptive alt text
+12. Technical Stack
+Framework: React with TypeScript
+Styling: Tailwind CSS with custom design tokens
+Animation: Framer Motion for scroll animations
+Lottie: @lottiefiles/react-lottie-player
+Forms: React Hook Form with Zod validation
+Icons: Lucide React
+Fonts: Google Fonts (Inter)
