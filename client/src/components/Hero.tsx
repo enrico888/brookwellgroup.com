@@ -7,8 +7,7 @@ const rotatingWords = [
   "Account Opening",
   "Advisor Transitions",
   "Cashiering",
-  "Cheque",
-  "Blotters",
+  "Cheque Blotters",
   "Onboarding",
   "Operations",
 ];
