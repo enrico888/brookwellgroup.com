@@ -56,7 +56,7 @@ export default function Navigation({ onNavigate }: NavigationProps) {
               <img src={logoImage} alt="Brookwell" className="h-[22px] md:h-[26px]" />
             </a>
 
-            <nav className="hidden md:flex items-center gap-4 xl:gap-6">
+            <nav className="hidden md:flex items-center gap-[15px] xl:gap-[23px]">
               {navItems.map((item) => (
                 <button
                   key={item.href}
