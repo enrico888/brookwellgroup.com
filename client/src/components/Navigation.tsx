@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
+import logoImage from "@assets/logo-icon_(1)_1765582535278.png";
 
 interface NavigationProps {
   onNavigate?: (section: string) => void;
@@ -49,10 +50,10 @@ export default function Navigation({ onNavigate }: NavigationProps) {
           <div className="flex items-center justify-between h-[72px] md:h-[72px]">
             <a
               href="#"
-              className="text-xl font-semibold tracking-tight text-foreground"
+              className="flex items-center"
               data-testid="link-logo"
             >
-              Brookwell
+              <img src={logoImage} alt="Brookwell" className="h-6 md:h-7" />
             </a>
 
             <nav className="hidden md:flex items-center gap-4 xl:gap-6">
