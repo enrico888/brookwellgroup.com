@@ -50,7 +50,7 @@ export default function Navigation({ onNavigate }: NavigationProps) {
           <div className="flex items-center justify-between h-[72px] md:h-[72px]">
             <a
               href="#"
-              className="flex items-center"
+              className="flex items-center mr-[15px] xl:mr-[23px]"
               data-testid="link-logo"
             >
               <img src={logoImage} alt="Brookwell" className="h-[22px] md:h-[26px]" />
@@ -69,7 +69,7 @@ export default function Navigation({ onNavigate }: NavigationProps) {
               ))}
             </nav>
 
-            <div className="flex items-center gap-4">
+            <div className="flex items-center gap-[15px] xl:gap-[23px]">
               <Button
                 size="sm"
                 onClick={() => handleNavClick("#contact")}
