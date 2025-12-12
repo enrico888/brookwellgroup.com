@@ -47,16 +47,16 @@ export default function Navigation({ onNavigate }: NavigationProps) {
         }`}
       >
         <div className="max-w-[1280px] mx-auto px-6 md:px-12 lg:px-16">
-          <div className="flex items-center justify-between h-[72px] md:h-[72px]">
+          <div className="flex items-center h-[72px] md:h-[72px]">
             <a
               href="#"
-              className="flex items-center mr-[15px] xl:mr-[23px]"
+              className="flex items-center"
               data-testid="link-logo"
             >
               <img src={logoImage} alt="Brookwell" className="h-[22px] md:h-[26px]" />
             </a>
 
-            <nav className="hidden md:flex items-center gap-[15px] xl:gap-[23px]">
+            <nav className="hidden md:flex items-center gap-[18px] xl:gap-[24px] mx-auto">
               {navItems.map((item) => (
                 <button
                   key={item.href}
@@ -69,7 +69,7 @@ export default function Navigation({ onNavigate }: NavigationProps) {
               ))}
             </nav>
 
-            <div className="flex items-center gap-[15px] xl:gap-[23px]">
+            <div className="flex items-center">
               <Button
                 size="sm"
                 onClick={() => handleNavClick("#contact")}
