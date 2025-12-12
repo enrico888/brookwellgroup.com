@@ -55,7 +55,7 @@ export default function Navigation({ onNavigate }: NavigationProps) {
               Brookwell
             </a>
 
-            <nav className="hidden md:flex items-center gap-8">
+            <nav className="hidden lg:flex items-center gap-6">
               {navItems.map((item) => (
                 <button
                   key={item.href}
@@ -71,7 +71,7 @@ export default function Navigation({ onNavigate }: NavigationProps) {
             <div className="flex items-center gap-4">
               <Button
                 onClick={() => handleNavClick("#contact")}
-                className="hidden md:inline-flex rounded-full px-6 text-sm font-medium tracking-wide"
+                className="hidden lg:inline-flex rounded-full px-5 text-sm font-medium tracking-wide whitespace-nowrap"
                 data-testid="button-contact-cta"
               >
                 Talk to an Expert
@@ -80,7 +80,7 @@ export default function Navigation({ onNavigate }: NavigationProps) {
               <Button
                 variant="ghost"
                 size="icon"
-                className="md:hidden"
+                className="lg:hidden"
                 onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
                 data-testid="button-mobile-menu"
               >
