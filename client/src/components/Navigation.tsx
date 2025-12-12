@@ -71,8 +71,9 @@ export default function Navigation({ onNavigate }: NavigationProps) {
 
             <div className="flex items-center gap-4">
               <Button
+                size="sm"
                 onClick={() => handleNavClick("#contact")}
-                className="hidden md:inline-flex rounded-full px-4 xl:px-6 text-sm font-medium tracking-wide whitespace-nowrap"
+                className="hidden md:inline-flex rounded-full px-3 xl:px-5 text-xs font-medium tracking-wide whitespace-nowrap"
                 data-testid="button-contact-cta"
               >
                 Talk to an Expert
