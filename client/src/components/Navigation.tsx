@@ -20,10 +20,10 @@ export default function Navigation({ onNavigate }: NavigationProps) {
   }, []);
 
   const navItems = [
-    { label: "AI Workflows", href: "#workflows" },
+    { label: "Agentic Operations", href: "#workflows" },
     { label: "AI Transitions", href: "#transitions" },
     { label: "Client Stories", href: "#stories" },
-    { label: "About", href: "#about" },
+    { label: "About Us", href: "#about" },
   ];
 
   const handleNavClick = (href: string) => {
@@ -74,7 +74,7 @@ export default function Navigation({ onNavigate }: NavigationProps) {
                 className="hidden md:inline-flex rounded-full px-6 text-sm font-medium tracking-wide"
                 data-testid="button-contact-cta"
               >
-                Contact
+                Talk to an Expert
               </Button>
 
               <Button
@@ -117,7 +117,7 @@ export default function Navigation({ onNavigate }: NavigationProps) {
                 className="mt-2 rounded-full"
                 data-testid="button-mobile-contact"
               >
-                Contact
+                Talk to an Expert
               </Button>
             </nav>
           </motion.div>
