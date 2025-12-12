@@ -53,7 +53,7 @@ export default function Navigation({ onNavigate }: NavigationProps) {
               className="flex items-center"
               data-testid="link-logo"
             >
-              <img src={logoImage} alt="Brookwell" className="h-6 md:h-7" />
+              <img src={logoImage} alt="Brookwell" className="h-[22px] md:h-[26px]" />
             </a>
 
             <nav className="hidden md:flex items-center gap-4 xl:gap-6">
