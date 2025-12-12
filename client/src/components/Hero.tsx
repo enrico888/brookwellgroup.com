@@ -1,10 +1,76 @@
+import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import { ChevronDown, ArrowRight } from "lucide-react";
+
+const rotatingWords = [
+  "Account Opening",
+  "Advisor Transitions",
+  "Cashiering",
+  "Cheque",
+  "Blotters",
+  "Onboarding",
+  "Operations",
+];
 
 interface HeroProps {
   onGetStarted?: () => void;
   onLearnMore?: () => void;
+}
+
+function useReducedMotion() {
+  const [prefersReducedMotion, setPrefersReducedMotion] = useState(false);
+
+  useEffect(() => {
+    const mediaQuery = window.matchMedia("(prefers-reduced-motion: reduce)");
+    setPrefersReducedMotion(mediaQuery.matches);
+
+    const handler = (event: MediaQueryListEvent) => {
+      setPrefersReducedMotion(event.matches);
+    };
+
+    mediaQuery.addEventListener("change", handler);
+    return () => mediaQuery.removeEventListener("change", handler);
+  }, []);
+
+  return prefersReducedMotion;
+}
+
+function RotatingWord() {
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const prefersReducedMotion = useReducedMotion();
+
+  useEffect(() => {
+    if (prefersReducedMotion) return;
+
+    const interval = setInterval(() => {
+      setCurrentIndex((prev) => (prev + 1) % rotatingWords.length);
+    }, 2000);
+
+    return () => clearInterval(interval);
+  }, [prefersReducedMotion]);
+
+  if (prefersReducedMotion) {
+    return <span>workflows</span>;
+  }
+
+  return (
+    <span className="inline-block relative">
+      <AnimatePresence mode="wait">
+        <motion.span
+          key={currentIndex}
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          exit={{ opacity: 0, y: -20 }}
+          transition={{ duration: 0.25, ease: "easeInOut" }}
+          className="inline-block"
+          data-testid="text-rotating-word"
+        >
+          {rotatingWords[currentIndex]}
+        </motion.span>
+      </AnimatePresence>
+    </span>
+  );
 }
 
 export default function Hero({ onGetStarted, onLearnMore }: HeroProps) {
@@ -39,7 +105,7 @@ export default function Hero({ onGetStarted, onLearnMore }: HeroProps) {
           className="text-4xl md:text-5xl lg:text-6xl font-semibold tracking-tight leading-[1.05] mb-6"
           data-testid="text-hero-headline"
         >
-          Intelligent workflows.
+          Intelligent <RotatingWord />.
           <br />
           Seamless transitions.
         </motion.h1>
