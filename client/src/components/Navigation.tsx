@@ -61,7 +61,7 @@ export default function Navigation({ onNavigate }: NavigationProps) {
                 <button
                   key={item.href}
                   onClick={() => handleNavClick(item.href)}
-                  className="text-sm text-muted-foreground hover:text-foreground transition-colors duration-150"
+                  className="text-[13px] text-muted-foreground hover:text-foreground transition-colors duration-150"
                   data-testid={`link-nav-${item.label.toLowerCase().replace(/\s/g, "-")}`}
                 >
                   {item.label}
