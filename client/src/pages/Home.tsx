@@ -43,15 +43,9 @@ export default function Home() {
         
         <WhoWeServe />
         
-        <ServiceToggle />
-        
-        <AIWorkflows />
-        
         <ClientStories />
         
         <Testimonials />
-        
-        <AITransitions />
         
         <PainPoints />
         
@@ -60,6 +54,12 @@ export default function Home() {
         <TransitionResults />
         
         <AboutUs />
+        
+        <ServiceToggle />
+        
+        <AIWorkflows />
+        
+        <AITransitions />
         
         <Contact />
       </main>
