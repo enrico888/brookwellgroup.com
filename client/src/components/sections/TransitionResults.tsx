@@ -58,7 +58,7 @@ export default function TransitionResults() {
           className="text-center mb-12"
         >
           <h3 className="text-2xl md:text-3xl font-semibold tracking-tight mb-4">
-            The result: Transitions that work
+            The Result: Transitions That Work
           </h3>
           <p className="text-muted-foreground max-w-xl mx-auto">
             Our AI-powered approach delivers measurable improvements across every aspect of the transition process.
