@@ -16,7 +16,7 @@ export default function WhoWeServe() {
             Who We Serve
           </p>
           <h2 className="text-3xl md:text-4xl font-semibold tracking-tight mb-4">
-            Built for financial services
+            Built for Financial Services
           </h2>
           <p className="text-muted-foreground max-w-xl mx-auto">
             We specialize in serving RIAs and Broker-Dealers with tailored AI solutions.
