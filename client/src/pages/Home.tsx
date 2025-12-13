@@ -1,6 +1,5 @@
 import Navigation from "@/components/Navigation";
 import Hero from "@/components/Hero";
-import LogoCarousel from "@/components/LogoCarousel";
 import ServiceToggle from "@/components/ServiceToggle";
 import AIWorkflows from "@/components/sections/AIWorkflows";
 import ClientStories from "@/components/sections/ClientStories";
@@ -41,8 +40,6 @@ export default function Home() {
       
       <main>
         <Hero onGetStarted={handleGetStarted} onLearnMore={handleLearnMore} />
-        
-        <LogoCarousel />
         
         <ServiceToggle />
         
