@@ -1,0 +1,194 @@
+import { motion } from "framer-motion";
+import { Button } from "@/components/ui/button";
+import { Card } from "@/components/ui/card";
+import Navigation from "@/components/Navigation";
+import Footer from "@/components/Footer";
+import { Linkedin } from "lucide-react";
+import { Link } from "wouter";
+
+const teamMembers = [
+  {
+    name: "Sarah Chen",
+    title: "CEO & Founder",
+    bio: "Former Goldman Sachs VP with 15 years in financial technology. Passionate about bringing AI innovation to wealth management.",
+    linkedin: "#",
+  },
+  {
+    name: "Michael Torres",
+    title: "Chief Technology Officer",
+    bio: "Previously led engineering at a top fintech unicorn. Expert in AI/ML systems and enterprise architecture.",
+    linkedin: "#",
+  },
+  {
+    name: "Emily Rodriguez",
+    title: "Head of Client Success",
+    bio: "10+ years helping financial advisors navigate technology transitions. Dedicated to seamless client experiences.",
+    linkedin: "#",
+  },
+  {
+    name: "David Kim",
+    title: "VP of Product",
+    bio: "Former product leader at major custodians. Deep expertise in advisor workflows and operational efficiency.",
+    linkedin: "#",
+  },
+];
+
+const values = [
+  "Client outcomes drive every decision we make",
+  "Technology should simplify, not complicate",
+  "Transparency builds lasting partnerships",
+  "Innovation with purpose, not for its own sake",
+  "Excellence in execution, always",
+];
+
+export default function About() {
+  const scrollToContact = () => {
+    window.location.href = "/#contact";
+  };
+
+  return (
+    <div className="min-h-screen bg-background">
+      <Navigation />
+
+      <main className="pt-[72px]">
+        <section className="py-24 md:py-32 px-6 md:px-12 lg:px-16" data-testid="section-about-hero">
+          <div className="max-w-[1280px] mx-auto">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              className="max-w-3xl"
+            >
+              <p className="text-xs uppercase tracking-[0.2em] text-muted-foreground mb-4">
+                About Us
+              </p>
+              <h1 className="text-4xl md:text-5xl font-semibold tracking-tight mb-6">
+                Transforming Financial Services Through Intelligent Automation
+              </h1>
+              <p className="text-lg text-muted-foreground leading-relaxed">
+                Brookwell was founded on a simple belief: financial advisors should spend their time 
+                serving clients, not wrestling with operational complexity. We combine deep industry 
+                expertise with cutting-edge AI to make that vision a reality for firms of all sizes.
+              </p>
+            </motion.div>
+          </div>
+        </section>
+
+        <section className="py-20 px-6 md:px-12 lg:px-16 bg-muted/30" data-testid="section-about-team">
+          <div className="max-w-[1280px] mx-auto">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="mb-12"
+            >
+              <h2 className="text-2xl md:text-3xl font-semibold tracking-tight mb-4">
+                Our Team
+              </h2>
+              <p className="text-muted-foreground max-w-2xl">
+                Industry veterans and technologists united by a shared mission to modernize 
+                financial services operations.
+              </p>
+            </motion.div>
+
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+              {teamMembers.map((member, index) => (
+                <motion.div
+                  key={member.name}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: index * 0.1 }}
+                >
+                  <Card className="p-6 h-full flex flex-col" data-testid={`card-team-${index}`}>
+                    <div className="w-16 h-16 rounded-full bg-muted mb-4 flex items-center justify-center">
+                      <span className="text-xl font-medium text-muted-foreground">
+                        {member.name.split(" ").map(n => n[0]).join("")}
+                      </span>
+                    </div>
+                    <h3 className="font-medium mb-1">{member.name}</h3>
+                    <p className="text-sm text-muted-foreground/70 mb-3">{member.title}</p>
+                    <p className="text-sm text-muted-foreground leading-relaxed flex-1">
+                      {member.bio}
+                    </p>
+                    <a
+                      href={member.linkedin}
+                      className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors mt-4"
+                      data-testid={`link-linkedin-${index}`}
+                    >
+                      <Linkedin className="h-4 w-4" />
+                      <span>LinkedIn</span>
+                    </a>
+                  </Card>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <section className="py-20 px-6 md:px-12 lg:px-16" data-testid="section-about-values">
+          <div className="max-w-[1280px] mx-auto">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="grid lg:grid-cols-2 gap-12 items-center"
+            >
+              <div>
+                <h2 className="text-2xl md:text-3xl font-semibold tracking-tight mb-4">
+                  What We Believe
+                </h2>
+                <p className="text-muted-foreground">
+                  Our values guide every product decision, client interaction, and team collaboration.
+                </p>
+              </div>
+              <div>
+                <ul className="space-y-4">
+                  {values.map((value, index) => (
+                    <motion.li
+                      key={index}
+                      initial={{ opacity: 0, x: 20 }}
+                      whileInView={{ opacity: 1, x: 0 }}
+                      viewport={{ once: true }}
+                      transition={{ delay: index * 0.1 }}
+                      className="flex items-start gap-3"
+                    >
+                      <span className="w-1.5 h-1.5 rounded-full bg-foreground/40 mt-2 flex-shrink-0" />
+                      <span className="text-muted-foreground">{value}</span>
+                    </motion.li>
+                  ))}
+                </ul>
+              </div>
+            </motion.div>
+          </div>
+        </section>
+
+        <section className="py-20 px-6 md:px-12 lg:px-16 bg-muted/30" data-testid="section-about-cta">
+          <div className="max-w-[1280px] mx-auto text-center">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+            >
+              <h2 className="text-2xl md:text-3xl font-semibold tracking-tight mb-4">
+                Ready to Transform Your Operations?
+              </h2>
+              <p className="text-muted-foreground mb-8 max-w-xl mx-auto">
+                Let's discuss how Brookwell can help your firm work smarter and serve clients better.
+              </p>
+              <Button
+                onClick={scrollToContact}
+                className="rounded-full px-8"
+                style={{ backgroundColor: "#310196" }}
+                data-testid="button-about-cta"
+              >
+                Talk to an Expert
+              </Button>
+            </motion.div>
+          </div>
+        </section>
+      </main>
+
+      <Footer />
+    </div>
+  );
+}

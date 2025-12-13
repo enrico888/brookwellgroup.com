@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
+import { Link, useLocation } from "wouter";
 import logoImage from "@assets/logo-icon_(1)_1765582535278.png";
 
 interface NavigationProps {
@@ -11,6 +12,7 @@ interface NavigationProps {
 export default function Navigation({ onNavigate }: NavigationProps) {
   const [scrolled, setScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [location] = useLocation();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -21,14 +23,21 @@ export default function Navigation({ onNavigate }: NavigationProps) {
   }, []);
 
   const navItems = [
-    { label: "Agentic Operations", href: "#workflows" },
-    { label: "AI Transitions", href: "#transitions" },
-    { label: "Client Stories", href: "#stories" },
-    { label: "About Us", href: "#about" },
+    { label: "Agentic Operations", href: "#workflows", isRoute: false },
+    { label: "AI Transitions", href: "#transitions", isRoute: false },
+    { label: "Client Stories", href: "#stories", isRoute: false },
+    { label: "About Us", href: "/about", isRoute: true },
   ];
 
-  const handleNavClick = (href: string) => {
+  const handleNavClick = (href: string, isRoute: boolean) => {
     setMobileMenuOpen(false);
+    if (isRoute) {
+      return;
+    }
+    if (location !== "/") {
+      window.location.href = "/" + href;
+      return;
+    }
     const element = document.querySelector(href);
     if (element) {
       element.scrollIntoView({ behavior: "smooth" });
@@ -58,21 +67,32 @@ export default function Navigation({ onNavigate }: NavigationProps) {
 
             <nav className="hidden md:flex items-center gap-[18px] xl:gap-[24px] mx-auto">
               {navItems.map((item) => (
-                <button
-                  key={item.href}
-                  onClick={() => handleNavClick(item.href)}
-                  className="text-[13px] text-muted-foreground hover:text-foreground transition-colors duration-150"
-                  data-testid={`link-nav-${item.label.toLowerCase().replace(/\s/g, "-")}`}
-                >
-                  {item.label}
-                </button>
+                item.isRoute ? (
+                  <Link
+                    key={item.href}
+                    href={item.href}
+                    className="text-[13px] text-muted-foreground hover:text-foreground transition-colors duration-150"
+                    data-testid={`link-nav-${item.label.toLowerCase().replace(/\s/g, "-")}`}
+                  >
+                    {item.label}
+                  </Link>
+                ) : (
+                  <button
+                    key={item.href}
+                    onClick={() => handleNavClick(item.href, item.isRoute)}
+                    className="text-[13px] text-muted-foreground hover:text-foreground transition-colors duration-150"
+                    data-testid={`link-nav-${item.label.toLowerCase().replace(/\s/g, "-")}`}
+                  >
+                    {item.label}
+                  </button>
+                )
               ))}
             </nav>
 
             <div className="flex items-center">
               <Button
                 size="sm"
-                onClick={() => handleNavClick("#contact")}
+                onClick={() => handleNavClick("#contact", false)}
                 className="hidden md:inline-flex rounded-full px-[11px] xl:px-[19px] text-[11px] font-medium tracking-wide whitespace-nowrap border-[#310196]"
                 style={{ backgroundColor: "#310196" }}
                 data-testid="button-contact-cta"
@@ -106,17 +126,29 @@ export default function Navigation({ onNavigate }: NavigationProps) {
           >
             <nav className="flex flex-col px-6 py-6 gap-4">
               {navItems.map((item) => (
-                <button
-                  key={item.href}
-                  onClick={() => handleNavClick(item.href)}
-                  className="text-left text-base text-muted-foreground hover:text-foreground transition-colors py-2"
-                  data-testid={`link-mobile-${item.label.toLowerCase().replace(/\s/g, "-")}`}
-                >
-                  {item.label}
-                </button>
+                item.isRoute ? (
+                  <Link
+                    key={item.href}
+                    href={item.href}
+                    onClick={() => setMobileMenuOpen(false)}
+                    className="text-left text-base text-muted-foreground hover:text-foreground transition-colors py-2"
+                    data-testid={`link-mobile-${item.label.toLowerCase().replace(/\s/g, "-")}`}
+                  >
+                    {item.label}
+                  </Link>
+                ) : (
+                  <button
+                    key={item.href}
+                    onClick={() => handleNavClick(item.href, item.isRoute)}
+                    className="text-left text-base text-muted-foreground hover:text-foreground transition-colors py-2"
+                    data-testid={`link-mobile-${item.label.toLowerCase().replace(/\s/g, "-")}`}
+                  >
+                    {item.label}
+                  </button>
+                )
               ))}
               <Button
-                onClick={() => handleNavClick("#contact")}
+                onClick={() => handleNavClick("#contact", false)}
                 className="mt-2 rounded-full"
                 data-testid="button-mobile-contact"
               >
