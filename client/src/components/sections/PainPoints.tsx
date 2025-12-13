@@ -30,7 +30,7 @@ export default function PainPoints() {
           viewport={{ once: true }}
           className="mb-12"
         >
-          <h3 className="text-xl font-semibold mb-2">The pain points</h3>
+          <h3 className="text-xl font-semibold mb-2">The Pain Points</h3>
           <p className="text-muted-foreground">
             Transitions are difficult. Here's what firms typically struggle with.
           </p>
