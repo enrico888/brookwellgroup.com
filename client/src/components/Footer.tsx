@@ -1,3 +1,5 @@
+import logoIcon from "@assets/logo-icon_(1)_1765582535278.png";
+
 export default function Footer() {
   const currentYear = new Date().getFullYear();
 
@@ -33,10 +35,14 @@ export default function Footer() {
           <div className="md:col-span-1">
             <a
               href="#"
-              className="text-xl font-semibold tracking-tight text-foreground"
+              className="block"
               data-testid="link-footer-logo"
             >
-              Brookwell
+              <img 
+                src={logoIcon} 
+                alt="Brookwell" 
+                className="h-[22px] md:h-[26px]"
+              />
             </a>
             <p className="text-sm text-muted-foreground mt-4 leading-relaxed">
               AI-powered solutions for financial services firms.
