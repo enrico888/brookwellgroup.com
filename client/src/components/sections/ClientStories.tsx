@@ -77,7 +77,7 @@ const stories: Story[] = [
     },
     results: {
       metrics: [
-        { value: "2 Days", label: "Onboarding" },
+        { value: "2", label: "Days to Onboard" },
         { value: "95%", label: "Satisfaction" },
         { value: "60%", label: "Time Saved" },
       ],
