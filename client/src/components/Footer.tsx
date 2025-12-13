@@ -41,7 +41,7 @@ export default function Footer() {
               <img 
                 src={logoIcon} 
                 alt="Brookwell" 
-                className="h-[22px] md:h-[26px]"
+                className="h-[28px] md:h-[32px]"
               />
             </a>
             <p className="text-sm text-muted-foreground mt-4 leading-relaxed">
