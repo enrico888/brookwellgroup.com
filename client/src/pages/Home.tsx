@@ -43,9 +43,9 @@ export default function Home() {
         
         <WhoWeServe />
         
-        <ServiceToggle />
-        
         <AIWorkflows />
+        
+        <ServiceToggle />
         
         <ClientStories />
         
