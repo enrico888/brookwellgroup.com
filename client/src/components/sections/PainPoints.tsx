@@ -5,17 +5,17 @@ import { FileWarning, Clock, Users } from "lucide-react";
 const painPoints = [
   {
     icon: FileWarning,
-    title: "Data fragmentation",
+    title: "Data Fragmentation",
     description: "Client data scattered across multiple systems, custodians, and platforms makes transitions chaotic and error-prone.",
   },
   {
     icon: Clock,
-    title: "Time-consuming processes",
+    title: "Time-Consuming Processes",
     description: "Manual data mapping, paperwork, and coordination consume weeks of valuable time and resources.",
   },
   {
     icon: Users,
-    title: "Client anxiety",
+    title: "Client Anxiety",
     description: "Poor communication and delays during transitions erode client trust and increase attrition risk.",
   },
 ];
