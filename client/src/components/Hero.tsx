@@ -54,7 +54,8 @@ function RotatingWord() {
   }
 
   return (
-    <span className="inline-flex justify-start min-w-[280px] md:min-w-[380px] lg:min-w-[480px]">
+    <span className="inline-block relative">
+      <span className="invisible">Advisor Transitions</span>
       <AnimatePresence mode="wait">
         <motion.span
           key={currentIndex}
@@ -62,7 +63,7 @@ function RotatingWord() {
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: -20 }}
           transition={{ duration: 0.25, ease: "easeInOut" }}
-          className="inline-block"
+          className="absolute left-0 top-0"
           data-testid="text-rotating-word"
         >
           {rotatingWords[currentIndex]}
@@ -104,9 +105,8 @@ export default function Hero({ onGetStarted, onLearnMore }: HeroProps) {
           className="text-4xl md:text-5xl lg:text-6xl font-semibold tracking-tight leading-[1.05] mb-6"
           data-testid="text-hero-headline"
         >
-          Intelligent <RotatingWord />
-          <br />
-          Seamless transitions.
+          <span className="block">Intelligent <RotatingWord /></span>
+          <span className="block">Seamless transitions.</span>
         </motion.h1>
 
         <motion.p
