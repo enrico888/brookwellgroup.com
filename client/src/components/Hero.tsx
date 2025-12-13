@@ -54,7 +54,7 @@ function RotatingWord() {
   }
 
   return (
-    <span className="inline-block relative">
+    <span className="inline-flex justify-start min-w-[280px] md:min-w-[380px] lg:min-w-[480px]">
       <AnimatePresence mode="wait">
         <motion.span
           key={currentIndex}
@@ -104,7 +104,7 @@ export default function Hero({ onGetStarted, onLearnMore }: HeroProps) {
           className="text-4xl md:text-5xl lg:text-6xl font-semibold tracking-tight leading-[1.05] mb-6"
           data-testid="text-hero-headline"
         >
-          Intelligent <RotatingWord />.
+          Intelligent <RotatingWord />
           <br />
           Seamless transitions.
         </motion.h1>
