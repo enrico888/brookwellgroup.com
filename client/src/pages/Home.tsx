@@ -1,15 +1,12 @@
 import Navigation from "@/components/Navigation";
 import Hero from "@/components/Hero";
-import ServiceToggle from "@/components/ServiceToggle";
 import AIWorkflows from "@/components/sections/AIWorkflows";
 import ClientStories from "@/components/sections/ClientStories";
 import WhoWeServe from "@/components/sections/WhoWeServe";
-import Testimonials from "@/components/sections/Testimonials";
 import AITransitions from "@/components/sections/AITransitions";
 import PainPoints from "@/components/sections/PainPoints";
 import ProcessTimeline from "@/components/sections/ProcessTimeline";
 import TransitionResults from "@/components/sections/TransitionResults";
-import AboutUs from "@/components/sections/AboutUs";
 import Contact from "@/components/sections/Contact";
 import Footer from "@/components/Footer";
 
@@ -45,11 +42,7 @@ export default function Home() {
         
         <AIWorkflows />
         
-        <ServiceToggle />
-        
         <ClientStories />
-        
-        <Testimonials />
         
         <AITransitions />
         
@@ -58,8 +51,6 @@ export default function Home() {
         <ProcessTimeline />
         
         <TransitionResults />
-        
-        <AboutUs />
         
         <Contact />
       </main>
