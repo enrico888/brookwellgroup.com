@@ -14,9 +14,9 @@ export default function AIWorkflows() {
             Agentic Operations
           </p>
           <h2 className="text-3xl md:text-4xl font-semibold tracking-tight mb-6">
-            Automate the complex.
+            Automate the Complex.
             <br />
-            Amplify your team.
+            Amplify Your Team.
           </h2>
           <p className="text-muted-foreground leading-relaxed">
             Our AI workflow solutions transform manual, time-consuming processes into intelligent, 
