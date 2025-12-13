@@ -138,41 +138,41 @@ export default function ClientStories() {
             transition={{ duration: 0.3 }}
           >
             <Card className="p-8 md:p-12">
-              <div className="grid md:grid-cols-[1fr_1fr_1.2fr] gap-8">
-                <div>
+              <div className="grid md:grid-cols-3 gap-10">
+                <div className="flex flex-col">
                   <div className="flex items-center gap-3 mb-4">
-                    <div className="w-10 h-10 rounded-lg bg-muted flex items-center justify-center">
+                    <div className="w-10 h-10 rounded-lg bg-muted flex items-center justify-center flex-shrink-0">
                       <AlertTriangle className="h-5 w-5 text-muted-foreground" />
                     </div>
                     <h3 className="font-medium">{currentStory.problem.headline}</h3>
                   </div>
-                  <p className="text-sm text-muted-foreground leading-relaxed">
+                  <p className="text-sm text-muted-foreground leading-relaxed flex-grow">
                     {currentStory.problem.description}
                   </p>
                 </div>
 
-                <div>
+                <div className="flex flex-col">
                   <div className="flex items-center gap-3 mb-4">
-                    <div className="w-10 h-10 rounded-lg bg-muted flex items-center justify-center">
+                    <div className="w-10 h-10 rounded-lg bg-muted flex items-center justify-center flex-shrink-0">
                       <Lightbulb className="h-5 w-5 text-muted-foreground" />
                     </div>
                     <h3 className="font-medium">{currentStory.solution.headline}</h3>
                   </div>
-                  <p className="text-sm text-muted-foreground leading-relaxed">
+                  <p className="text-sm text-muted-foreground leading-relaxed flex-grow">
                     {currentStory.solution.description}
                   </p>
                 </div>
 
-                <div>
+                <div className="flex flex-col">
                   <div className="flex items-center gap-3 mb-4">
-                    <div className="w-10 h-10 rounded-lg bg-muted flex items-center justify-center">
+                    <div className="w-10 h-10 rounded-lg bg-muted flex items-center justify-center flex-shrink-0">
                       <TrendingUp className="h-5 w-5 text-muted-foreground" />
                     </div>
                     <h3 className="font-medium">The Results</h3>
                   </div>
-                  <div className="flex flex-wrap gap-6">
+                  <div className="grid grid-cols-3 gap-4">
                     {currentStory.results.metrics.map((metric, i) => (
-                      <div key={i} className="min-w-[70px]">
+                      <div key={i} className="text-center">
                         <p className="text-2xl font-semibold tracking-tight" data-testid={`text-metric-${i}`}>
                           {metric.value}
                         </p>
