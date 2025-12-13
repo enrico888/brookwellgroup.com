@@ -65,7 +65,7 @@ export default function TransitionResults() {
           </p>
         </motion.div>
 
-        <div className="grid md:grid-cols-3 gap-6">
+        <div className="grid md:grid-cols-3 gap-8">
           {metrics.map((metric, index) => (
             <motion.div
               key={metric.label}
@@ -74,11 +74,11 @@ export default function TransitionResults() {
               viewport={{ once: true }}
               transition={{ delay: index * 0.1 }}
             >
-              <Card className="p-8 text-center" data-testid={`card-result-${index}`}>
-                <p className="text-4xl md:text-5xl font-semibold tracking-tight mb-2">
+              <Card className="p-10 text-center h-full flex flex-col items-center justify-center" data-testid={`card-result-${index}`}>
+                <p className="text-3xl md:text-4xl font-medium tracking-tight text-foreground/90 mb-3">
                   <AnimatedCounter end={metric.value} suffix={metric.suffix} />
                 </p>
-                <p className="text-sm text-muted-foreground">{metric.label}</p>
+                <p className="text-xs text-muted-foreground/70 uppercase tracking-wider">{metric.label}</p>
               </Card>
             </motion.div>
           ))}
