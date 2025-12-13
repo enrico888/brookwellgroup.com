@@ -10,8 +10,8 @@ export default function Footer() {
       { label: "Client Stories", href: "#stories" },
     ],
     company: [
-      { label: "About", href: "#about" },
-      { label: "Contact", href: "#contact" },
+      { label: "About Us", href: "#about" },
+      { label: "Talk to an Expert", href: "#contact" },
     ],
     legal: [
       { label: "Privacy Policy", href: "#" },
