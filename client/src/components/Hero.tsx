@@ -106,7 +106,7 @@ export default function Hero({ onGetStarted, onLearnMore }: HeroProps) {
           className="text-4xl md:text-5xl lg:text-6xl font-semibold tracking-tight leading-[1.05] mb-6"
           data-testid="text-hero-headline"
         >
-          <span className="block">Intelligent <RotatingWord /></span>
+          <span className="block mb-2 md:mb-3">Intelligent <RotatingWord /></span>
           <span className="block">Seamless Transitions</span>
         </motion.h1>
 
