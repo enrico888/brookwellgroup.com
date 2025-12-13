@@ -27,11 +27,11 @@ const stories: Story[] = [
     company: "Regional RIA",
     title: "Manual client reporting consumed 40+ hours weekly",
     problem: {
-      headline: "The challenge",
+      headline: "The Challenge",
       description: "A growing RIA firm was spending 40+ hours weekly on manual client reporting, leading to delays and errors that frustrated both advisors and clients.",
     },
     solution: {
-      headline: "Our approach",
+      headline: "Our Approach",
       description: "We implemented an AI-powered reporting workflow that automatically aggregated data from multiple custodians and generated personalized client reports.",
     },
     results: {
@@ -48,11 +48,11 @@ const stories: Story[] = [
     company: "Mid-Size Broker-Dealer",
     title: "Compliance reviews creating bottlenecks",
     problem: {
-      headline: "The challenge",
+      headline: "The Challenge",
       description: "Compliance reviews were creating significant bottlenecks, with each trade requiring manual oversight and documentation.",
     },
     solution: {
-      headline: "Our approach",
+      headline: "Our Approach",
       description: "We deployed intelligent compliance workflows that pre-screened trades against regulations and automatically flagged only high-risk transactions for human review.",
     },
     results: {
@@ -68,11 +68,11 @@ const stories: Story[] = [
     company: "Private Wealth Manager",
     title: "Client onboarding taking weeks",
     problem: {
-      headline: "The challenge",
+      headline: "The Challenge",
       description: "Client onboarding was taking 2-3 weeks due to scattered paperwork and manual data entry across multiple systems.",
     },
     solution: {
-      headline: "Our approach",
+      headline: "Our Approach",
       description: "We created a unified AI-driven onboarding workflow that automated document collection, verification, and system population.",
     },
     results: {
@@ -168,7 +168,7 @@ export default function ClientStories() {
                     <div className="w-10 h-10 rounded-lg bg-muted flex items-center justify-center">
                       <TrendingUp className="h-5 w-5 text-muted-foreground" />
                     </div>
-                    <h3 className="font-medium">The results</h3>
+                    <h3 className="font-medium">The Results</h3>
                   </div>
                   <div className="flex flex-wrap gap-6">
                     {currentStory.results.metrics.map((metric, i) => (
