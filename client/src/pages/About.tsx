@@ -42,7 +42,7 @@ const values = [
 ];
 
 export default function About() {
-  const scrollToContact = () => {
+  const navigateToContact = () => {
     window.location.href = "/#contact";
   };
 
@@ -176,7 +176,7 @@ export default function About() {
                 Let's discuss how Brookwell can help your firm work smarter and serve clients better.
               </p>
               <Button
-                onClick={scrollToContact}
+                onClick={navigateToContact}
                 className="rounded-full px-8"
                 style={{ backgroundColor: "#310196" }}
                 data-testid="button-about-cta"
