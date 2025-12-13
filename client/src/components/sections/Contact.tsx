@@ -86,7 +86,7 @@ export default function Contact() {
               Contact
             </p>
             <h2 className="text-3xl md:text-4xl font-semibold tracking-tight mb-6">
-              Let's talk
+              Talk to an Expert
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-8">
               Ready to transform your operations with AI? Get in touch to discuss 
