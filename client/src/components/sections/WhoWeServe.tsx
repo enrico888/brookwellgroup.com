@@ -23,13 +23,12 @@ export default function WhoWeServe() {
           </p>
         </motion.div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid md:grid-cols-2 gap-6 mb-6">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0 }}
-            className="lg:col-span-2 lg:row-span-2"
           >
             <Card className="h-full p-8" data-testid="card-ria">
               <div className="w-12 h-12 rounded-lg bg-muted flex items-center justify-center mb-6">
@@ -62,7 +61,6 @@ export default function WhoWeServe() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.1 }}
-            className="lg:col-span-2 lg:row-span-2"
           >
             <Card className="h-full p-8" data-testid="card-broker-dealer">
               <div className="w-12 h-12 rounded-lg bg-muted flex items-center justify-center mb-6">
@@ -89,13 +87,14 @@ export default function WhoWeServe() {
               </ul>
             </Card>
           </motion.div>
+        </div>
 
+        <div className="grid md:grid-cols-2 gap-6">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.2 }}
-            className="lg:col-span-2"
           >
             <Card className="p-8" data-testid="card-stat-clients">
               <div className="flex items-center gap-4">
@@ -115,7 +114,6 @@ export default function WhoWeServe() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.3 }}
-            className="lg:col-span-2"
           >
             <Card className="p-8" data-testid="card-stat-aum">
               <div className="flex items-center gap-4">
