@@ -138,7 +138,7 @@ export default function ClientStories() {
             transition={{ duration: 0.3 }}
           >
             <Card className="p-8 md:p-12">
-              <div className="grid md:grid-cols-3 gap-8">
+              <div className="grid md:grid-cols-[1fr_1fr_1.2fr] gap-8">
                 <div>
                   <div className="flex items-center gap-3 mb-4">
                     <div className="w-10 h-10 rounded-lg bg-muted flex items-center justify-center">
@@ -170,9 +170,9 @@ export default function ClientStories() {
                     </div>
                     <h3 className="font-medium">The results</h3>
                   </div>
-                  <div className="grid grid-cols-3 gap-4">
+                  <div className="flex flex-wrap gap-6">
                     {currentStory.results.metrics.map((metric, i) => (
-                      <div key={i}>
+                      <div key={i} className="min-w-[70px]">
                         <p className="text-2xl font-semibold tracking-tight" data-testid={`text-metric-${i}`}>
                           {metric.value}
                         </p>
