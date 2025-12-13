@@ -41,13 +41,13 @@ export default function Home() {
       <main>
         <Hero onGetStarted={handleGetStarted} onLearnMore={handleLearnMore} />
         
+        <WhoWeServe />
+        
         <ServiceToggle />
         
         <AIWorkflows />
         
         <ClientStories />
-        
-        <WhoWeServe />
         
         <Testimonials />
         
