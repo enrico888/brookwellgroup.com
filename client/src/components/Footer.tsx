@@ -5,7 +5,7 @@ export default function Footer() {
 
   const links = {
     services: [
-      { label: "AI Workflows", href: "#workflows" },
+      { label: "Agentic Operations", href: "#workflows" },
       { label: "AI Transitions", href: "#transitions" },
       { label: "Client Stories", href: "#stories" },
     ],
