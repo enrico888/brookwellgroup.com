@@ -4,7 +4,6 @@ import ServiceToggle from "@/components/ServiceToggle";
 import AIWorkflows from "@/components/sections/AIWorkflows";
 import ClientStories from "@/components/sections/ClientStories";
 import WhoWeServe from "@/components/sections/WhoWeServe";
-import AgenticOperations from "@/components/sections/AgenticOperations";
 import Testimonials from "@/components/sections/Testimonials";
 import AITransitions from "@/components/sections/AITransitions";
 import PainPoints from "@/components/sections/PainPoints";
@@ -43,8 +42,6 @@ export default function Home() {
         <Hero onGetStarted={handleGetStarted} onLearnMore={handleLearnMore} />
         
         <WhoWeServe />
-        
-        <AgenticOperations />
         
         <ServiceToggle />
         
