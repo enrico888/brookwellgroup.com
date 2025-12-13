@@ -36,7 +36,7 @@ export default function PainPoints() {
           </p>
         </motion.div>
 
-        <div className="grid md:grid-cols-3 gap-6">
+        <div className="grid md:grid-cols-3 gap-6 items-stretch">
           {painPoints.map((point, index) => (
             <motion.div
               key={point.title}
@@ -44,13 +44,14 @@ export default function PainPoints() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.1 }}
+              className="h-full"
             >
-              <Card className="p-6 h-full" data-testid={`card-pain-${index}`}>
-                <div className="w-10 h-10 rounded-lg bg-muted flex items-center justify-center mb-4">
+              <Card className="p-6 h-full flex flex-col" data-testid={`card-pain-${index}`}>
+                <div className="w-10 h-10 rounded-lg bg-muted flex items-center justify-center mb-5 flex-shrink-0">
                   <point.icon className="h-5 w-5 text-muted-foreground" />
                 </div>
-                <h4 className="font-medium mb-2">{point.title}</h4>
-                <p className="text-sm text-muted-foreground leading-relaxed">
+                <h4 className="font-medium mb-3 min-h-[48px] flex items-start">{point.title}</h4>
+                <p className="text-sm text-muted-foreground leading-relaxed flex-grow">
                   {point.description}
                 </p>
               </Card>
