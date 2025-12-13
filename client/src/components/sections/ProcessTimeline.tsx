@@ -34,7 +34,7 @@ export default function ProcessTimeline() {
           viewport={{ once: true }}
           className="mb-12"
         >
-          <h3 className="text-xl font-semibold mb-2">How we make it better</h3>
+          <h3 className="text-xl font-semibold mb-2">How We Make It Better</h3>
           <p className="text-muted-foreground">
             Our proven four-step process transforms complex transitions into smooth operations.
           </p>
