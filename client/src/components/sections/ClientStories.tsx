@@ -102,7 +102,7 @@ export default function ClientStories() {
             Client Stories
           </p>
           <h2 className="text-3xl md:text-4xl font-semibold tracking-tight mb-4">
-            Real results for real firms
+            Real Results for Real Firms
           </h2>
           <p className="text-muted-foreground max-w-xl mx-auto">
             See how we've helped financial services firms transform their operations with AI-powered workflows.
