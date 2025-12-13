@@ -2,6 +2,57 @@ import { Card } from "@/components/ui/card";
 import { motion } from "framer-motion";
 import { Building2, Briefcase, Users, TrendingUp } from "lucide-react";
 
+const riaFeatures = [
+  "Automated portfolio rebalancing and trade execution",
+  "Intelligent client reporting and performance analytics",
+  "Streamlined client onboarding and document management",
+  "Proactive compliance monitoring and risk assessment",
+];
+
+const bdFeatures = [
+  "AI-powered trade surveillance and compliance automation",
+  "Intelligent supervision workflows and exception handling",
+  "Automated regulatory reporting and filing preparation",
+  "Rep transition support and book movement tracking",
+];
+
+interface AudienceCardProps {
+  icon: typeof Building2;
+  title: string;
+  features: string[];
+  testId: string;
+  delay: number;
+}
+
+function AudienceCard({ icon: Icon, title, features, testId, delay }: AudienceCardProps) {
+  return (
+    <motion.div
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ delay }}
+      className="h-full"
+    >
+      <Card className="h-full p-8 flex flex-col" data-testid={testId}>
+        <div className="w-12 h-12 rounded-lg bg-muted flex items-center justify-center mb-6 flex-shrink-0">
+          <Icon className="h-6 w-6" />
+        </div>
+        <h3 className="text-xl font-semibold mb-6 flex-shrink-0 min-h-[56px] flex items-start">
+          {title}
+        </h3>
+        <ul className="space-y-5 text-sm text-muted-foreground flex-grow">
+          {features.map((feature, index) => (
+            <li key={index} className="flex gap-3 leading-relaxed">
+              <span className="w-1.5 h-1.5 rounded-full bg-foreground/40 mt-[7px] flex-shrink-0" />
+              <span className="flex-1">{feature}</span>
+            </li>
+          ))}
+        </ul>
+      </Card>
+    </motion.div>
+  );
+}
+
 export default function WhoWeServe() {
   return (
     <section className="py-32 px-6 md:px-12 lg:px-16 bg-muted/30" data-testid="section-who-we-serve">
@@ -23,70 +74,21 @@ export default function WhoWeServe() {
           </p>
         </motion.div>
 
-        <div className="grid md:grid-cols-2 gap-6 mb-6">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0 }}
-          >
-            <Card className="h-full p-8" data-testid="card-ria">
-              <div className="w-12 h-12 rounded-lg bg-muted flex items-center justify-center mb-6">
-                <Building2 className="h-6 w-6" />
-              </div>
-              <h3 className="text-xl font-semibold mb-4">Registered Investment Advisors</h3>
-              <ul className="space-y-4 text-sm text-muted-foreground">
-                <li className="flex items-start gap-3 min-h-[44px]">
-                  <span className="w-1.5 h-1.5 rounded-full bg-foreground/40 mt-2 flex-shrink-0" />
-                  <span>Automated portfolio rebalancing and trade execution</span>
-                </li>
-                <li className="flex items-start gap-3 min-h-[44px]">
-                  <span className="w-1.5 h-1.5 rounded-full bg-foreground/40 mt-2 flex-shrink-0" />
-                  <span>Intelligent client reporting and performance analytics</span>
-                </li>
-                <li className="flex items-start gap-3 min-h-[44px]">
-                  <span className="w-1.5 h-1.5 rounded-full bg-foreground/40 mt-2 flex-shrink-0" />
-                  <span>Streamlined client onboarding and document management</span>
-                </li>
-                <li className="flex items-start gap-3 min-h-[44px]">
-                  <span className="w-1.5 h-1.5 rounded-full bg-foreground/40 mt-2 flex-shrink-0" />
-                  <span>Proactive compliance monitoring and risk assessment</span>
-                </li>
-              </ul>
-            </Card>
-          </motion.div>
-
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.1 }}
-          >
-            <Card className="h-full p-8" data-testid="card-broker-dealer">
-              <div className="w-12 h-12 rounded-lg bg-muted flex items-center justify-center mb-6">
-                <Briefcase className="h-6 w-6" />
-              </div>
-              <h3 className="text-xl font-semibold mb-4">Broker-Dealers</h3>
-              <ul className="space-y-4 text-sm text-muted-foreground">
-                <li className="flex items-start gap-3 min-h-[44px]">
-                  <span className="w-1.5 h-1.5 rounded-full bg-foreground/40 mt-2 flex-shrink-0" />
-                  <span>AI-powered trade surveillance and compliance automation</span>
-                </li>
-                <li className="flex items-start gap-3 min-h-[44px]">
-                  <span className="w-1.5 h-1.5 rounded-full bg-foreground/40 mt-2 flex-shrink-0" />
-                  <span>Intelligent supervision workflows and exception handling</span>
-                </li>
-                <li className="flex items-start gap-3 min-h-[44px]">
-                  <span className="w-1.5 h-1.5 rounded-full bg-foreground/40 mt-2 flex-shrink-0" />
-                  <span>Automated regulatory reporting and filing preparation</span>
-                </li>
-                <li className="flex items-start gap-3 min-h-[44px]">
-                  <span className="w-1.5 h-1.5 rounded-full bg-foreground/40 mt-2 flex-shrink-0" />
-                  <span>Rep transition support and book movement tracking</span>
-                </li>
-              </ul>
-            </Card>
-          </motion.div>
+        <div className="grid md:grid-cols-2 gap-6 mb-6 items-stretch">
+          <AudienceCard
+            icon={Building2}
+            title="Registered Investment Advisors"
+            features={riaFeatures}
+            testId="card-ria"
+            delay={0}
+          />
+          <AudienceCard
+            icon={Briefcase}
+            title="Broker-Dealers"
+            features={bdFeatures}
+            testId="card-broker-dealer"
+            delay={0.1}
+          />
         </div>
 
         <div className="grid md:grid-cols-2 gap-6">
@@ -98,7 +100,7 @@ export default function WhoWeServe() {
           >
             <Card className="p-8" data-testid="card-stat-clients">
               <div className="flex items-center gap-4">
-                <div className="w-12 h-12 rounded-lg bg-muted flex items-center justify-center">
+                <div className="w-12 h-12 rounded-lg bg-muted flex items-center justify-center flex-shrink-0">
                   <Users className="h-6 w-6" />
                 </div>
                 <div>
@@ -117,7 +119,7 @@ export default function WhoWeServe() {
           >
             <Card className="p-8" data-testid="card-stat-aum">
               <div className="flex items-center gap-4">
-                <div className="w-12 h-12 rounded-lg bg-muted flex items-center justify-center">
+                <div className="w-12 h-12 rounded-lg bg-muted flex items-center justify-center flex-shrink-0">
                   <TrendingUp className="h-6 w-6" />
                 </div>
                 <div>
