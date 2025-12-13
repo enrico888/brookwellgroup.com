@@ -106,7 +106,7 @@ export default function Hero({ onGetStarted, onLearnMore }: HeroProps) {
           data-testid="text-hero-headline"
         >
           <span className="block">Intelligent <RotatingWord /></span>
-          <span className="block">Seamless transitions.</span>
+          <span className="block">Seamless Transitions</span>
         </motion.h1>
 
         <motion.p
