@@ -128,14 +128,6 @@ export default function Hero({ onGetStarted, onLearnMore }: HeroProps) {
           className="flex flex-col sm:flex-row items-center justify-center gap-4"
         >
           <Button
-            onClick={onGetStarted}
-            className="rounded-full px-8 text-sm font-medium tracking-wide group"
-            data-testid="button-hero-cta"
-          >
-            Get Started
-            <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
-          </Button>
-          <Button
             variant="ghost"
             onClick={onLearnMore}
             className="text-muted-foreground hover:text-foreground"
