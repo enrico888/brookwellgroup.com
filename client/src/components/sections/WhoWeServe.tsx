@@ -35,20 +35,20 @@ export default function WhoWeServe() {
                 <Building2 className="h-6 w-6" />
               </div>
               <h3 className="text-xl font-semibold mb-4">Registered Investment Advisors</h3>
-              <ul className="space-y-3 text-sm text-muted-foreground">
-                <li className="flex items-start gap-3">
+              <ul className="space-y-4 text-sm text-muted-foreground">
+                <li className="flex items-start gap-3 min-h-[44px]">
                   <span className="w-1.5 h-1.5 rounded-full bg-foreground/40 mt-2 flex-shrink-0" />
                   <span>Automated portfolio rebalancing and trade execution</span>
                 </li>
-                <li className="flex items-start gap-3">
+                <li className="flex items-start gap-3 min-h-[44px]">
                   <span className="w-1.5 h-1.5 rounded-full bg-foreground/40 mt-2 flex-shrink-0" />
                   <span>Intelligent client reporting and performance analytics</span>
                 </li>
-                <li className="flex items-start gap-3">
+                <li className="flex items-start gap-3 min-h-[44px]">
                   <span className="w-1.5 h-1.5 rounded-full bg-foreground/40 mt-2 flex-shrink-0" />
                   <span>Streamlined client onboarding and document management</span>
                 </li>
-                <li className="flex items-start gap-3">
+                <li className="flex items-start gap-3 min-h-[44px]">
                   <span className="w-1.5 h-1.5 rounded-full bg-foreground/40 mt-2 flex-shrink-0" />
                   <span>Proactive compliance monitoring and risk assessment</span>
                 </li>
@@ -67,20 +67,20 @@ export default function WhoWeServe() {
                 <Briefcase className="h-6 w-6" />
               </div>
               <h3 className="text-xl font-semibold mb-4">Broker-Dealers</h3>
-              <ul className="space-y-3 text-sm text-muted-foreground">
-                <li className="flex items-start gap-3">
+              <ul className="space-y-4 text-sm text-muted-foreground">
+                <li className="flex items-start gap-3 min-h-[44px]">
                   <span className="w-1.5 h-1.5 rounded-full bg-foreground/40 mt-2 flex-shrink-0" />
                   <span>AI-powered trade surveillance and compliance automation</span>
                 </li>
-                <li className="flex items-start gap-3">
+                <li className="flex items-start gap-3 min-h-[44px]">
                   <span className="w-1.5 h-1.5 rounded-full bg-foreground/40 mt-2 flex-shrink-0" />
                   <span>Intelligent supervision workflows and exception handling</span>
                 </li>
-                <li className="flex items-start gap-3">
+                <li className="flex items-start gap-3 min-h-[44px]">
                   <span className="w-1.5 h-1.5 rounded-full bg-foreground/40 mt-2 flex-shrink-0" />
                   <span>Automated regulatory reporting and filing preparation</span>
                 </li>
-                <li className="flex items-start gap-3">
+                <li className="flex items-start gap-3 min-h-[44px]">
                   <span className="w-1.5 h-1.5 rounded-full bg-foreground/40 mt-2 flex-shrink-0" />
                   <span>Rep transition support and book movement tracking</span>
                 </li>
