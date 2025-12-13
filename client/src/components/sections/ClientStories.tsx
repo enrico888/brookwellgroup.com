@@ -164,19 +164,19 @@ export default function ClientStories() {
                 </div>
 
                 <div className="flex flex-col">
-                  <div className="flex items-center gap-3 mb-4">
+                  <div className="flex items-center gap-3 mb-6">
                     <div className="w-10 h-10 rounded-lg bg-muted flex items-center justify-center flex-shrink-0">
                       <TrendingUp className="h-5 w-5 text-muted-foreground" />
                     </div>
                     <h3 className="font-medium">The Results</h3>
                   </div>
-                  <div className="grid grid-cols-3 gap-4">
+                  <div className="flex justify-between gap-6">
                     {currentStory.results.metrics.map((metric, i) => (
-                      <div key={i} className="text-center">
-                        <p className="text-2xl font-semibold tracking-tight" data-testid={`text-metric-${i}`}>
+                      <div key={i} className="flex flex-col items-center text-center flex-1">
+                        <p className="text-xl font-medium tracking-tight text-foreground/90 mb-1" data-testid={`text-metric-${i}`}>
                           {metric.value}
                         </p>
-                        <p className="text-xs text-muted-foreground">{metric.label}</p>
+                        <p className="text-[11px] text-muted-foreground/70 uppercase tracking-wider">{metric.label}</p>
                       </div>
                     ))}
                   </div>
