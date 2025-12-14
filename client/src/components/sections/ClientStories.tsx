@@ -40,7 +40,6 @@ const stories: Story[] = [
         { value: "99.9%", label: "Accuracy Rate" },
         { value: "3x", label: "Client Growth" },
       ],
-      quote: "Brookwell transformed our operations. What took days now takes minutes.",
     },
   },
   {
