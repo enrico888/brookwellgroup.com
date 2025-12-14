@@ -1,10 +1,10 @@
+import { useEffect } from "react";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Linkedin } from "lucide-react";
-import { Link } from "wouter";
 
 const teamMembers = [
   {
@@ -42,6 +42,10 @@ const values = [
 ];
 
 export default function About() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   const navigateToContact = () => {
     window.location.href = "/#contact";
   };
