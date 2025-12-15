@@ -55,7 +55,7 @@ function RotatingWord() {
 
   return (
     <span className="inline-block relative">
-      <span className="invisible">Advisor Transitions</span>
+      <span className="invisible">Cashiering Indexing</span>
       <AnimatePresence mode="wait">
         <motion.span
           key={currentIndex}
@@ -63,7 +63,7 @@ function RotatingWord() {
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: -20 }}
           transition={{ duration: 0.25, ease: "easeInOut" }}
-          className="absolute left-0 top-0"
+          className="absolute inset-0 flex items-center justify-center whitespace-nowrap"
           style={{ color: "#310196" }}
           data-testid="text-rotating-word"
         >
@@ -103,10 +103,11 @@ export default function Hero({ onGetStarted, onLearnMore }: HeroProps) {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.1 }}
-          className="text-4xl md:text-5xl lg:text-6xl font-semibold tracking-tight leading-[1.05] mb-6"
+          className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold tracking-tight leading-[1.15] mb-6 flex flex-col sm:flex-row items-center justify-center gap-1 sm:gap-3"
           data-testid="text-hero-headline"
         >
-          Agentic <RotatingWord />
+          <span>Agentic</span>
+          <RotatingWord />
         </motion.h1>
 
         <motion.p
