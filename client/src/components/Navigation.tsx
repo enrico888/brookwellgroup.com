@@ -25,7 +25,6 @@ export default function Navigation({ onNavigate }: NavigationProps) {
   const navItems = [
     { label: "Agentic Operations", href: "#workflows", isRoute: false },
     { label: "AI Transitions", href: "#transitions", isRoute: false },
-    { label: "Client Stories", href: "#stories", isRoute: false },
     { label: "About Us", href: "/about", isRoute: true },
   ];
 
