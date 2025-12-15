@@ -1,9 +1,9 @@
 import { useEffect } from "react";
 import { motion } from "framer-motion";
-import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import Contact from "@/components/sections/Contact";
 import { Linkedin } from "lucide-react";
 
 const teamMembers = [
@@ -45,10 +45,6 @@ export default function About() {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
-
-  const navigateToContact = () => {
-    window.location.href = "/#contact";
-  };
 
   return (
     <div className="min-h-screen bg-background">
@@ -166,30 +162,7 @@ export default function About() {
           </div>
         </section>
 
-        <section className="py-20 px-6 md:px-12 lg:px-16 bg-muted/30" data-testid="section-about-cta">
-          <div className="max-w-[1280px] mx-auto text-center">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-            >
-              <h2 className="text-2xl md:text-3xl font-semibold tracking-tight mb-4">
-                Ready to Transform Your Operations?
-              </h2>
-              <p className="text-muted-foreground mb-8 max-w-xl mx-auto">
-                Let's discuss how Brookwell can help your firm work smarter and serve clients better.
-              </p>
-              <Button
-                onClick={navigateToContact}
-                className="rounded-full px-8"
-                style={{ backgroundColor: "#310196" }}
-                data-testid="button-about-cta"
-              >
-                Talk to an Expert
-              </Button>
-            </motion.div>
-          </div>
-        </section>
+        <Contact />
       </main>
 
       <Footer />
