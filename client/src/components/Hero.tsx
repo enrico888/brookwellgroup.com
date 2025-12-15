@@ -6,9 +6,9 @@ import { ChevronDown, ArrowRight } from "lucide-react";
 const rotatingWords = [
   "Account Opening",
   "Advisor Transitions",
-  "Cashiering",
-  "Cheque Blotters",
-  "Onboarding",
+  "Cashiering Indexing",
+  "Check Blotters",
+  "Data Aggregation",
   "Operations",
 ];
 
