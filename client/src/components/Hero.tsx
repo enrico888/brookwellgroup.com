@@ -9,7 +9,6 @@ const rotatingWords = [
   "Cashiering Indexing",
   "Check Blotters",
   "Data Aggregation",
-  "Operations",
 ];
 
 interface HeroProps {
