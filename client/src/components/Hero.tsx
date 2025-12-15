@@ -63,7 +63,7 @@ function RotatingWord() {
           exit={{ opacity: 0, y: -20 }}
           transition={{ duration: 0.25, ease: "easeInOut" }}
           className="absolute inset-0 flex items-center justify-center whitespace-nowrap"
-          style={{ color: "#2A34E5" }}
+          style={{ color: "#2437E0" }}
           data-testid="text-rotating-word"
         >
           {rotatingWords[currentIndex]}
