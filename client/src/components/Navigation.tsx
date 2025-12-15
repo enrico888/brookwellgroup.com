@@ -55,22 +55,22 @@ export default function Navigation({ onNavigate }: NavigationProps) {
         }`}
       >
         <div className="max-w-[1280px] mx-auto px-6 md:px-12 lg:px-16">
-          <div className="flex items-center h-[72px] md:h-[72px]">
+          <div className="flex items-center justify-between h-[72px]">
             <a
-              href="#"
-              className="flex items-center"
+              href="/"
+              className="flex items-center flex-shrink-0"
               data-testid="link-logo"
             >
-              <img src={logoImage} alt="Brookwell" className="h-[22px] md:h-[26px]" />
+              <img src={logoImage} alt="Brookwell" className="h-[22px] md:h-[28px]" />
             </a>
 
-            <nav className="hidden md:flex items-center gap-[18px] xl:gap-[24px] mx-auto">
+            <nav className="hidden md:flex items-center gap-8 lg:gap-10">
               {navItems.map((item) => (
                 item.isRoute ? (
                   <Link
                     key={item.href}
                     href={item.href}
-                    className="text-[13px] text-muted-foreground hover:text-foreground transition-colors duration-150"
+                    className="text-sm text-muted-foreground hover:text-foreground transition-colors duration-150"
                     data-testid={`link-nav-${item.label.toLowerCase().replace(/\s/g, "-")}`}
                   >
                     {item.label}
@@ -79,7 +79,7 @@ export default function Navigation({ onNavigate }: NavigationProps) {
                   <button
                     key={item.href}
                     onClick={() => handleNavClick(item.href, item.isRoute)}
-                    className="text-[13px] text-muted-foreground hover:text-foreground transition-colors duration-150"
+                    className="text-sm text-muted-foreground hover:text-foreground transition-colors duration-150"
                     data-testid={`link-nav-${item.label.toLowerCase().replace(/\s/g, "-")}`}
                   >
                     {item.label}
@@ -88,11 +88,10 @@ export default function Navigation({ onNavigate }: NavigationProps) {
               ))}
             </nav>
 
-            <div className="flex items-center">
+            <div className="flex items-center gap-4">
               <Button
-                size="sm"
                 onClick={() => handleNavClick("#contact", false)}
-                className="hidden md:inline-flex rounded-full px-[11px] xl:px-[19px] text-[11px] font-medium tracking-wide whitespace-nowrap border-[#005DAA]"
+                className="hidden md:inline-flex rounded-full px-6 text-sm font-medium tracking-wide whitespace-nowrap"
                 style={{ backgroundColor: "#005DAA" }}
                 data-testid="button-contact-cta"
               >
