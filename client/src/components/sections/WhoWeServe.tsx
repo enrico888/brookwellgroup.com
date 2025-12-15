@@ -1,6 +1,6 @@
 import { Card } from "@/components/ui/card";
 import { motion } from "framer-motion";
-import { Building2, Briefcase, Users, TrendingUp } from "lucide-react";
+import { Building2, Briefcase } from "lucide-react";
 
 const riaFeatures = [
   "Automated portfolio rebalancing and trade execution",
@@ -74,7 +74,7 @@ export default function WhoWeServe() {
           </p>
         </motion.div>
 
-        <div className="grid md:grid-cols-2 gap-6 mb-6 items-stretch">
+        <div className="grid md:grid-cols-2 gap-6 items-stretch">
           <AudienceCard
             icon={Building2}
             title="Registered Investment Advisors"
@@ -89,46 +89,6 @@ export default function WhoWeServe() {
             testId="card-broker-dealer"
             delay={0.1}
           />
-        </div>
-
-        <div className="grid md:grid-cols-2 gap-6">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.2 }}
-          >
-            <Card className="p-8" data-testid="card-stat-clients">
-              <div className="flex items-center gap-4">
-                <div className="w-12 h-12 rounded-lg bg-muted flex items-center justify-center flex-shrink-0">
-                  <Users className="h-6 w-6" />
-                </div>
-                <div>
-                  <p className="text-3xl font-semibold tracking-tight">150+</p>
-                  <p className="text-sm text-muted-foreground">Firms Served</p>
-                </div>
-              </div>
-            </Card>
-          </motion.div>
-
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.3 }}
-          >
-            <Card className="p-8" data-testid="card-stat-aum">
-              <div className="flex items-center gap-4">
-                <div className="w-12 h-12 rounded-lg bg-muted flex items-center justify-center flex-shrink-0">
-                  <TrendingUp className="h-6 w-6" />
-                </div>
-                <div>
-                  <p className="text-3xl font-semibold tracking-tight">$50B+</p>
-                  <p className="text-sm text-muted-foreground">AUM Impacted</p>
-                </div>
-              </div>
-            </Card>
-          </motion.div>
         </div>
       </div>
     </section>
