@@ -31,9 +31,9 @@ export default function Home() {
   };
 
   const handleLearnMore = () => {
-    const workflowsSection = document.querySelector("#workflows");
-    if (workflowsSection) {
-      workflowsSection.scrollIntoView({ behavior: "smooth" });
+    const whoWeServeSection = document.querySelector("#who-we-serve");
+    if (whoWeServeSection) {
+      whoWeServeSection.scrollIntoView({ behavior: "smooth" });
     }
   };
 
