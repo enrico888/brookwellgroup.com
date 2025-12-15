@@ -89,7 +89,7 @@ export default function ClientStories() {
   const currentStory = stories.find((s) => s.id === activeStory) || stories[0];
 
   return (
-    <section id="stories" className="py-32 px-6 md:px-12 lg:px-16" data-testid="section-client-stories">
+    <section id="stories" className="py-32 px-6 md:px-12 lg:px-16 bg-muted/30" data-testid="section-client-stories">
       <div className="max-w-[1280px] mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
