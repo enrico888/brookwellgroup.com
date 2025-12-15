@@ -91,7 +91,7 @@ export default function Navigation({ onNavigate }: NavigationProps) {
             <div className="flex items-center gap-4">
               <Button
                 onClick={() => handleNavClick("#contact", false)}
-                className="hidden md:inline-flex rounded-full px-6 text-sm font-medium tracking-wide whitespace-nowrap"
+                className="hidden md:inline-flex rounded-full px-6 text-sm whitespace-nowrap"
                 style={{ backgroundColor: "#005DAA" }}
                 data-testid="button-contact-cta"
               >
