@@ -93,8 +93,8 @@ export default function Navigation({ onNavigate }: NavigationProps) {
               <Button
                 size="sm"
                 onClick={() => handleNavClick("#contact", false)}
-                className="hidden md:inline-flex rounded-full px-[11px] xl:px-[19px] text-[11px] font-medium tracking-wide whitespace-nowrap border-[#310196]"
-                style={{ backgroundColor: "#310196" }}
+                className="hidden md:inline-flex rounded-full px-[11px] xl:px-[19px] text-[11px] font-medium tracking-wide whitespace-nowrap border-[#005DAA]"
+                style={{ backgroundColor: "#005DAA" }}
                 data-testid="button-contact-cta"
               >
                 Talk to an Expert
