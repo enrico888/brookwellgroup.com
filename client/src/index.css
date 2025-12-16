@@ -295,16 +295,6 @@
     inset: -1px;
   }
 
-  /* Animated gradient background on hover */
-  @keyframes gradient-shift {
-    0% {
-      background-position: 0% 0%;
-    }
-    100% {
-      background-position: 200% 200%;
-    }
-  }
-
   @keyframes gradient-border-rotate {
     0% {
       background-position: 0% 50%;
