@@ -366,7 +366,7 @@
     background-size: 300% 100%;
     border-radius: inherit;
     z-index: -2;
-    animation: gradient-border-rotate 2s linear infinite;
+    animation: gradient-border-rotate 5s linear infinite;
     opacity: 1;
     transition: opacity 0.3s ease;
   }
