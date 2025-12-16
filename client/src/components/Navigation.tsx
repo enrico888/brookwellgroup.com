@@ -90,12 +90,21 @@ export default function Navigation({ onNavigate }: NavigationProps) {
 
             <div className="flex items-center gap-4">
               <Button
+                variant="outline"
                 onClick={() => handleNavClick("#contact", false)}
-                className="hidden md:inline-flex rounded-full px-6 text-sm whitespace-nowrap text-white"
-                style={{ background: "linear-gradient(90deg, #2A34E5 0%, #8B5CF6 25%, #EC4899 50%, #F43F5E 75%, #F97316 100%)" }}
+                className="hidden md:inline-flex rounded-full px-6 text-sm whitespace-nowrap"
                 data-testid="button-contact-cta"
               >
-                Talk to an Expert
+                <span
+                  style={{
+                    background: "linear-gradient(90deg, #2A34E5 0%, #8B5CF6 25%, #EC4899 50%, #F43F5E 75%, #F97316 100%)",
+                    WebkitBackgroundClip: "text",
+                    WebkitTextFillColor: "transparent",
+                    backgroundClip: "text",
+                  }}
+                >
+                  Talk to an Expert
+                </span>
               </Button>
 
               <Button
@@ -146,12 +155,21 @@ export default function Navigation({ onNavigate }: NavigationProps) {
                 )
               ))}
               <Button
+                variant="outline"
                 onClick={() => handleNavClick("#contact", false)}
-                className="mt-2 rounded-full text-white"
-                style={{ background: "linear-gradient(90deg, #2A34E5 0%, #8B5CF6 25%, #EC4899 50%, #F43F5E 75%, #F97316 100%)" }}
+                className="mt-2 rounded-full"
                 data-testid="button-mobile-contact"
               >
-                Talk to an Expert
+                <span
+                  style={{
+                    background: "linear-gradient(90deg, #2A34E5 0%, #8B5CF6 25%, #EC4899 50%, #F43F5E 75%, #F97316 100%)",
+                    WebkitBackgroundClip: "text",
+                    WebkitTextFillColor: "transparent",
+                    backgroundClip: "text",
+                  }}
+                >
+                  Talk to an Expert
+                </span>
               </Button>
             </nav>
           </motion.div>
