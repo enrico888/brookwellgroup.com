@@ -92,10 +92,10 @@ export default function Navigation({ onNavigate }: NavigationProps) {
               <Button
                 variant="outline"
                 onClick={() => handleNavClick("#contact", false)}
-                className="hidden md:inline-flex rounded-full px-6 text-sm font-normal whitespace-nowrap text-foreground"
+                className="hidden md:inline-flex rounded-full px-6 text-sm font-normal whitespace-nowrap text-foreground gradient-bg-hover"
                 data-testid="button-contact-cta"
               >
-                <span className="gradient-text-hover">Talk to an Expert</span>
+                Talk to an Expert
               </Button>
 
               <Button
@@ -148,10 +148,10 @@ export default function Navigation({ onNavigate }: NavigationProps) {
               <Button
                 variant="outline"
                 onClick={() => handleNavClick("#contact", false)}
-                className="mt-2 rounded-full font-normal text-foreground"
+                className="mt-2 rounded-full font-normal text-foreground gradient-bg-hover"
                 data-testid="button-mobile-contact"
               >
-                <span className="gradient-text-hover">Talk to an Expert</span>
+                Talk to an Expert
               </Button>
             </nav>
           </motion.div>
