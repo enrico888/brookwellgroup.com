@@ -92,7 +92,7 @@ export default function Navigation({ onNavigate }: NavigationProps) {
               <Button
                 variant="outline"
                 onClick={() => handleNavClick("#contact", false)}
-                className="hidden md:inline-flex rounded-full px-6 text-sm whitespace-nowrap"
+                className="hidden md:inline-flex rounded-full px-6 text-sm font-normal whitespace-nowrap"
                 data-testid="button-contact-cta"
               >
                 <span
@@ -157,7 +157,7 @@ export default function Navigation({ onNavigate }: NavigationProps) {
               <Button
                 variant="outline"
                 onClick={() => handleNavClick("#contact", false)}
-                className="mt-2 rounded-full"
+                className="mt-2 rounded-full font-normal"
                 data-testid="button-mobile-contact"
               >
                 <span
