@@ -323,17 +323,12 @@
     opacity: 0;
     transition: opacity 0.3s ease;
     border-radius: inherit;
-    z-index: 0;
+    z-index: -1;
   }
 
   .gradient-bg-hover:hover::before {
     opacity: 1;
     animation: gradient-shift 2s ease infinite;
-  }
-
-  .gradient-bg-hover > * {
-    position: relative;
-    z-index: 1;
   }
 
   .gradient-bg-hover:hover {
