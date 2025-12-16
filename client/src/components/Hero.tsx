@@ -53,7 +53,10 @@ function RotatingWord() {
   }
 
   return (
-    <span className="inline-block min-w-[280px] sm:min-w-[340px] md:min-w-[420px] lg:min-w-[500px]">
+    <span 
+      className="relative inline-grid items-center min-w-[280px] sm:min-w-[340px] md:min-w-[420px] lg:min-w-[500px]"
+      style={{ minHeight: "calc(1.2em + 40px)" }}
+    >
       <AnimatePresence mode="wait">
         <motion.span
           key={currentIndex}
