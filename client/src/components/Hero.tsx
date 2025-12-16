@@ -53,8 +53,8 @@ function RotatingWord() {
   }
 
   return (
-    <span className="inline-block relative pb-1">
-      <span className="invisible">Cashiering Indexing</span>
+    <span className="inline-block relative overflow-visible">
+      <span className="invisible">Cashiering Indexingy</span>
       <AnimatePresence mode="wait">
         <motion.span
           key={currentIndex}
@@ -81,7 +81,7 @@ function RotatingWord() {
 export default function Hero({ onGetStarted, onLearnMore }: HeroProps) {
   return (
     <section
-      className="relative min-h-screen flex flex-col items-center justify-center px-6 md:px-12 lg:px-16 overflow-hidden"
+      className="relative min-h-screen flex flex-col items-center justify-center px-6 md:px-12 lg:px-16 overflow-x-hidden"
       data-testid="section-hero"
     >
       <div
