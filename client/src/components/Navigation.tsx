@@ -91,8 +91,8 @@ export default function Navigation({ onNavigate }: NavigationProps) {
             <div className="flex items-center gap-4">
               <Button
                 onClick={() => handleNavClick("#contact", false)}
-                className="hidden md:inline-flex rounded-full px-6 text-sm whitespace-nowrap"
-                style={{ backgroundColor: "#2A34E5" }}
+                className="hidden md:inline-flex rounded-full px-6 text-sm whitespace-nowrap text-white"
+                style={{ background: "linear-gradient(90deg, #2A34E5 0%, #8B5CF6 25%, #EC4899 50%, #F43F5E 75%, #F97316 100%)" }}
                 data-testid="button-contact-cta"
               >
                 Talk to an Expert
@@ -147,7 +147,8 @@ export default function Navigation({ onNavigate }: NavigationProps) {
               ))}
               <Button
                 onClick={() => handleNavClick("#contact", false)}
-                className="mt-2 rounded-full"
+                className="mt-2 rounded-full text-white"
+                style={{ background: "linear-gradient(90deg, #2A34E5 0%, #8B5CF6 25%, #EC4899 50%, #F43F5E 75%, #F97316 100%)" }}
                 data-testid="button-mobile-contact"
               >
                 Talk to an Expert
