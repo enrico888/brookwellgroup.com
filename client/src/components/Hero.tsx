@@ -53,8 +53,7 @@ function RotatingWord() {
   }
 
   return (
-    <span className="inline-block relative overflow-visible">
-      <span className="invisible">Cashiering Indexingy</span>
+    <span className="inline-block min-w-[280px] sm:min-w-[340px] md:min-w-[420px] lg:min-w-[500px]">
       <AnimatePresence mode="wait">
         <motion.span
           key={currentIndex}
@@ -62,7 +61,7 @@ function RotatingWord() {
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: -20 }}
           transition={{ duration: 0.25, ease: "easeInOut" }}
-          className="absolute inset-0 flex items-center justify-start whitespace-nowrap"
+          className="inline-block whitespace-nowrap"
           style={{
             background: "linear-gradient(90deg, #2A34E5 0%, #8B5CF6 25%, #EC4899 50%, #F43F5E 75%, #F97316 100%)",
             WebkitBackgroundClip: "text",
