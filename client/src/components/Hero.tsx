@@ -107,11 +107,10 @@ export default function Hero({ onGetStarted, onLearnMore }: HeroProps) {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.1 }}
-          className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold tracking-tight leading-[1.15] mb-6 flex flex-col items-center justify-center gap-1"
+          className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold tracking-tight leading-[1.15] mb-6 flex flex-wrap items-center justify-center gap-x-4"
           data-testid="text-hero-headline"
         >
-          <span>Agentic</span>
-          <RotatingWord />
+          <span>Agentic</span> <RotatingWord />
         </motion.h1>
 
         <motion.p
