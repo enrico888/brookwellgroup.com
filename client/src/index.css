@@ -318,7 +318,7 @@
     content: "";
     position: absolute;
     inset: 0;
-    background: linear-gradient(90deg, #2A34E5 0%, #8B5CF6 25%, #EC4899 50%, #F43F5E 75%, #F97316 100%);
+    background: radial-gradient(circle at center, #2A34E5 0%, #8B5CF6 25%, #EC4899 50%, #F43F5E 75%, #F97316 100%);
     background-size: 200% 200%;
     opacity: 0;
     transition: opacity 0.3s ease;
