@@ -54,8 +54,8 @@ function RotatingWord() {
 
   return (
     <span 
-      className="relative inline-grid items-center min-w-[280px] sm:min-w-[340px] md:min-w-[420px] lg:min-w-[500px]"
-      style={{ minHeight: "calc(1.2em + 40px)" }}
+      className="relative inline-grid items-center min-w-[280px] sm:min-w-[340px] md:min-w-[420px] lg:min-w-[500px] overflow-visible"
+      style={{ minHeight: "1.5em" }}
     >
       <AnimatePresence mode="wait">
         <motion.span
@@ -64,7 +64,7 @@ function RotatingWord() {
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: -20 }}
           transition={{ duration: 0.25, ease: "easeInOut" }}
-          className="inline-block whitespace-nowrap"
+          className="inline-block whitespace-nowrap pb-1"
           style={{
             background: "linear-gradient(90deg, #2A34E5 0%, #8B5CF6 25%, #EC4899 50%, #F43F5E 75%, #F97316 100%)",
             WebkitBackgroundClip: "text",
