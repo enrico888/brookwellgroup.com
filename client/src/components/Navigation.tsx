@@ -95,7 +95,7 @@ export default function Navigation({ onNavigate }: NavigationProps) {
                 className="hidden md:inline-flex rounded-full px-6 text-sm font-normal whitespace-nowrap text-foreground"
                 data-testid="button-contact-cta"
               >
-                Talk to an Expert
+                <span className="gradient-text-hover">Talk to an Expert</span>
               </Button>
 
               <Button
@@ -151,7 +151,7 @@ export default function Navigation({ onNavigate }: NavigationProps) {
                 className="mt-2 rounded-full font-normal text-foreground"
                 data-testid="button-mobile-contact"
               >
-                Talk to an Expert
+                <span className="gradient-text-hover">Talk to an Expert</span>
               </Button>
             </nav>
           </motion.div>
