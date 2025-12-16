@@ -94,8 +94,8 @@ export default function Contact() {
             </p>
             <div className="flex items-center gap-3 text-muted-foreground">
               <Mail className="h-5 w-5" />
-              <a href="mailto:contact@brookwell.com" className="hover:text-foreground transition-colors">
-                contact@brookwell.com
+              <a href="mailto:contact@brookwellgroup.com" className="hover:text-foreground transition-colors">
+                contact@brookwellgroup.com
               </a>
             </div>
           </motion.div>
