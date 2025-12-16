@@ -356,6 +356,7 @@
     background: hsl(var(--background));
     border-radius: inherit;
     z-index: -1;
+    transition: all 0.4s ease;
   }
 
   .gradient-border-btn::after {
@@ -368,10 +369,22 @@
     z-index: -2;
     animation: gradient-border-rotate 5s linear infinite;
     opacity: 1;
-    transition: opacity 0.3s ease;
+    transition: all 0.4s ease;
+  }
+
+  .gradient-border-btn:hover::before {
+    background: linear-gradient(90deg, #2A34E5, #8B5CF6, #EC4899, #F43F5E, #F97316);
+    background-size: 200% 100%;
+    animation: gradient-border-rotate 3s linear infinite;
   }
 
   .gradient-border-btn:hover::after {
-    opacity: 1;
+    inset: -3px;
+    filter: blur(4px);
+    opacity: 0.6;
+  }
+
+  .gradient-border-btn:hover {
+    color: white !important;
   }
 }
