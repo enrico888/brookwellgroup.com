@@ -321,7 +321,7 @@
     border: none !important;
   }
 
-  /* Animated gradient border when not hovered */
+  /* Animated gradient border */
   .gradient-bg-hover::after {
     content: "";
     position: absolute;
@@ -342,20 +342,9 @@
     background: hsl(var(--background));
     border-radius: inherit;
     z-index: -1;
-    transition: all 0.3s ease;
   }
 
   .gradient-bg-hover:hover::after {
-    opacity: 0;
-  }
-
-  .gradient-bg-hover:hover::before {
-    background: radial-gradient(circle at center, #2A34E5 0%, #8B5CF6 25%, #EC4899 50%, #F43F5E 75%, #F97316 100%);
-    background-size: 200% 200%;
-    animation: gradient-shift 2s ease infinite;
-  }
-
-  .gradient-bg-hover:hover {
-    color: white !important;
+    opacity: 1;
   }
 }
