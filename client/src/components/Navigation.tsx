@@ -92,7 +92,7 @@ export default function Navigation({ onNavigate }: NavigationProps) {
               <Button
                 variant="outline"
                 onClick={() => handleNavClick("#contact", false)}
-                className="hidden md:inline-flex rounded-full px-6 text-sm font-normal whitespace-nowrap text-muted-foreground hover:text-foreground hover:border-foreground transition-all duration-300 hover:scale-[1.02]"
+                className="hidden md:inline-flex rounded-full px-6 text-sm font-normal whitespace-nowrap text-muted-foreground hover:text-foreground transition-colors duration-150"
                 data-testid="button-contact-cta"
               >
                 Talk to an Expert
@@ -148,7 +148,7 @@ export default function Navigation({ onNavigate }: NavigationProps) {
               <Button
                 variant="outline"
                 onClick={() => handleNavClick("#contact", false)}
-                className="mt-2 rounded-full font-normal text-muted-foreground hover:text-foreground hover:border-foreground transition-all duration-300 hover:scale-[1.02]"
+                className="mt-2 rounded-full font-normal text-muted-foreground hover:text-foreground transition-colors duration-150"
                 data-testid="button-mobile-contact"
               >
                 Talk to an Expert
