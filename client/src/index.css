@@ -339,4 +339,39 @@
   .gradient-bg-hover:hover::after {
     opacity: 1;
   }
+
+  /* Subtle animated gradient border for buttons */
+  .gradient-border-btn {
+    position: relative;
+    overflow: visible;
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+  }
+
+  .gradient-border-btn::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: hsl(var(--background));
+    border-radius: inherit;
+    z-index: -1;
+  }
+
+  .gradient-border-btn::after {
+    content: "";
+    position: absolute;
+    inset: -1px;
+    background: linear-gradient(90deg, #2A34E5, #8B5CF6, #EC4899, #F43F5E, #F97316, #2A34E5);
+    background-size: 300% 100%;
+    border-radius: inherit;
+    z-index: -2;
+    animation: gradient-border-rotate 4s linear infinite;
+    opacity: 0.4;
+    transition: opacity 0.3s ease;
+  }
+
+  .gradient-border-btn:hover::after {
+    opacity: 0.8;
+  }
 }
