@@ -305,31 +305,57 @@
     }
   }
 
+  @keyframes gradient-border-rotate {
+    0% {
+      background-position: 0% 50%;
+    }
+    100% {
+      background-position: 300% 50%;
+    }
+  }
+
   .gradient-bg-hover {
     transition: all 0.3s ease;
     position: relative;
-    overflow: hidden;
+    overflow: visible;
+    border: none !important;
+  }
+
+  /* Animated gradient border when not hovered */
+  .gradient-bg-hover::after {
+    content: "";
+    position: absolute;
+    inset: -2px;
+    background: linear-gradient(90deg, #2A34E5, #8B5CF6, #EC4899, #F43F5E, #F97316, #2A34E5);
+    background-size: 300% 100%;
+    border-radius: inherit;
+    z-index: -2;
+    animation: gradient-border-rotate 3s linear infinite;
+    opacity: 0.5;
+    transition: opacity 0.3s ease;
   }
 
   .gradient-bg-hover::before {
     content: "";
     position: absolute;
     inset: 0;
-    background: radial-gradient(circle at center, #2A34E5 0%, #8B5CF6 25%, #EC4899 50%, #F43F5E 75%, #F97316 100%);
-    background-size: 200% 200%;
-    opacity: 0;
-    transition: opacity 0.3s ease;
+    background: hsl(var(--background));
     border-radius: inherit;
     z-index: -1;
+    transition: all 0.3s ease;
+  }
+
+  .gradient-bg-hover:hover::after {
+    opacity: 0;
   }
 
   .gradient-bg-hover:hover::before {
-    opacity: 1;
+    background: radial-gradient(circle at center, #2A34E5 0%, #8B5CF6 25%, #EC4899 50%, #F43F5E 75%, #F97316 100%);
+    background-size: 200% 200%;
     animation: gradient-shift 2s ease infinite;
   }
 
   .gradient-bg-hover:hover {
     color: white !important;
-    border-color: transparent !important;
   }
 }
