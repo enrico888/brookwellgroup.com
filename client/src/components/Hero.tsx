@@ -53,7 +53,7 @@ function RotatingWord() {
   }
 
   return (
-    <span className="inline-block relative">
+    <span className="inline-block relative pb-1">
       <span className="invisible">Cashiering Indexing</span>
       <AnimatePresence mode="wait">
         <motion.span
