@@ -361,13 +361,13 @@
   .gradient-border-btn::after {
     content: "";
     position: absolute;
-    inset: -1px;
+    inset: -2px;
     background: linear-gradient(90deg, #2A34E5, #8B5CF6, #EC4899, #F43F5E, #F97316, #2A34E5);
     background-size: 300% 100%;
     border-radius: inherit;
     z-index: -2;
-    animation: gradient-border-rotate 3s linear infinite;
-    opacity: 0.7;
+    animation: gradient-border-rotate 2s linear infinite;
+    opacity: 1;
     transition: opacity 0.3s ease;
   }
 
