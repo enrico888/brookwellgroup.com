@@ -373,9 +373,9 @@
   }
 
   .gradient-border-btn:hover::before {
-    background: linear-gradient(90deg, #2A34E5, #8B5CF6, #EC4899, #F43F5E, #F97316);
-    background-size: 200% 100%;
-    animation: gradient-border-rotate 3s linear infinite;
+    background: linear-gradient(90deg, #2A34E5, #8B5CF6, #EC4899, #F43F5E, #F97316, #2A34E5);
+    background-size: 300% 100%;
+    animation: gradient-border-rotate 5s linear infinite;
   }
 
   .gradient-border-btn:hover::after {
