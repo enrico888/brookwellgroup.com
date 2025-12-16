@@ -92,19 +92,10 @@ export default function Navigation({ onNavigate }: NavigationProps) {
               <Button
                 variant="outline"
                 onClick={() => handleNavClick("#contact", false)}
-                className="hidden md:inline-flex rounded-full px-6 text-sm font-normal whitespace-nowrap"
+                className="hidden md:inline-flex rounded-full px-6 text-sm font-normal whitespace-nowrap text-foreground"
                 data-testid="button-contact-cta"
               >
-                <span
-                  style={{
-                    background: "linear-gradient(90deg, #2A34E5 0%, #8B5CF6 25%, #EC4899 50%, #F43F5E 75%, #F97316 100%)",
-                    WebkitBackgroundClip: "text",
-                    WebkitTextFillColor: "transparent",
-                    backgroundClip: "text",
-                  }}
-                >
-                  Talk to an Expert
-                </span>
+                Talk to an Expert
               </Button>
 
               <Button
@@ -157,19 +148,10 @@ export default function Navigation({ onNavigate }: NavigationProps) {
               <Button
                 variant="outline"
                 onClick={() => handleNavClick("#contact", false)}
-                className="mt-2 rounded-full font-normal"
+                className="mt-2 rounded-full font-normal text-foreground"
                 data-testid="button-mobile-contact"
               >
-                <span
-                  style={{
-                    background: "linear-gradient(90deg, #2A34E5 0%, #8B5CF6 25%, #EC4899 50%, #F43F5E 75%, #F97316 100%)",
-                    WebkitBackgroundClip: "text",
-                    WebkitTextFillColor: "transparent",
-                    backgroundClip: "text",
-                  }}
-                >
-                  Talk to an Expert
-                </span>
+                Talk to an Expert
               </Button>
             </nav>
           </motion.div>
