@@ -54,7 +54,7 @@ function RotatingWord() {
 
   return (
     <span 
-      className="relative inline-grid items-center min-w-[280px] sm:min-w-[340px] md:min-w-[420px] lg:min-w-[500px] overflow-visible"
+      className="relative inline-grid items-center w-[280px] sm:w-[340px] md:w-[450px] lg:w-[540px] overflow-visible text-left"
       style={{ minHeight: "1.5em" }}
     >
       <AnimatePresence mode="wait">
