@@ -309,6 +309,8 @@
     position: relative;
     overflow: visible;
     border: none !important;
+    background: transparent !important;
+    box-shadow: none !important;
   }
 
   /* Animated gradient border */
