@@ -329,7 +329,7 @@
     content: "";
     position: absolute;
     inset: 0;
-    background: hsl(var(--background));
+    background: transparent;
     border-radius: inherit;
     z-index: -1;
   }
