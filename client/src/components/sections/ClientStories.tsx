@@ -1,8 +1,7 @@
 import { useState } from "react";
 import { Card } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
 import { motion, AnimatePresence } from "framer-motion";
-import { AlertTriangle, Lightbulb, TrendingUp, ChevronLeft, ChevronRight, Quote } from "lucide-react";
+import { AlertTriangle, Lightbulb, TrendingUp, Quote } from "lucide-react";
 
 interface Story {
   id: string;
@@ -117,14 +116,6 @@ export default function ClientStories() {
   const [activeStory, setActiveStory] = useState(stories[0].id);
   const [activeTestimonial, setActiveTestimonial] = useState(0);
   const currentStory = stories.find((s) => s.id === activeStory) || stories[0];
-
-  const nextTestimonial = () => {
-    setActiveTestimonial((prev) => (prev + 1) % testimonials.length);
-  };
-
-  const prevTestimonial = () => {
-    setActiveTestimonial((prev) => (prev - 1 + testimonials.length) % testimonials.length);
-  };
 
   return (
     <section id="stories" className="py-32 px-6 md:px-12 lg:px-16 bg-muted/30" data-testid="section-client-stories">
@@ -270,26 +261,6 @@ export default function ClientStories() {
                 </div>
               </motion.div>
             </AnimatePresence>
-
-            <Button
-              variant="ghost"
-              size="icon"
-              onClick={prevTestimonial}
-              className="absolute left-0 top-1/2 -translate-y-1/2"
-              data-testid="button-testimonial-prev"
-            >
-              <ChevronLeft className="h-5 w-5" />
-            </Button>
-
-            <Button
-              variant="ghost"
-              size="icon"
-              onClick={nextTestimonial}
-              className="absolute right-0 top-1/2 -translate-y-1/2"
-              data-testid="button-testimonial-next"
-            >
-              <ChevronRight className="h-5 w-5" />
-            </Button>
           </div>
 
           {/* Dots indicator */}
