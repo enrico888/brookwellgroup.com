@@ -7,6 +7,18 @@ import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { Mail, CheckCircle2 } from "lucide-react";
 
+import awsLogo from "@assets/AWS_1766000546291.png";
+import azureLogo from "@assets/Azure_1766000546291.jpeg";
+import docupaceLogo from "@assets/docupace_1766000546291.png";
+import sqlLogo from "@assets/SQL_1766000546291.png";
+
+const integrations = [
+  { name: "AWS", logo: awsLogo },
+  { name: "Microsoft Azure", logo: azureLogo },
+  { name: "Docupace", logo: docupaceLogo },
+  { name: "SQL", logo: sqlLogo },
+];
+
 interface FormData {
   name: string;
   email: string;
@@ -202,6 +214,37 @@ export default function Contact() {
             </Card>
           </motion.div>
         </div>
+
+        {/* Integration Ticker */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="mt-24"
+          data-testid="integration-ticker"
+        >
+          <p className="text-xs uppercase tracking-[0.2em] text-muted-foreground text-center mb-8">
+            Seamless Integrations
+          </p>
+          <div className="ticker-container relative overflow-hidden">
+            <div className="ticker-mask" />
+            <div className="ticker-track">
+              {[...integrations, ...integrations, ...integrations, ...integrations].map((integration, index) => (
+                <div
+                  key={`${integration.name}-${index}`}
+                  className="ticker-item flex items-center justify-center px-8 md:px-12"
+                  data-testid={`ticker-logo-${integration.name.toLowerCase().replace(/\s/g, "-")}-${index}`}
+                >
+                  <img
+                    src={integration.logo}
+                    alt={integration.name}
+                    className="h-8 w-28 md:h-10 md:w-32 object-contain grayscale opacity-50 hover:opacity-80 transition-all"
+                  />
+                </div>
+              ))}
+            </div>
+          </div>
+        </motion.div>
       </div>
     </section>
   );
