@@ -18,15 +18,15 @@ import salesforceLogo from "@assets/Salesforce.com_logo.svg_1766006489944.png";
 import wealthboxLogo from "@assets/wealthbox-logo-padded_1766006489944.webp";
 
 const integrations = [
-  { name: "Fidelity", logo: fidelityLogo },
-  { name: "Broadridge", logo: broadridgeLogo },
-  { name: "Charles Schwab", logo: schwabLogo },
-  { name: "BNY Pershing", logo: pershingLogo },
-  { name: "Envestnet", logo: envestnetLogo },
-  { name: "RightBridge", logo: rightbridgeLogo },
-  { name: "Redtail", logo: redtailLogo },
-  { name: "Salesforce", logo: salesforceLogo },
-  { name: "Wealthbox", logo: wealthboxLogo },
+  { name: "Fidelity", logo: fidelityLogo, size: "default" },
+  { name: "Broadridge", logo: broadridgeLogo, size: "default" },
+  { name: "Charles Schwab", logo: schwabLogo, size: "large" },
+  { name: "BNY Pershing", logo: pershingLogo, size: "default" },
+  { name: "Envestnet", logo: envestnetLogo, size: "default" },
+  { name: "RightBridge", logo: rightbridgeLogo, size: "default" },
+  { name: "Redtail", logo: redtailLogo, size: "large" },
+  { name: "Salesforce", logo: salesforceLogo, size: "default" },
+  { name: "Wealthbox", logo: wealthboxLogo, size: "default" },
 ];
 
 interface FormData {
@@ -248,7 +248,11 @@ export default function Contact() {
                   <img
                     src={integration.logo}
                     alt={integration.name}
-                    className="h-6 md:h-8 max-w-[120px] md:max-w-[140px] object-contain grayscale opacity-50 hover:opacity-80 transition-all"
+                    className={`object-contain grayscale opacity-50 hover:opacity-80 transition-all ${
+                      integration.size === "large" 
+                        ? "h-10 md:h-12 max-w-[140px] md:max-w-[160px]" 
+                        : "h-6 md:h-8 max-w-[120px] md:max-w-[140px]"
+                    }`}
                   />
                 </div>
               ))}
