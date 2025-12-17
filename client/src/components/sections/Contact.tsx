@@ -7,16 +7,26 @@ import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { Mail, CheckCircle2 } from "lucide-react";
 
-import awsLogo from "@assets/AWS_1766000546291.png";
-import azureLogo from "@assets/Azure_1766000546291.jpeg";
-import docupaceLogo from "@assets/docupace_1766000546291.png";
-import sqlLogo from "@assets/SQL_1766000546291.png";
+import fidelityLogo from "@assets/108-1081744_fidelity-investments-png-logo-transparent-png_1766006489944.png";
+import broadridgeLogo from "@assets/Broadridge_Financial_Solutions_Logo.svg_1766006489944.png";
+import schwabLogo from "@assets/charles-schwab-corporation-bank-finance-investment-bank-thumbn_1766006489944.jpg";
+import pershingLogo from "@assets/images_1766006489944.png";
+import envestnetLogo from "@assets/lg-686b714b3a7e2-Envestnet_1766006489944.webp";
+import rightbridgeLogo from "@assets/Logo_RightBridge_by_CapitalROCK_1766006489944.png";
+import redtailLogo from "@assets/redtail-technology-logo-png_seeklogo-409556_1766006489944.png";
+import salesforceLogo from "@assets/Salesforce.com_logo.svg_1766006489944.png";
+import wealthboxLogo from "@assets/wealthbox-logo-padded_1766006489944.webp";
 
 const integrations = [
-  { name: "AWS", logo: awsLogo },
-  { name: "Microsoft Azure", logo: azureLogo },
-  { name: "Docupace", logo: docupaceLogo },
-  { name: "SQL", logo: sqlLogo },
+  { name: "Fidelity", logo: fidelityLogo },
+  { name: "Broadridge", logo: broadridgeLogo },
+  { name: "Charles Schwab", logo: schwabLogo },
+  { name: "BNY Pershing", logo: pershingLogo },
+  { name: "Envestnet", logo: envestnetLogo },
+  { name: "RightBridge", logo: rightbridgeLogo },
+  { name: "Redtail", logo: redtailLogo },
+  { name: "Salesforce", logo: salesforceLogo },
+  { name: "Wealthbox", logo: wealthboxLogo },
 ];
 
 interface FormData {
@@ -238,7 +248,7 @@ export default function Contact() {
                   <img
                     src={integration.logo}
                     alt={integration.name}
-                    className="h-8 w-28 md:h-10 md:w-32 object-contain grayscale opacity-50 hover:opacity-80 transition-all"
+                    className="h-6 md:h-8 max-w-[120px] md:max-w-[140px] object-contain grayscale opacity-50 hover:opacity-80 transition-all"
                   />
                 </div>
               ))}
