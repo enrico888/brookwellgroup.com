@@ -11,9 +11,9 @@ import fidelityLogo from "@assets/108-1081744_fidelity-investments-png-logo-tran
 import broadridgeLogo from "@assets/Broadridge_Financial_Solutions_Logo.svg_1766006489944.png";
 import schwabLogo from "@assets/charles-schwab-corporation-bank-finance-investment-bank-thumbn_1766006489944.jpg";
 import pershingLogo from "@assets/images_1766006489944.png";
-import envestnetLogo from "@assets/lg-686b714b3a7e2-Envestnet_1766006489944.webp";
+import envestnetLogo from "@assets/envestment_1766006783005.png";
 import rightbridgeLogo from "@assets/Logo_RightBridge_by_CapitalROCK_1766006489944.png";
-import redtailLogo from "@assets/redtail-technology-logo-png_seeklogo-409556_1766006489944.png";
+import redtailLogo from "@assets/redtail_PNG_1766006783005.png";
 import salesforceLogo from "@assets/Salesforce.com_logo.svg_1766006489944.png";
 import wealthboxLogo from "@assets/wealthbox-logo-padded_1766006489944.webp";
 
