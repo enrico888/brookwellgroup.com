@@ -18,13 +18,13 @@ import salesforceLogo from "@assets/Salesforce.com_logo.svg_1766006489944.png";
 import wealthboxLogo from "@assets/wealthbox-logo-padded_1766006489944.webp";
 
 const integrations = [
-  { name: "Fidelity", logo: fidelityLogo, size: "default" },
+  { name: "Fidelity", logo: fidelityLogo, size: "xlarge" },
   { name: "Broadridge", logo: broadridgeLogo, size: "default" },
-  { name: "Charles Schwab", logo: schwabLogo, size: "large" },
+  { name: "Charles Schwab", logo: schwabLogo, size: "xlarge" },
   { name: "BNY Pershing", logo: pershingLogo, size: "default" },
   { name: "Envestnet", logo: envestnetLogo, size: "default" },
   { name: "RightBridge", logo: rightbridgeLogo, size: "default" },
-  { name: "Redtail", logo: redtailLogo, size: "large" },
+  { name: "Redtail", logo: redtailLogo, size: "xlarge" },
   { name: "Salesforce", logo: salesforceLogo, size: "large" },
   { name: "Wealthbox", logo: wealthboxLogo, size: "default" },
 ];
@@ -254,9 +254,11 @@ export default function Contact({ showTicker = true }: ContactProps) {
                       src={integration.logo}
                       alt={integration.name}
                       className={`object-contain grayscale opacity-50 hover:opacity-80 transition-all ${
-                        integration.size === "large" 
-                          ? "h-10 md:h-12 max-w-[140px] md:max-w-[160px]" 
-                          : "h-6 md:h-8 max-w-[120px] md:max-w-[140px]"
+                        integration.size === "xlarge" 
+                          ? "h-12 md:h-14 max-w-[160px] md:max-w-[180px]" 
+                          : integration.size === "large" 
+                            ? "h-10 md:h-12 max-w-[140px] md:max-w-[160px]" 
+                            : "h-6 md:h-8 max-w-[120px] md:max-w-[140px]"
                       }`}
                     />
                   </div>
