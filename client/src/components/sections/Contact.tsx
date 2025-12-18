@@ -7,12 +7,12 @@ import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { Mail, CheckCircle2 } from "lucide-react";
 
-import fidelityLogo from "@assets/108-1081744_fidelity-investments-png-logo-transparent-png_1766006489944.png";
+import fidelityLogo from "@assets/Fidelity-Logo_1766096201283.png";
 import broadridgeLogo from "@assets/Broadridge_Financial_Solutions_Logo.svg_1766006489944.png";
-import schwabLogo from "@assets/charles-schwab-corporation-bank-finance-investment-bank-thumbn_1766006489944.jpg";
+import schwabLogo from "@assets/charles-schwab-2-logo-png-transparent_1766096201283.webp";
 import pershingLogo from "@assets/images_1766006489944.png";
-import envestnetLogo from "@assets/envestment_1766006783005.png";
-import rightbridgeLogo from "@assets/Logo_RightBridge_by_CapitalROCK_1766006489944.png";
+import envestnetLogo from "@assets/Envestnet-logo_1766096201283.png";
+import rightbridgeLogo from "@assets/6d0948863d66a53d716a8555d0668cb2_1766096201283.png";
 import redtailLogo from "@assets/redtail_PNG_1766006783005.png";
 import salesforceLogo from "@assets/Salesforce.com_logo.svg_1766006489944.png";
 import wealthboxLogo from "@assets/wealthbox-logo-padded_1766006489944.webp";
