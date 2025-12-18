@@ -102,6 +102,45 @@ export default function Contact({ showTicker = true }: ContactProps) {
   return (
     <section id="contact" className="py-32 px-6 md:px-12 lg:px-16 bg-muted/30" data-testid="section-contact">
       <div className="max-w-[1280px] mx-auto">
+        {/* Integration Ticker */}
+        {showTicker && (
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="mb-24"
+            data-testid="integration-ticker"
+          >
+            <p className="text-xs uppercase tracking-[0.2em] text-muted-foreground text-center mb-8">
+              Seamless Integrations
+            </p>
+            <div className="ticker-container relative overflow-hidden">
+              <div className="ticker-mask" />
+              <div className="ticker-track">
+                {[...integrations, ...integrations, ...integrations, ...integrations].map((integration, index) => (
+                  <div
+                    key={`${integration.name}-${index}`}
+                    className="ticker-item flex items-center justify-center px-8 md:px-12"
+                    data-testid={`ticker-logo-${integration.name.toLowerCase().replace(/\s/g, "-")}-${index}`}
+                  >
+                    <img
+                      src={integration.logo}
+                      alt={integration.name}
+                      className={`object-contain grayscale opacity-50 hover:opacity-80 transition-all ${
+                        integration.size === "xlarge" 
+                          ? "h-12 md:h-14 max-w-[160px] md:max-w-[180px]" 
+                          : integration.size === "large" 
+                            ? "h-10 md:h-12 max-w-[140px] md:max-w-[160px]" 
+                            : "h-6 md:h-8 max-w-[120px] md:max-w-[140px]"
+                      }`}
+                    />
+                  </div>
+                ))}
+              </div>
+            </div>
+          </motion.div>
+        )}
+
         <div className="grid lg:grid-cols-2 gap-16">
           <motion.div
             initial={{ opacity: 0, x: -20 }}
@@ -228,45 +267,6 @@ export default function Contact({ showTicker = true }: ContactProps) {
             </Card>
           </motion.div>
         </div>
-
-        {/* Integration Ticker */}
-        {showTicker && (
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="mt-24"
-            data-testid="integration-ticker"
-          >
-            <p className="text-xs uppercase tracking-[0.2em] text-muted-foreground text-center mb-8">
-              Seamless Integrations
-            </p>
-            <div className="ticker-container relative overflow-hidden">
-              <div className="ticker-mask" />
-              <div className="ticker-track">
-                {[...integrations, ...integrations, ...integrations, ...integrations].map((integration, index) => (
-                  <div
-                    key={`${integration.name}-${index}`}
-                    className="ticker-item flex items-center justify-center px-8 md:px-12"
-                    data-testid={`ticker-logo-${integration.name.toLowerCase().replace(/\s/g, "-")}-${index}`}
-                  >
-                    <img
-                      src={integration.logo}
-                      alt={integration.name}
-                      className={`object-contain grayscale opacity-50 hover:opacity-80 transition-all ${
-                        integration.size === "xlarge" 
-                          ? "h-12 md:h-14 max-w-[160px] md:max-w-[180px]" 
-                          : integration.size === "large" 
-                            ? "h-10 md:h-12 max-w-[140px] md:max-w-[160px]" 
-                            : "h-6 md:h-8 max-w-[120px] md:max-w-[140px]"
-                      }`}
-                    />
-                  </div>
-                ))}
-              </div>
-            </div>
-          </motion.div>
-        )}
       </div>
     </section>
   );
