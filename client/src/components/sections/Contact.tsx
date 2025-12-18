@@ -20,7 +20,7 @@ import wealthboxLogo from "@assets/wealthbox-logo-padded_1766006489944.webp";
 const integrations = [
   { name: "Fidelity", logo: fidelityLogo, size: "xlarge" },
   { name: "Broadridge", logo: broadridgeLogo, size: "default" },
-  { name: "Charles Schwab", logo: schwabLogo, size: "xlarge" },
+  { name: "Charles Schwab", logo: schwabLogo, size: "xxlarge" },
   { name: "BNY Pershing", logo: pershingLogo, size: "default" },
   { name: "Envestnet", logo: envestnetLogo, size: "default" },
   { name: "RightBridge", logo: rightbridgeLogo, size: "default" },
@@ -127,11 +127,13 @@ export default function Contact({ showTicker = true }: ContactProps) {
                       src={integration.logo}
                       alt={integration.name}
                       className={`object-contain grayscale opacity-50 hover:opacity-80 transition-all ${
-                        integration.size === "xlarge" 
-                          ? "h-12 md:h-14 max-w-[160px] md:max-w-[180px]" 
-                          : integration.size === "large" 
-                            ? "h-10 md:h-12 max-w-[140px] md:max-w-[160px]" 
-                            : "h-6 md:h-8 max-w-[120px] md:max-w-[140px]"
+                        integration.size === "xxlarge"
+                          ? "h-14 md:h-16 max-w-[180px] md:max-w-[200px]"
+                          : integration.size === "xlarge" 
+                            ? "h-12 md:h-14 max-w-[160px] md:max-w-[180px]" 
+                            : integration.size === "large" 
+                              ? "h-10 md:h-12 max-w-[140px] md:max-w-[160px]" 
+                              : "h-6 md:h-8 max-w-[120px] md:max-w-[140px]"
                       }`}
                     />
                   </div>
