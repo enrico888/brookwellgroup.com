@@ -115,7 +115,6 @@ export default function Contact({ showTicker = true }: ContactProps) {
               Seamless Integrations
             </p>
             <div className="ticker-container relative overflow-hidden">
-              <div className="ticker-mask" />
               <div className="ticker-track">
                 {[...integrations, ...integrations, ...integrations, ...integrations].map((integration, index) => (
                   <div
