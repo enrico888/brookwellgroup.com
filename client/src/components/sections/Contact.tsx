@@ -25,7 +25,7 @@ const integrations = [
   { name: "Envestnet", logo: envestnetLogo, size: "default" },
   { name: "RightBridge", logo: rightbridgeLogo, size: "default" },
   { name: "Redtail", logo: redtailLogo, size: "large" },
-  { name: "Salesforce", logo: salesforceLogo, size: "default" },
+  { name: "Salesforce", logo: salesforceLogo, size: "large" },
   { name: "Wealthbox", logo: wealthboxLogo, size: "default" },
 ];
 
