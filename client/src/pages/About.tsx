@@ -56,7 +56,7 @@ export default function About() {
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              className="max-w-3xl"
+              className="max-w-3xl mx-auto text-center"
             >
               <p className="text-xs uppercase tracking-[0.2em] text-muted-foreground mb-4">
                 About Us
@@ -79,12 +79,12 @@ export default function About() {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="mb-12"
+              className="mb-12 text-center"
             >
               <h2 className="text-2xl md:text-3xl font-semibold tracking-tight mb-4">
                 Our Team
               </h2>
-              <p className="text-muted-foreground max-w-2xl">
+              <p className="text-muted-foreground max-w-2xl mx-auto">
                 Industry veterans and technologists united by a shared mission to modernize 
                 financial services operations.
               </p>
@@ -131,9 +131,9 @@ export default function About() {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="grid lg:grid-cols-2 gap-12 items-center"
+              className="max-w-3xl mx-auto"
             >
-              <div>
+              <div className="text-center mb-12">
                 <h2 className="text-2xl md:text-3xl font-semibold tracking-tight mb-4">
                   What We Believe
                 </h2>
@@ -141,23 +141,21 @@ export default function About() {
                   Our values guide every product decision, client interaction, and team collaboration.
                 </p>
               </div>
-              <div>
-                <ul className="space-y-4">
-                  {values.map((value, index) => (
-                    <motion.li
-                      key={index}
-                      initial={{ opacity: 0, x: 20 }}
-                      whileInView={{ opacity: 1, x: 0 }}
-                      viewport={{ once: true }}
-                      transition={{ delay: index * 0.1 }}
-                      className="flex items-start gap-3"
-                    >
-                      <span className="w-1.5 h-1.5 rounded-full bg-foreground/40 mt-2 flex-shrink-0" />
-                      <span className="text-muted-foreground">{value}</span>
-                    </motion.li>
-                  ))}
-                </ul>
-              </div>
+              <ul className="space-y-4">
+                {values.map((value, index) => (
+                  <motion.li
+                    key={index}
+                    initial={{ opacity: 0, y: 10 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ delay: index * 0.1 }}
+                    className="flex items-start gap-3"
+                  >
+                    <span className="w-1.5 h-1.5 rounded-full bg-foreground/40 mt-2 flex-shrink-0" />
+                    <span className="text-muted-foreground">{value}</span>
+                  </motion.li>
+                ))}
+              </ul>
             </motion.div>
           </div>
         </section>
