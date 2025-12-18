@@ -162,7 +162,7 @@ export default function About() {
           </div>
         </section>
 
-        <Contact />
+        <Contact showTicker={false} />
       </main>
 
       <Footer />
