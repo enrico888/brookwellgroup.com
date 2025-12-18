@@ -54,7 +54,7 @@ function RotatingWord() {
 
   return (
     <span 
-      className="relative inline-grid items-center w-[200px] sm:w-[280px] md:w-[400px] lg:w-[500px] overflow-visible text-left flex-shrink-0"
+      className="relative inline-grid items-center w-[200px] sm:w-[280px] md:w-[400px] lg:w-[500px] overflow-visible text-center sm:text-left flex-shrink-0"
       style={{ minHeight: "1.5em" }}
     >
       <AnimatePresence mode="wait">
@@ -109,10 +109,12 @@ export default function Hero({ onGetStarted, onLearnMore }: HeroProps) {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.1 }}
-          className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold tracking-tight leading-normal mb-6 flex flex-nowrap items-center justify-center"
+          className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold tracking-tight leading-normal mb-6 flex flex-col sm:flex-row sm:flex-nowrap items-center justify-center"
           data-testid="text-hero-headline"
         >
-          <span className="flex-shrink-0">Agentic&nbsp;</span><RotatingWord />
+          <span className="flex-shrink-0">Agentic</span>
+          <span className="hidden sm:inline">&nbsp;</span>
+          <RotatingWord />
         </motion.h1>
 
         <motion.p
