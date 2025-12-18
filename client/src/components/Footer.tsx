@@ -1,3 +1,4 @@
+import { Link } from "wouter";
 import logoIcon from "@assets/logo-icon_(1)_1765582535278.png";
 
 export default function Footer() {
@@ -10,8 +11,8 @@ export default function Footer() {
       { label: "Client Stories", href: "#stories" },
     ],
     company: [
-      { label: "About Us", href: "#about" },
-      { label: "Talk to an Expert", href: "#contact" },
+      { label: "About Us", href: "/about", isRoute: true },
+      { label: "Talk to an Expert", href: "#contact", isRoute: false },
     ],
     legal: [
       { label: "Privacy Policy", href: "#" },
@@ -71,13 +72,23 @@ export default function Footer() {
             <ul className="space-y-3">
               {links.company.map((link) => (
                 <li key={link.label}>
-                  <button
-                    onClick={() => handleClick(link.href)}
-                    className="text-sm text-muted-foreground hover:text-foreground transition-colors"
-                    data-testid={`link-footer-${link.label.toLowerCase()}`}
-                  >
-                    {link.label}
-                  </button>
+                  {link.isRoute ? (
+                    <Link
+                      href={link.href}
+                      className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+                      data-testid={`link-footer-${link.label.toLowerCase().replace(/\s/g, "-")}`}
+                    >
+                      {link.label}
+                    </Link>
+                  ) : (
+                    <button
+                      onClick={() => handleClick(link.href)}
+                      className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+                      data-testid={`link-footer-${link.label.toLowerCase().replace(/\s/g, "-")}`}
+                    >
+                      {link.label}
+                    </button>
+                  )}
                 </li>
               ))}
             </ul>
