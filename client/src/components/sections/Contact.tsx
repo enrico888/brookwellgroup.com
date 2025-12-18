@@ -10,7 +10,7 @@ import { Mail, CheckCircle2 } from "lucide-react";
 import fidelityLogo from "@assets/Fidelity-Logo_1766096201283.png";
 import broadridgeLogo from "@assets/Broadridge_Financial_Solutions_Logo.svg_1766006489944.png";
 import schwabLogo from "@assets/charles-schwab-2-logo-png-transparent_1766096201283.webp";
-import pershingLogo from "@assets/images_1766006489944.png";
+import pershingLogo from "@assets/BNY_pershing_1766096298607.png";
 import envestnetLogo from "@assets/Envestnet-logo_1766096201283.png";
 import rightbridgeLogo from "@assets/6d0948863d66a53d716a8555d0668cb2_1766096201283.png";
 import redtailLogo from "@assets/redtail_PNG_1766006783005.png";
