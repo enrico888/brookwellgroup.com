@@ -1,7 +1,8 @@
 import { useState } from "react";
 import { Card } from "@/components/ui/card";
 import { motion, AnimatePresence } from "framer-motion";
-import { AlertTriangle, Lightbulb, TrendingUp, Quote } from "lucide-react";
+import { AlertTriangle, Lightbulb, TrendingUp, Quote, ChevronLeft, ChevronRight } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 interface Story {
   id: string;
@@ -116,6 +117,14 @@ export default function ClientStories() {
   const [activeStory, setActiveStory] = useState(stories[0].id);
   const [activeTestimonial, setActiveTestimonial] = useState(0);
   const currentStory = stories.find((s) => s.id === activeStory) || stories[0];
+
+  const nextTestimonial = () => {
+    setActiveTestimonial((prev) => (prev + 1) % testimonials.length);
+  };
+
+  const prevTestimonial = () => {
+    setActiveTestimonial((prev) => (prev - 1 + testimonials.length) % testimonials.length);
+  };
 
   return (
     <section id="stories" className="py-32 px-6 md:px-12 lg:px-16 bg-muted/30" data-testid="section-client-stories">
@@ -234,49 +243,55 @@ export default function ClientStories() {
             Client Testimonials
           </p>
 
-          <div className="relative max-w-3xl mx-auto">
-            <AnimatePresence mode="wait">
-              <motion.div
-                key={activeTestimonial}
-                initial={{ opacity: 0, x: 20 }}
-                animate={{ opacity: 1, x: 0 }}
-                exit={{ opacity: 0, x: -20 }}
-                transition={{ duration: 0.3 }}
-                className="text-center px-12"
-              >
-                <Quote className="h-8 w-8 mx-auto mb-6 text-muted-foreground/30" />
-                <p 
-                  className="text-xl md:text-2xl font-light leading-relaxed text-foreground/90 mb-8"
-                  data-testid={`testimonial-quote-${activeTestimonial}`}
-                >
-                  "{testimonials[activeTestimonial].quote}"
-                </p>
-                <div>
-                  <p className="text-sm font-medium tracking-wide" data-testid={`testimonial-name-${activeTestimonial}`}>
-                    {testimonials[activeTestimonial].name}
-                  </p>
-                  <p className="text-xs text-muted-foreground mt-1">
-                    {testimonials[activeTestimonial].title}, {testimonials[activeTestimonial].company}
-                  </p>
-                </div>
-              </motion.div>
-            </AnimatePresence>
-          </div>
+          <div className="relative max-w-3xl mx-auto flex items-center gap-4">
+            <Button
+              variant="ghost"
+              size="icon"
+              onClick={prevTestimonial}
+              className="flex-shrink-0"
+              data-testid="button-testimonial-prev"
+            >
+              <ChevronLeft className="h-5 w-5" />
+            </Button>
 
-          {/* Dots indicator */}
-          <div className="flex justify-center gap-2 mt-8">
-            {testimonials.map((_, index) => (
-              <button
-                key={index}
-                onClick={() => setActiveTestimonial(index)}
-                className={`w-2 h-2 rounded-full transition-all ${
-                  index === activeTestimonial
-                    ? "bg-foreground w-6"
-                    : "bg-muted-foreground/30"
-                }`}
-                data-testid={`button-testimonial-dot-${index}`}
-              />
-            ))}
+            <div className="flex-1">
+              <AnimatePresence mode="wait">
+                <motion.div
+                  key={activeTestimonial}
+                  initial={{ opacity: 0, x: 20 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  exit={{ opacity: 0, x: -20 }}
+                  transition={{ duration: 0.3 }}
+                  className="text-center"
+                >
+                  <Quote className="h-8 w-8 mx-auto mb-6 text-muted-foreground/30" />
+                  <p 
+                    className="text-xl md:text-2xl font-light leading-relaxed text-foreground/90 mb-8"
+                    data-testid={`testimonial-quote-${activeTestimonial}`}
+                  >
+                    "{testimonials[activeTestimonial].quote}"
+                  </p>
+                  <div>
+                    <p className="text-sm font-medium tracking-wide" data-testid={`testimonial-name-${activeTestimonial}`}>
+                      {testimonials[activeTestimonial].name}
+                    </p>
+                    <p className="text-xs text-muted-foreground mt-1">
+                      {testimonials[activeTestimonial].title}, {testimonials[activeTestimonial].company}
+                    </p>
+                  </div>
+                </motion.div>
+              </AnimatePresence>
+            </div>
+
+            <Button
+              variant="ghost"
+              size="icon"
+              onClick={nextTestimonial}
+              className="flex-shrink-0"
+              data-testid="button-testimonial-next"
+            >
+              <ChevronRight className="h-5 w-5" />
+            </Button>
           </div>
         </motion.div>
       </div>
