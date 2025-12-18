@@ -33,14 +33,21 @@ export default function Navigation({ onNavigate }: NavigationProps) {
     if (isRoute) {
       return;
     }
+    
+    // First try to scroll to element on current page
+    const element = document.querySelector(href);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+      onNavigate?.(href);
+      return;
+    }
+    
+    // If element not found and not on home page, redirect to home with hash
     if (location !== "/") {
       window.location.href = "/" + href;
       return;
     }
-    const element = document.querySelector(href);
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
-    }
+    
     onNavigate?.(href);
   };
 
