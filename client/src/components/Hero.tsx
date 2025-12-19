@@ -124,8 +124,7 @@ export default function Hero({ onGetStarted, onLearnMore }: HeroProps) {
           className="text-lg text-muted-foreground max-w-md mx-auto mb-10 leading-relaxed"
           data-testid="text-hero-subheadline"
         >
-          We help financial services firms harness AI to automate complex
-          processes and navigate advisor transitions with confidence.
+          We help financial services firms automate complex workflows and take control of their data.
         </motion.p>
 
         <motion.div
