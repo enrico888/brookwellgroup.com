@@ -26,20 +26,20 @@ const stories: Story[] = [
   {
     id: "ria-firm",
     company: "Regional RIA",
-    title: "Manual client reporting consumed 40+ hours weekly",
+    title: "Manual processes and broken APIs slowing operations",
     problem: {
       headline: "The Challenge",
-      description: "A growing RIA firm was spending 40+ hours weekly on manual client reporting, leading to delays and errors that frustrated both advisors and clients.",
+      description: "Very manual process prone to errors with broken APIs creating bottlenecks across the organization.",
     },
     solution: {
       headline: "Our Approach",
-      description: "We implemented an AI-powered reporting workflow that automatically aggregated data from multiple custodians and generated personalized client reports.",
+      description: "We extracted data and handwriting from PDFs, fixed broken APIs, and deployed AI to automatically create new accounts in M&O.",
     },
     results: {
       metrics: [
-        { value: "85%", label: "Time Saved" },
-        { value: "99.9%", label: "Accuracy Rate" },
-        { value: "3x", label: "Client Growth" },
+        { value: "70%", label: "Time Saved" },
+        { value: "95%", label: "Fewer Errors" },
+        { value: "100%", label: "Compliance" },
       ],
     },
   },
