@@ -87,7 +87,7 @@ export default function Hero({ onGetStarted, onLearnMore }: HeroProps) {
       data-testid="section-hero"
     >
       <div
-        className="absolute inset-0 opacity-[0.02]"
+        className="absolute inset-0 opacity-[0.06]"
         style={{
           backgroundImage: `radial-gradient(circle at 1px 1px, currentColor 1px, transparent 1px)`,
           backgroundSize: "32px 32px",
