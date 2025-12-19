@@ -25,7 +25,7 @@ interface Story {
 const stories: Story[] = [
   {
     id: "broker-dealer-ao",
-    company: "Broker-Dealer",
+    company: "RIA",
     title: "Account opening bottlenecked by manual processes",
     problem: {
       headline: "The Challenge",
