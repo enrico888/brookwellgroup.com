@@ -1,6 +1,5 @@
 import { useEffect } from "react";
 import { motion } from "framer-motion";
-import { Card } from "@/components/ui/card";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import Contact from "@/components/sections/Contact";
@@ -99,13 +98,13 @@ export default function About() {
                   viewport={{ once: true }}
                   transition={{ delay: index * 0.1 }}
                 >
-                  <Card className="p-6 h-full flex flex-col items-center text-center" data-testid={`card-team-${index}`}>
-                    <div className="w-20 h-20 rounded-full bg-muted flex items-center justify-center mb-4">
-                      <span className="text-xl font-medium text-muted-foreground">
+                  <div className="flex flex-col items-center text-center" data-testid={`card-team-${index}`}>
+                    <div className="w-40 h-40 md:w-48 md:h-48 rounded-full bg-muted flex items-center justify-center mb-5">
+                      <span className="text-4xl md:text-5xl font-medium text-muted-foreground">
                         {member.name.split(" ").map(n => n[0]).join("")}
                       </span>
                     </div>
-                    <h3 className="font-medium mb-1">{member.name}</h3>
+                    <h3 className="font-semibold text-lg mb-1">{member.name}</h3>
                     <p className="text-sm text-muted-foreground/70 mb-3">{member.title}</p>
                     <a
                       href={member.linkedin}
@@ -115,7 +114,7 @@ export default function About() {
                       <Linkedin className="h-4 w-4" />
                       <span>LinkedIn</span>
                     </a>
-                  </Card>
+                  </div>
                 </motion.div>
               ))}
             </div>
