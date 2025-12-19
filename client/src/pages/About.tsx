@@ -90,7 +90,7 @@ export default function About() {
               </p>
             </motion.div>
 
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
               {teamMembers.map((member, index) => (
                 <motion.div
                   key={member.name}
@@ -99,25 +99,27 @@ export default function About() {
                   viewport={{ once: true }}
                   transition={{ delay: index * 0.1 }}
                 >
-                  <Card className="p-6 h-full flex flex-col" data-testid={`card-team-${index}`}>
-                    <div className="w-16 h-16 rounded-full bg-muted mb-4 flex items-center justify-center">
-                      <span className="text-xl font-medium text-muted-foreground">
+                  <Card className="p-6 h-full flex flex-row gap-6" data-testid={`card-team-${index}`}>
+                    <div className="w-24 h-24 rounded-full bg-muted flex-shrink-0 flex items-center justify-center">
+                      <span className="text-2xl font-medium text-muted-foreground">
                         {member.name.split(" ").map(n => n[0]).join("")}
                       </span>
                     </div>
-                    <h3 className="font-medium mb-1">{member.name}</h3>
-                    <p className="text-sm text-muted-foreground/70 mb-3">{member.title}</p>
-                    <p className="text-sm text-muted-foreground leading-relaxed flex-1">
-                      {member.bio}
-                    </p>
-                    <a
-                      href={member.linkedin}
-                      className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors mt-4"
-                      data-testid={`link-linkedin-${index}`}
-                    >
-                      <Linkedin className="h-4 w-4" />
-                      <span>LinkedIn</span>
-                    </a>
+                    <div className="flex flex-col">
+                      <h3 className="font-medium mb-1">{member.name}</h3>
+                      <p className="text-sm text-muted-foreground/70 mb-3">{member.title}</p>
+                      <p className="text-sm text-muted-foreground leading-relaxed flex-1">
+                        {member.bio}
+                      </p>
+                      <a
+                        href={member.linkedin}
+                        className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors mt-4"
+                        data-testid={`link-linkedin-${index}`}
+                      >
+                        <Linkedin className="h-4 w-4" />
+                        <span>LinkedIn</span>
+                      </a>
+                    </div>
                   </Card>
                 </motion.div>
               ))}
