@@ -1,8 +1,7 @@
 import { useState } from "react";
 import { Card } from "@/components/ui/card";
 import { motion, AnimatePresence } from "framer-motion";
-import { AlertTriangle, Lightbulb, TrendingUp, Quote, ChevronLeft, ChevronRight } from "lucide-react";
-import { Button } from "@/components/ui/button";
+import { AlertTriangle, Lightbulb, TrendingUp, Quote } from "lucide-react";
 
 interface Story {
   id: string;
@@ -115,16 +114,7 @@ const testimonials: Testimonial[] = [
 
 export default function ClientStories() {
   const [activeStory, setActiveStory] = useState(stories[0].id);
-  const [activeTestimonial, setActiveTestimonial] = useState(0);
   const currentStory = stories.find((s) => s.id === activeStory) || stories[0];
-
-  const nextTestimonial = () => {
-    setActiveTestimonial((prev) => (prev + 1) % testimonials.length);
-  };
-
-  const prevTestimonial = () => {
-    setActiveTestimonial((prev) => (prev - 1 + testimonials.length) % testimonials.length);
-  };
 
   return (
     <section id="stories" className="py-32 px-6 md:px-12 lg:px-16 bg-muted/30" data-testid="section-client-stories">
@@ -231,67 +221,28 @@ export default function ClientStories() {
           </motion.div>
         </AnimatePresence>
 
-        {/* Testimonials Section */}
+        {/* Testimonial Quote */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="mt-24"
+          className="mt-24 max-w-3xl mx-auto text-center"
           data-testid="testimonials-section"
         >
-          <p className="text-xs uppercase tracking-[0.2em] text-muted-foreground text-center mb-12">
-            Client Testimonials
+          <Quote className="h-8 w-8 mx-auto mb-6 text-muted-foreground/30" />
+          <p 
+            className="text-xl md:text-2xl font-light leading-relaxed text-foreground/90 mb-8"
+            data-testid="testimonial-quote"
+          >
+            "{testimonials[0].quote}"
           </p>
-
-          <div className="relative max-w-3xl mx-auto flex items-center gap-4">
-            <Button
-              variant="ghost"
-              size="icon"
-              onClick={prevTestimonial}
-              className="flex-shrink-0"
-              data-testid="button-testimonial-prev"
-            >
-              <ChevronLeft className="h-5 w-5" />
-            </Button>
-
-            <div className="flex-1">
-              <AnimatePresence mode="wait">
-                <motion.div
-                  key={activeTestimonial}
-                  initial={{ opacity: 0, x: 20 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  exit={{ opacity: 0, x: -20 }}
-                  transition={{ duration: 0.3 }}
-                  className="text-center"
-                >
-                  <Quote className="h-8 w-8 mx-auto mb-6 text-muted-foreground/30" />
-                  <p 
-                    className="text-xl md:text-2xl font-light leading-relaxed text-foreground/90 mb-8"
-                    data-testid={`testimonial-quote-${activeTestimonial}`}
-                  >
-                    "{testimonials[activeTestimonial].quote}"
-                  </p>
-                  <div>
-                    <p className="text-sm font-medium tracking-wide" data-testid={`testimonial-name-${activeTestimonial}`}>
-                      {testimonials[activeTestimonial].name}
-                    </p>
-                    <p className="text-xs text-muted-foreground mt-1">
-                      {testimonials[activeTestimonial].title}, {testimonials[activeTestimonial].company}
-                    </p>
-                  </div>
-                </motion.div>
-              </AnimatePresence>
-            </div>
-
-            <Button
-              variant="ghost"
-              size="icon"
-              onClick={nextTestimonial}
-              className="flex-shrink-0"
-              data-testid="button-testimonial-next"
-            >
-              <ChevronRight className="h-5 w-5" />
-            </Button>
+          <div>
+            <p className="text-sm font-medium tracking-wide" data-testid="testimonial-name">
+              {testimonials[0].name}
+            </p>
+            <p className="text-xs text-muted-foreground mt-1">
+              {testimonials[0].title}, {testimonials[0].company}
+            </p>
           </div>
         </motion.div>
       </div>
