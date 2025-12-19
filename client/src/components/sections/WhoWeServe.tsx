@@ -4,7 +4,6 @@ import { Building2, Briefcase } from "lucide-react";
 
 const riaFeatures = [
   "Fragmented data across custodians, CRMs and workflow platforms",
-  "Highly customized client portfolios that resist standardization",
   "Lean operations and compliance teams managing growing complexity",
   "Pressure to scale AUM without adding headcount",
 ];
