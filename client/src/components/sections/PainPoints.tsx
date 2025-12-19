@@ -9,14 +9,14 @@ const painPoints = [
     description: "Client data scattered across multiple systems, custodians, and platforms makes transitions chaotic and error-prone.",
   },
   {
-    icon: Clock,
-    title: "Time-Consuming Processes",
-    description: "Manual data mapping, paperwork, and coordination consume weeks of valuable time and resources.",
-  },
-  {
     icon: Users,
     title: "Client Anxiety",
     description: "Poor communication and delays during transitions erode client trust and increase attrition risk.",
+  },
+  {
+    icon: Clock,
+    title: "Time-Consuming Processes",
+    description: "Manual data mapping, paperwork, and coordination consume weeks of valuable time and resources.",
   },
 ];
 
