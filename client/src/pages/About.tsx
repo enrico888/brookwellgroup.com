@@ -105,15 +105,12 @@ export default function About() {
                         {member.name.split(" ").map(n => n[0]).join("")}
                       </span>
                     </div>
-                    <div className="flex flex-col">
+                    <div className="flex flex-col justify-center">
                       <h3 className="font-medium mb-1">{member.name}</h3>
                       <p className="text-sm text-muted-foreground/70 mb-3">{member.title}</p>
-                      <p className="text-sm text-muted-foreground leading-relaxed flex-1">
-                        {member.bio}
-                      </p>
                       <a
                         href={member.linkedin}
-                        className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors mt-4"
+                        className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors"
                         data-testid={`link-linkedin-${index}`}
                       >
                         <Linkedin className="h-4 w-4" />
