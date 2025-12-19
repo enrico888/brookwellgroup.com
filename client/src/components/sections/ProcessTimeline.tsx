@@ -1,50 +1,61 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Search, ClipboardList, Play, CheckCircle2, ChevronDown } from "lucide-react";
+import { Users, Eye, Database, Cpu, Link, ChevronDown } from "lucide-react";
 
 const steps = [
   {
-    icon: Search,
-    title: "Analysis",
-    description: "We analyze your current systems, data structures, and client portfolio to create a comprehensive transition plan.",
+    icon: Users,
+    title: "White Glove Support",
+    description: "Expert-led support for transitioning advisors, with dedicated specialists guiding every step of the process.",
     expandedContent: [
-      "Deep dive into existing technology stack and data sources",
-      "Client segmentation and priority assessment",
-      "Risk identification and mitigation planning",
-      "Timeline and resource requirement estimation",
+      "Dedicated transition specialist assigned to your team",
+      "Regular check-ins and progress updates",
+      "On-call support for urgent issues",
+      "Best practices from hundreds of successful transitions",
     ],
   },
   {
-    icon: ClipboardList,
-    title: "Planning",
-    description: "AI generates detailed migration scripts, client communication templates, and timeline milestones.",
+    icon: Eye,
+    title: "Transparency",
+    description: "We make clear what data is required and track progress so you always know where things stand.",
     expandedContent: [
-      "Automated migration script generation",
-      "Custom client communication workflows",
-      "Milestone tracking and approval gates",
-      "Contingency planning for edge cases",
+      "Clear data requirements checklist upfront",
+      "Real-time progress dashboards",
+      "Milestone tracking and notifications",
+      "Complete visibility into the transition timeline",
     ],
   },
   {
-    icon: Play,
-    title: "Execution",
-    description: "Automated data migration with real-time monitoring, exception handling, and progress tracking.",
+    icon: Database,
+    title: "Data Collection",
+    description: "We help advisors collect their data from vendors, custodians, and aggregators.",
     expandedContent: [
-      "Parallel processing for faster migrations",
-      "Real-time validation and error detection",
-      "Automated exception handling and escalation",
-      "Live dashboard for stakeholder visibility",
+      "Direct integrations with major custodians",
+      "Vendor data extraction support",
+      "Aggregator data consolidation",
+      "Secure data handling and transfer",
     ],
   },
   {
-    icon: CheckCircle2,
-    title: "Validation",
-    description: "Comprehensive quality assurance checks ensure data integrity and account accuracy post-transition.",
+    icon: Cpu,
+    title: "AI Validation",
+    description: "Our AI normalizes and pre-screens data against validations to catch issues before they become problems.",
     expandedContent: [
-      "Automated reconciliation across all accounts",
-      "Data integrity verification reports",
-      "Client-facing confirmation workflows",
-      "Post-transition support and monitoring",
+      "Automated data normalization",
+      "Pre-screening against validation rules",
+      "Error detection and flagging",
+      "Data quality scoring and reporting",
+    ],
+  },
+  {
+    icon: Link,
+    title: "Integration",
+    description: "Integrate with your current workflow to open and transfer accounts into your systems seamlessly.",
+    expandedContent: [
+      "Connect to your existing tech stack",
+      "Automated account opening workflows",
+      "Transfer processing integration",
+      "Post-transition system sync",
     ],
   },
 ];
@@ -86,11 +97,11 @@ export default function ProcessTimeline() {
         >
           <h3 className="text-xl font-semibold mb-2">How We Make It Better</h3>
           <p className="text-muted-foreground">
-            Our proven four-step process transforms complex transitions into smooth operations.
+            Our proven process transforms complex transitions into smooth operations.
           </p>
         </motion.div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
+        <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-4">
           {steps.map((step, index) => {
             const isExpanded = activeStep === index;
             
