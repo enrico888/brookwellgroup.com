@@ -44,22 +44,22 @@ const stories: Story[] = [
     },
   },
   {
-    id: "broker-dealer",
-    company: "Mid-Size Broker-Dealer",
-    title: "Compliance reviews creating bottlenecks",
+    id: "data-centralization",
+    company: "Broker-Dealer",
+    title: "Centralizing client data across systems",
     problem: {
       headline: "The Challenge",
-      description: "Compliance reviews were creating significant bottlenecks, with each trade requiring manual oversight and documentation.",
+      description: "Data was out of date between systems with no source of truth. Clients weren't working for the firm, and they didn't know who was registered for e-delivery, leading to wasted mail-outs.",
     },
     solution: {
       headline: "Our Approach",
-      description: "We deployed intelligent compliance workflows that pre-screened trades against regulations and automatically flagged only high-risk transactions for human review.",
+      description: "We used AI to pull data from change of address forms, propagated changes through bi-directional integrations, and built information dashboards to take control of the data.",
     },
     results: {
       metrics: [
-        { value: "70%", label: "Faster Reviews" },
-        { value: "50%", label: "Cost Reduction" },
-        { value: "Zero", label: "Violations" },
+        { value: "100%", label: "Data In Sync" },
+        { value: "Real-time", label: "Dashboards" },
+        { value: "40%", label: "Mail Savings" },
       ],
     },
   },
