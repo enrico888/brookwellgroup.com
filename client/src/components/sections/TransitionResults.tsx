@@ -45,7 +45,7 @@ export default function TransitionResults() {
   const metrics = [
     { value: 30, suffix: "%", label: "Faster Transitions" },
     { value: 98, suffix: "%", label: "Data Accuracy" },
-    { value: 95, suffix: "%", label: "Client Retention" },
+    { value: 95, suffix: "%", label: "Reduced NIGOS" },
   ];
 
   return (
