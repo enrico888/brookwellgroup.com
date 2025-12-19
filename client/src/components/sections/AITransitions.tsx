@@ -23,6 +23,11 @@ export default function AITransitions() {
           </p>
         </motion.div>
       </div>
+      
+      {/* Visual break divider */}
+      <div className="max-w-[1280px] mx-auto mt-24">
+        <div className="h-px bg-gradient-to-r from-transparent via-border to-transparent" />
+      </div>
     </section>
   );
 }
