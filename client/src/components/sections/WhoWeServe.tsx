@@ -3,10 +3,10 @@ import { motion } from "framer-motion";
 import { Building2, Briefcase } from "lucide-react";
 
 const riaFeatures = [
-  "Disconnected systems create manual work and unreliable data",
-  "Client onboarding and account maintenance don't scale with growth",
-  "Reporting and performance analysis require time-consuming reconciliation",
-  "Compliance oversight depends too heavily on people and spreadsheets",
+  "Fragmented data across custodians and best-of-breed platforms",
+  "Highly customized client portfolios that resist standardization",
+  "Lean operations and compliance teams managing growing complexity",
+  "Pressure to scale AUM without adding headcount",
 ];
 
 const bdFeatures = [
