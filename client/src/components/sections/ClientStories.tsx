@@ -33,7 +33,7 @@ const stories: Story[] = [
     },
     solution: {
       headline: "Our Approach",
-      description: "We extracted data and handwriting from PDFs, fixed broken APIs, and deployed AI to automatically create new accounts in M&O.",
+      description: "We extracted data and handwriting from PDFs, fixed broken APIs, and automated the creation of new accounts in M&O.",
     },
     results: {
       metrics: [
