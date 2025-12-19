@@ -24,9 +24,9 @@ interface Story {
 
 const stories: Story[] = [
   {
-    id: "ria-firm",
-    company: "Regional RIA",
-    title: "Manual processes and broken APIs slowing operations",
+    id: "broker-dealer-ao",
+    company: "Broker-Dealer",
+    title: "Account opening bottlenecked by manual processes",
     problem: {
       headline: "The Challenge",
       description: "Very manual process prone to errors with broken APIs creating bottlenecks across the organization.",
