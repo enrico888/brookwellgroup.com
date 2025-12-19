@@ -3,10 +3,10 @@ import { motion } from "framer-motion";
 import { Building2, Briefcase } from "lucide-react";
 
 const riaFeatures = [
-  "Automated portfolio rebalancing and trade execution",
-  "Intelligent client reporting and performance analytics",
-  "Streamlined client onboarding and document management",
-  "Proactive compliance monitoring and risk assessment",
+  "Disconnected systems create manual work and unreliable data",
+  "Client onboarding and account maintenance don't scale with growth",
+  "Reporting and performance analysis require time-consuming reconciliation",
+  "Compliance oversight depends too heavily on people and spreadsheets",
 ];
 
 const bdFeatures = [
