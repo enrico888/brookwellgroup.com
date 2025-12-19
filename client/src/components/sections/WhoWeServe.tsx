@@ -40,6 +40,7 @@ function AudienceCard({ icon: Icon, title, features, testId, delay }: AudienceCa
         <h3 className="text-xl font-semibold mb-6 flex-shrink-0 min-h-[56px] flex items-start">
           {title}
         </h3>
+        <p className="text-sm font-medium text-foreground/80 mb-4">Unique Challenges</p>
         <ul className="space-y-5 text-sm text-muted-foreground flex-grow">
           {features.map((feature, index) => (
             <li key={index} className="flex gap-3 leading-relaxed">
