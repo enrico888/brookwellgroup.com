@@ -70,7 +70,7 @@ export default function WhoWeServe() {
             Built for Financial Services
           </h2>
           <p className="text-muted-foreground max-w-xl mx-auto">
-            We specialize in serving RIAs and Broker-Dealers with tailored AI solutions.
+            We specialize in serving RIAs and Broker-Dealers with tailored solutions.
           </p>
         </motion.div>
 
