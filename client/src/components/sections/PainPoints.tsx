@@ -10,8 +10,8 @@ const painPoints = [
   },
   {
     icon: Users,
-    title: "Client Anxiety",
-    description: "Poor communication and delays during transitions erode client trust and increase attrition risk.",
+    title: "Restricted Interaction",
+    description: "Compliance rules prevent firms from working directly with advisors post-break, leading to delays and operational blind spots.",
   },
   {
     icon: Clock,
