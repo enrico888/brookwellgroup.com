@@ -142,7 +142,7 @@ export default function ClientStories() {
             Real Results for Real Firms
           </h2>
           <p className="text-muted-foreground max-w-xl mx-auto">
-            See how we've helped real financial services firms transform their operations.
+            See how we've helped financial services firms transform their operations.
           </p>
         </motion.div>
 
