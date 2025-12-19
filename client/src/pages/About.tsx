@@ -99,7 +99,7 @@ export default function About() {
                   transition={{ delay: index * 0.1 }}
                 >
                   <div className="flex flex-col items-center text-center" data-testid={`card-team-${index}`}>
-                    <div className="w-40 h-52 md:w-48 md:h-64 rounded-xl bg-muted flex items-center justify-center mb-5">
+                    <div className="w-full aspect-[3/4] rounded-xl bg-muted flex items-center justify-center mb-5">
                       <span className="text-4xl md:text-5xl font-medium text-muted-foreground">
                         {member.name.split(" ").map(n => n[0]).join("")}
                       </span>
