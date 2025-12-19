@@ -19,7 +19,7 @@ export default function AIWorkflows() {
             Regain Operational Control.
           </h2>
           <p className="text-muted-foreground leading-relaxed">
-            Our AI workflow solutions transform manual, time-consuming processes into intelligent, 
+            Our AI-powered solutions transform manual, time-consuming processes into intelligent, 
             automated systems that scale with your business. From client reporting to compliance 
             monitoring, we help you work smarter, not harder.
           </p>
