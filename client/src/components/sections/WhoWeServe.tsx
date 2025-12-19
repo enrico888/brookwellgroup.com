@@ -10,7 +10,7 @@ const riaFeatures = [
 
 const bdFeatures = [
   "High-volume activity across reps, branches, and products",
-  "Continuous supervision and exception handling at scale",
+  "Continuous supervision and internal auditing at scale",
   "Heavy, time-sensitive regulatory and reporting obligations",
   "Deeply interconnected legacy systems that limit agility",
 ];
