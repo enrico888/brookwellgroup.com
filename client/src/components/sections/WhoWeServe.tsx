@@ -10,10 +10,10 @@ const riaFeatures = [
 ];
 
 const bdFeatures = [
-  "AI-powered trade surveillance and compliance automation",
-  "Intelligent supervision workflows and exception handling",
-  "Automated regulatory reporting and filing preparation",
-  "Rep transition support and book movement tracking",
+  "High-volume activity across reps, branches, and products",
+  "Continuous supervision and exception handling at scale",
+  "Heavy, time-sensitive regulatory and reporting obligations",
+  "Deeply interconnected legacy systems that limit agility",
 ];
 
 interface AudienceCardProps {
