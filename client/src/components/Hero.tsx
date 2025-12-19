@@ -102,7 +102,7 @@ export default function Hero({ onGetStarted, onLearnMore }: HeroProps) {
           className="text-xs uppercase tracking-[0.2em] text-muted-foreground mb-6"
           data-testid="text-hero-eyebrow"
         >
-          AI-Powered Financial Consulting
+          AI Powered Financial Services
         </motion.p>
 
         <motion.h1
