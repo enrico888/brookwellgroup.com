@@ -25,7 +25,7 @@ interface Story {
 const stories: Story[] = [
   {
     id: "broker-dealer-ao",
-    company: "RIA",
+    company: "Broker-Dealer",
     title: "Account opening bottlenecked by manual processes",
     problem: {
       headline: "The Challenge",
@@ -45,7 +45,7 @@ const stories: Story[] = [
   },
   {
     id: "data-centralization",
-    company: "Broker-Dealer",
+    company: "RIA",
     title: "Centralizing client data across systems",
     problem: {
       headline: "The Challenge",
