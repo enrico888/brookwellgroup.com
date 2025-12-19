@@ -64,22 +64,22 @@ const stories: Story[] = [
     },
   },
   {
-    id: "wealth-manager",
-    company: "Private Wealth Manager",
-    title: "Client onboarding taking weeks",
+    id: "check-blotters",
+    company: "Broker-Dealer",
+    title: "Check blotters causing compliance SLA misses",
     problem: {
       headline: "The Challenge",
-      description: "Client onboarding was taking 2-3 weeks due to scattered paperwork and manual data entry across multiple systems.",
+      description: "Compliance issues due to missed SLAs. The firm needed to reach out to advisors to fill out missing data within tight timeframes, but the highly manual process made it difficult to keep up.",
     },
     solution: {
       headline: "Our Approach",
-      description: "We created a unified AI-driven onboarding workflow that automated document collection, verification, and system population.",
+      description: "We automated email notifications tailored to each advisor and populated systems with check data, streamlining the entire process.",
     },
     results: {
       metrics: [
-        { value: "2", label: "Days to Onboard" },
-        { value: "95%", label: "Satisfaction" },
-        { value: "60%", label: "Time Saved" },
+        { value: "100%", label: "SLA Compliance" },
+        { value: "80%", label: "Time Saved" },
+        { value: "Zero", label: "Manual Entry" },
       ],
     },
   },
