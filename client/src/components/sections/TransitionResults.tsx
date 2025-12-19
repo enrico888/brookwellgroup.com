@@ -43,8 +43,8 @@ function AnimatedCounter({ end, suffix = "", duration = 2 }: AnimatedCounterProp
 
 export default function TransitionResults() {
   const metrics = [
-    { value: 75, suffix: "%", label: "Faster Transitions" },
-    { value: 99, suffix: "%", label: "Data Accuracy" },
+    { value: 30, suffix: "%", label: "Faster Transitions" },
+    { value: 98, suffix: "%", label: "Data Accuracy" },
     { value: 95, suffix: "%", label: "Client Retention" },
   ];
 
