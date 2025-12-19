@@ -19,9 +19,7 @@ export default function AITransitions() {
             Not Mountains.
           </h2>
           <p className="text-muted-foreground leading-relaxed">
-            Advisor transitions are notoriously complex and stressful. Our AI-powered 
-            transition platform streamlines the entire process, from initial planning 
-            to final validation, ensuring a smooth experience for everyone involved.
+            Advisor transitions are notoriously complex and stressful. Our transitions team provides white-glove service to streamline the entire process, from break planning to client signature.
           </p>
         </motion.div>
       </div>
