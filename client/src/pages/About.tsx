@@ -61,7 +61,7 @@ export default function About() {
                 About Us
               </p>
               <h1 className="text-4xl md:text-5xl font-semibold tracking-tight mb-6">
-                Technology Built to Serve You; Not the Other Way Around
+                Technology Built to Serve You — Not the Other Way Around
               </h1>
               <p className="text-lg text-muted-foreground leading-relaxed">
                 Brookwell was founded on a simple belief: financial advisors should spend their time 
