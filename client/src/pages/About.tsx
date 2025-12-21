@@ -17,8 +17,8 @@ const teamMembers = [
     image: sarahPhoto,
   },
   {
-    name: "Michael Torres",
-    title: "Chief Technology Officer",
+    name: "Alex Thibault",
+    title: "Co-Founder",
     bio: "Previously led engineering at a top fintech unicorn. Expert in AI/ML systems and enterprise architecture.",
     linkedin: "#",
     image: michaelPhoto,
