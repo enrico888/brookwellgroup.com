@@ -100,41 +100,46 @@ export default function Contact({ showTicker = true }: ContactProps) {
   };
 
   return (
-    <section id="contact" className="py-32 px-6 md:px-12 lg:px-16 bg-muted/30" data-testid="section-contact">
-      <div className="max-w-[1280px] mx-auto">
-        {/* Integration Ticker */}
-        {showTicker && (
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="mb-24"
-            data-testid="integration-ticker"
-          >
-            <p className="text-xs uppercase tracking-[0.2em] text-muted-foreground text-center mb-8">
-              Technologies We Work With
-            </p>
-            <div className="ticker-container relative overflow-hidden">
-              <div className="ticker-track">
-                {[...integrations, ...integrations, ...integrations, ...integrations].map((integration, index) => (
-                  <div
-                    key={`${integration.name}-${index}`}
-                    className="ticker-item flex items-center justify-center px-8 md:px-12"
-                    data-testid={`ticker-logo-${integration.name.toLowerCase().replace(/\s/g, "-")}-${index}`}
-                  >
-                    <img
-                      src={integration.logo}
-                      alt={integration.name}
-                      className="object-contain grayscale opacity-50 hover:opacity-80 transition-all h-8 md:h-10 max-w-[160px] md:max-w-[180px]"
-                    />
-                  </div>
-                ))}
+    <>
+      {/* Integration Ticker Section */}
+      {showTicker && (
+        <section className="py-20 px-6 md:px-12 lg:px-16" data-testid="section-integrations">
+          <div className="max-w-[1280px] mx-auto">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              data-testid="integration-ticker"
+            >
+              <p className="text-xs uppercase tracking-[0.2em] text-muted-foreground text-center mb-8">
+                Technologies We Work With
+              </p>
+              <div className="ticker-container relative overflow-hidden">
+                <div className="ticker-track">
+                  {[...integrations, ...integrations, ...integrations, ...integrations].map((integration, index) => (
+                    <div
+                      key={`${integration.name}-${index}`}
+                      className="ticker-item flex items-center justify-center px-8 md:px-12"
+                      data-testid={`ticker-logo-${integration.name.toLowerCase().replace(/\s/g, "-")}-${index}`}
+                    >
+                      <img
+                        src={integration.logo}
+                        alt={integration.name}
+                        className="object-contain grayscale opacity-50 hover:opacity-80 transition-all h-8 md:h-10 max-w-[160px] md:max-w-[180px]"
+                      />
+                    </div>
+                  ))}
+                </div>
               </div>
-            </div>
-          </motion.div>
-        )}
+            </motion.div>
+          </div>
+        </section>
+      )}
 
-        <div className="grid lg:grid-cols-2 gap-16">
+      {/* Contact Section */}
+      <section id="contact" className="py-32 px-6 md:px-12 lg:px-16 bg-muted/30" data-testid="section-contact">
+        <div className="max-w-[1280px] mx-auto">
+          <div className="grid lg:grid-cols-2 gap-16">
           <motion.div
             initial={{ opacity: 0, x: -20 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -262,5 +267,6 @@ export default function Contact({ showTicker = true }: ContactProps) {
         </div>
       </div>
     </section>
+    </>
   );
 }
