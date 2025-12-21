@@ -30,12 +30,6 @@ const teamMembers = [
     linkedin: "https://www.linkedin.com/in/jenlmenard/",
     image: jenPhoto,
   },
-  {
-    name: "David Kim",
-    title: "VP of Product",
-    bio: "Former product leader at major custodians. Deep expertise in advisor workflows and operational efficiency.",
-    linkedin: "#",
-  },
 ];
 
 const values = [
@@ -95,7 +89,7 @@ export default function About() {
               </p>
             </motion.div>
 
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
+            <div className="grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-6">
               {teamMembers.map((member, index) => (
                 <motion.div
                   key={member.name}
