@@ -5,7 +5,8 @@ import Footer from "@/components/Footer";
 import Contact from "@/components/sections/Contact";
 import { Linkedin } from "lucide-react";
 import sarahPhoto from "@assets/p1_linkedin__..,__1766320618582.jpg";
-import emilyPhoto from "@assets/emily_rodriguez.png";
+import jenPhoto from "@assets/emily_rodriguez.png";
+import michaelPhoto from "@assets/1694480036866_1766320851717.jpeg";
 
 const teamMembers = [
   {
@@ -20,13 +21,14 @@ const teamMembers = [
     title: "Chief Technology Officer",
     bio: "Previously led engineering at a top fintech unicorn. Expert in AI/ML systems and enterprise architecture.",
     linkedin: "#",
+    image: michaelPhoto,
   },
   {
     name: "Jen Menard",
     title: "Head of Transitions",
     bio: "10+ years helping financial advisors navigate technology transitions. Dedicated to seamless client experiences.",
     linkedin: "#",
-    image: emilyPhoto,
+    image: jenPhoto,
   },
   {
     name: "David Kim",
