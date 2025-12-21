@@ -5,6 +5,7 @@ import Footer from "@/components/Footer";
 import Contact from "@/components/sections/Contact";
 import { Linkedin } from "lucide-react";
 import sarahPhoto from "@assets/p1_linkedin__..,__1766320618582.jpg";
+import emilyPhoto from "@assets/emily_rodriguez.png";
 
 const teamMembers = [
   {
@@ -25,6 +26,7 @@ const teamMembers = [
     title: "Head of Client Success",
     bio: "10+ years helping financial advisors navigate technology transitions. Dedicated to seamless client experiences.",
     linkedin: "#",
+    image: emilyPhoto,
   },
   {
     name: "David Kim",
