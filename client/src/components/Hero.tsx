@@ -86,6 +86,14 @@ export default function Hero({ onGetStarted, onLearnMore }: HeroProps) {
       className="relative min-h-screen flex flex-col items-center justify-center px-6 md:px-12 lg:px-16 overflow-x-hidden"
       data-testid="section-hero"
     >
+      <div
+        className="absolute inset-0 opacity-[0.02]"
+        style={{
+          backgroundImage: `radial-gradient(circle at 1px 1px, currentColor 1px, transparent 1px)`,
+          backgroundSize: "32px 32px",
+        }}
+      />
+
       <div className="relative z-10 max-w-4xl mx-auto text-center">
         <motion.p
           initial={{ opacity: 0, y: 10 }}

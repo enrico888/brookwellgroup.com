@@ -173,14 +173,14 @@
   body {
     @apply font-sans antialiased text-foreground;
     background-color: hsl(0 0% 99%);
-    background-image: radial-gradient(circle, hsl(0 0% 50% / 0.6) 1.5px, transparent 1.5px);
+    background-image: radial-gradient(circle, hsl(0 0% 60% / 0.4) 1px, transparent 1px);
     background-size: 24px 24px;
     background-attachment: fixed;
   }
 
   .dark body {
     background-color: hsl(0 0% 5%);
-    background-image: radial-gradient(circle, hsl(0 0% 45% / 0.5) 1.5px, transparent 1.5px);
+    background-image: radial-gradient(circle, hsl(0 0% 40% / 0.35) 1px, transparent 1px);
   }
 }
 

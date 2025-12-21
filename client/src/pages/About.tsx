@@ -46,7 +46,7 @@ export default function About() {
   }, []);
 
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen bg-background">
       <Navigation />
 
       <main className="pt-[72px]">
