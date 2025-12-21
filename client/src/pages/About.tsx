@@ -22,8 +22,8 @@ const teamMembers = [
     linkedin: "#",
   },
   {
-    name: "Emily Rodriguez",
-    title: "Head of Client Success",
+    name: "Jen Menard",
+    title: "Head of Transitions",
     bio: "10+ years helping financial advisors navigate technology transitions. Dedicated to seamless client experiences.",
     linkedin: "#",
     image: emilyPhoto,
