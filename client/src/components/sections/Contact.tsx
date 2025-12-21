@@ -112,7 +112,7 @@ export default function Contact({ showTicker = true }: ContactProps) {
             data-testid="integration-ticker"
           >
             <p className="text-xs uppercase tracking-[0.2em] text-muted-foreground text-center mb-8">
-              Technologies We Integrate With
+              Technologies We Work With
             </p>
             <div className="ticker-container relative overflow-hidden">
               <div className="ticker-track">
