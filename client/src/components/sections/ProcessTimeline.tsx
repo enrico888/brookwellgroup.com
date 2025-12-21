@@ -126,7 +126,7 @@ export default function ProcessTimeline() {
                   className={`w-full text-left p-6 rounded-xl transition-all duration-200 border ${
                     isExpanded
                       ? "bg-background border-border shadow-sm"
-                      : "bg-background/50 border-transparent hover:bg-background hover:border-border/50"
+                      : "bg-muted/50 border-border/30 hover:bg-muted/70 hover:border-border/50"
                   }`}
                   data-testid={`button-step-${index}`}
                 >
