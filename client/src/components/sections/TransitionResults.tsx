@@ -68,7 +68,7 @@ export default function TransitionResults() {
         </div>
       </section>
 
-      <section className="py-20 px-6 md:px-12 lg:px-16 bg-muted/40" data-testid="section-transition-results">
+      <section className="py-20 px-6 md:px-12 lg:px-16" data-testid="section-transition-results">
         <div className="max-w-[1280px] mx-auto">
           <div className="grid md:grid-cols-3 gap-8">
             {metrics.map((metric, index) => (
