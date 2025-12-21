@@ -61,7 +61,7 @@ export default function About() {
                 About Us
               </p>
               <h1 className="text-4xl md:text-5xl font-semibold tracking-tight mb-6">
-                Simplifying Transitions for Financial Advisors
+                Technology built around you; so you can focus on crushing it
               </h1>
               <p className="text-lg text-muted-foreground leading-relaxed">
                 Brookwell was founded on a simple belief: financial advisors should spend their time 
