@@ -65,9 +65,8 @@ export default function About() {
               </h1>
               <p className="text-lg text-muted-foreground leading-relaxed">
                 Brookwell was founded on a simple belief: financial advisors should spend their time 
-                serving clients, not wrestling with outdated systems. Technology should serve you, not 
-                the other way around. We combine deep industry expertise with cutting-edge technology 
-                to make that vision a reality for firms of all sizes.
+                serving clients, not wrestling with outdated systems. We combine deep industry expertise 
+                with cutting-edge technology to make that vision a reality for firms of all sizes.
               </p>
             </motion.div>
           </div>
