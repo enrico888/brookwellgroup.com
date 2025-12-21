@@ -22,7 +22,7 @@ function DotOverlay() {
     <div
       className="fixed inset-0 pointer-events-none z-[1]"
       style={{
-        backgroundImage: `radial-gradient(circle, hsl(0 0% 50% / 0.25) 1.5px, transparent 1.5px)`,
+        backgroundImage: `radial-gradient(circle, hsl(0 0% 50% / 0.12) 1.5px, transparent 1.5px)`,
         backgroundSize: "24px 24px",
       }}
       aria-hidden="true"
