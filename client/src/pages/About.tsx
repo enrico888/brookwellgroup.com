@@ -64,8 +64,8 @@ export default function About() {
                 Technology Built to Serve You — Not the Other Way Around
               </h1>
               <p className="text-lg text-muted-foreground leading-relaxed">
-                Brookwell was founded on a simple belief: financial advisors should spend their time 
-                serving clients, not wrestling with outdated systems. We combine deep industry expertise 
+                Brookwell was founded on a simple belief: financial services firms should spend their time 
+                serving advisors, not wrestling with outdated systems. We combine deep industry expertise 
                 with cutting-edge technology to make that vision a reality for firms of all sizes.
               </p>
             </motion.div>
