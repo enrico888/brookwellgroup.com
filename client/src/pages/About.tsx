@@ -4,6 +4,7 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import Contact from "@/components/sections/Contact";
 import { Linkedin } from "lucide-react";
+import sarahPhoto from "@assets/p1_linkedin__..,__1766320618582.jpg";
 
 const teamMembers = [
   {
@@ -11,6 +12,7 @@ const teamMembers = [
     title: "CEO & Founder",
     bio: "Former Goldman Sachs VP with 15 years in financial technology. Passionate about bringing AI innovation to wealth management.",
     linkedin: "#",
+    image: sarahPhoto,
   },
   {
     name: "Michael Torres",
@@ -99,10 +101,18 @@ export default function About() {
                   transition={{ delay: index * 0.1 }}
                 >
                   <div className="flex flex-col items-center text-center" data-testid={`card-team-${index}`}>
-                    <div className="w-full aspect-[3/4] rounded-xl bg-muted flex items-center justify-center mb-5">
-                      <span className="text-4xl md:text-5xl font-medium text-muted-foreground">
-                        {member.name.split(" ").map(n => n[0]).join("")}
-                      </span>
+                    <div className="w-full aspect-[3/4] rounded-xl bg-muted flex items-center justify-center mb-5 overflow-hidden">
+                      {member.image ? (
+                        <img 
+                          src={member.image} 
+                          alt={member.name}
+                          className="w-full h-full object-cover"
+                        />
+                      ) : (
+                        <span className="text-4xl md:text-5xl font-medium text-muted-foreground">
+                          {member.name.split(" ").map(n => n[0]).join("")}
+                        </span>
+                      )}
                     </div>
                     <h3 className="font-semibold text-lg mb-1">{member.name}</h3>
                     <p className="text-sm text-muted-foreground/70 mb-3">{member.title}</p>
