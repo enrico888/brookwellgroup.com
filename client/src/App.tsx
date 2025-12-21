@@ -17,10 +17,24 @@ function Router() {
   );
 }
 
+function DotOverlay() {
+  return (
+    <div
+      className="fixed inset-0 pointer-events-none z-[1]"
+      style={{
+        backgroundImage: `radial-gradient(circle, hsl(0 0% 50% / 0.5) 1.5px, transparent 1.5px)`,
+        backgroundSize: "24px 24px",
+      }}
+      aria-hidden="true"
+    />
+  );
+}
+
 function App() {
   return (
     <QueryClientProvider client={queryClient}>
       <TooltipProvider>
+        <DotOverlay />
         <Toaster />
         <Router />
       </TooltipProvider>
