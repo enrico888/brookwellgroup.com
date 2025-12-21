@@ -27,7 +27,7 @@ const teamMembers = [
     name: "Jen Menard",
     title: "Head of Transitions",
     bio: "10+ years helping financial advisors navigate technology transitions. Dedicated to seamless client experiences.",
-    linkedin: "#",
+    linkedin: "https://www.linkedin.com/in/jenlmenard/",
     image: jenPhoto,
   },
   {
