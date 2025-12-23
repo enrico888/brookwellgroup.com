@@ -11,7 +11,7 @@ import michaelPhoto from "@assets/1694480036866_1766320851717.jpeg";
 const teamMembers = [
   {
     name: "Eric Pinto",
-    title: "Co-Founder",
+    title: "CEO, Co-Founder",
     bio: "Former Goldman Sachs VP with 15 years in financial technology. Passionate about bringing AI innovation to wealth management.",
     linkedin: "https://www.linkedin.com/in/pinto-eric/",
     image: sarahPhoto,
