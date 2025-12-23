@@ -13,20 +13,20 @@ import schwabLogo from "@assets/charles-schwab-2-logo-png-transparent_1766096201
 import pershingLogo from "@assets/BNY_pershing_1766096298607.png";
 import envestnetLogo from "@assets/Envestnet-logo_1766096201283.png";
 import rightbridgeLogo from "@assets/6d0948863d66a53d716a8555d0668cb2_1766096201283.png";
-import redtailLogo from "@assets/redtail_PNG_1766006783005.png";
+import redtailLogo from "@assets/redtail-technology-logo-png_seeklogo-409556_1766006489944.png";
 import salesforceLogo from "@assets/Salesforce.com_logo.svg_1766006489944.png";
 import wealthboxLogo from "@assets/wealthbox-logo-padded_1766006489944.webp";
 
 const integrations = [
-  { name: "Fidelity", logo: fidelityLogo, size: "xlarge" },
-  { name: "Broadridge", logo: broadridgeLogo, size: "default" },
-  { name: "Charles Schwab", logo: schwabLogo, size: "xxlarge" },
-  { name: "BNY Pershing", logo: pershingLogo, size: "default" },
-  { name: "Envestnet", logo: envestnetLogo, size: "default" },
-  { name: "RightBridge", logo: rightbridgeLogo, size: "default" },
-  { name: "Redtail", logo: redtailLogo, size: "xlarge" },
-  { name: "Salesforce", logo: salesforceLogo, size: "large" },
-  { name: "Wealthbox", logo: wealthboxLogo, size: "default" },
+  { name: "Fidelity", logo: fidelityLogo, className: "h-14 md:h-16" },
+  { name: "Broadridge", logo: broadridgeLogo, className: "h-8 md:h-10" },
+  { name: "Charles Schwab", logo: schwabLogo, className: "h-24 md:h-28" },
+  { name: "BNY Pershing", logo: pershingLogo, className: "h-8 md:h-10" },
+  { name: "Envestnet", logo: envestnetLogo, className: "h-8 md:h-10" },
+  { name: "RightBridge", logo: rightbridgeLogo, className: "h-10 md:h-12" },
+  { name: "Redtail", logo: redtailLogo, className: "h-24 md:h-28" },
+  { name: "Salesforce", logo: salesforceLogo, className: "h-8 md:h-10" },
+  { name: "Wealthbox", logo: wealthboxLogo, className: "h-8 md:h-10" },
 ];
 
 interface FormData {
@@ -139,7 +139,7 @@ export default function Contact({ showTicker = true }: ContactProps) {
                       <img
                         src={integration.logo}
                         alt={integration.name}
-                        className="object-contain grayscale opacity-50 hover:opacity-80 transition-all h-8 md:h-10 max-w-[160px] md:max-w-[180px]"
+                        className={`object-contain grayscale opacity-50 hover:opacity-80 transition-all max-w-[140px] md:max-w-[160px] ${integration.className}`}
                       />
                     </div>
                   ))}
