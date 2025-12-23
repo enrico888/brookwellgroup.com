@@ -64,7 +64,7 @@ function RotatingWord() {
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: -20 }}
           transition={{ duration: 0.25, ease: "easeInOut" }}
-          className="inline-block whitespace-nowrap pb-1 mx-auto sm:mx-0"
+          className="inline-block whitespace-nowrap pb-2 mx-auto sm:mx-0"
           style={{
             background: "linear-gradient(90deg, #2A34E5 0%, #8B5CF6 25%, #EC4899 50%, #F43F5E 75%, #F97316 100%)",
             WebkitBackgroundClip: "text",
@@ -109,7 +109,7 @@ export default function Hero({ onGetStarted, onLearnMore }: HeroProps) {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.1 }}
-          className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-semibold tracking-tight leading-normal mb-6 flex flex-col sm:flex-row sm:flex-nowrap items-center justify-center"
+          className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-semibold tracking-tight leading-tight mb-6 flex flex-col sm:flex-row sm:flex-nowrap items-center justify-center overflow-visible pb-2"
           data-testid="text-hero-headline"
         >
           <span className="flex-shrink-0">Agentic</span>
