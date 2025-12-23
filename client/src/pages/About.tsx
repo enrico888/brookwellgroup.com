@@ -18,7 +18,7 @@ const teamMembers = [
   },
   {
     name: "Alex Thibault",
-    title: "Co-Founder",
+    title: "CTO, Co-Founder",
     bio: "Previously led engineering at a top fintech unicorn. Expert in AI/ML systems and enterprise architecture.",
     linkedin: "https://www.linkedin.com/in/alex-thibault/",
     image: michaelPhoto,
