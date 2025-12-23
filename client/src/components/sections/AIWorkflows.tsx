@@ -16,7 +16,7 @@ export default function AIWorkflows() {
           <h2 className="text-3xl md:text-4xl font-semibold tracking-tight mb-6">
             Automate the Complex.
             <br />
-            Regain Operational Control.
+            Simplify your Life.
           </h2>
           <p className="text-muted-foreground leading-relaxed">
             Our AI-powered solutions transform manual, time-consuming processes into intelligent, 
