@@ -114,7 +114,7 @@ export default function Hero({ onGetStarted, onLearnMore }: HeroProps) {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.3 }}
-          className="text-lg text-muted-foreground max-w-md mx-auto mb-10 leading-relaxed"
+          className="text-lg text-muted-foreground max-w-md mx-auto mb-10 leading-relaxed px-4 sm:px-0"
           data-testid="text-hero-subheadline"
         >
           We help financial services firms automate complex workflows, take control of their data, and accelerate advisor transitions.
