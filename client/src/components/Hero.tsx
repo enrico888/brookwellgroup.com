@@ -127,6 +127,14 @@ export default function Hero({ onGetStarted, onLearnMore }: HeroProps) {
           className="flex flex-col sm:flex-row items-center justify-center gap-4"
         >
           <Button
+            variant="outline"
+            onClick={onGetStarted}
+            className="rounded-full px-6 text-sm font-normal whitespace-nowrap text-muted-foreground hover:text-foreground transition-colors duration-150 gradient-border-btn no-default-hover-elevate no-default-active-elevate"
+            data-testid="button-hero-talk-expert"
+          >
+            Talk with an Expert
+          </Button>
+          <Button
             variant="ghost"
             onClick={onLearnMore}
             className="text-muted-foreground hover:text-foreground"
