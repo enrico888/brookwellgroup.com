@@ -31,7 +31,7 @@ const steps = [
 
 export default function ProcessTimeline() {
   return (
-    <section className="py-20 px-6 md:px-12 lg:px-16 bg-muted/15" data-testid="section-process-timeline">
+    <section className="py-20 px-6 md:px-12 lg:px-16" data-testid="section-process-timeline">
       <div className="max-w-[1280px] mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}

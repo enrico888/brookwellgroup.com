@@ -6,17 +6,13 @@ export default function Footer() {
 
   const links = {
     services: [
-      { label: "Agentic Operations", href: "#workflows" },
-      { label: "AI Transitions", href: "#transitions" },
+      { label: "Intelligent Operations", href: "#workflows" },
+      { label: "Advisor Transitions", href: "#transitions" },
       { label: "Client Stories", href: "#stories" },
     ],
     company: [
       { label: "About Us", href: "/about", isRoute: true },
-      { label: "Talk to an Expert", href: "#contact", isRoute: false },
-    ],
-    legal: [
-      { label: "Privacy Policy", href: "#" },
-      { label: "Terms of Service", href: "#" },
+      { label: "Talk with an Expert", href: "#contact", isRoute: false },
     ],
   };
 
@@ -32,7 +28,7 @@ export default function Footer() {
   return (
     <footer className="py-16 px-6 md:px-12 lg:px-16 border-t" data-testid="footer">
       <div className="max-w-[1280px] mx-auto">
-        <div className="grid md:grid-cols-4 gap-12 mb-12">
+        <div className="grid md:grid-cols-3 gap-12 mb-12">
           <div className="md:col-span-1">
             <a
               href="#"
@@ -51,7 +47,7 @@ export default function Footer() {
           </div>
 
           <div>
-            <h4 className="font-medium mb-4 text-sm">Services</h4>
+            <h4 className="font-medium mb-4 text-sm">Sections</h4>
             <ul className="space-y-3">
               {links.services.map((link) => (
                 <li key={link.label}>
@@ -94,22 +90,6 @@ export default function Footer() {
             </ul>
           </div>
 
-          <div>
-            <h4 className="font-medium mb-4 text-sm">Legal</h4>
-            <ul className="space-y-3">
-              {links.legal.map((link) => (
-                <li key={link.label}>
-                  <a
-                    href={link.href}
-                    className="text-sm text-muted-foreground hover:text-foreground transition-colors"
-                    data-testid={`link-footer-${link.label.toLowerCase().replace(/\s/g, "-")}`}
-                  >
-                    {link.label}
-                  </a>
-                </li>
-              ))}
-            </ul>
-          </div>
         </div>
 
         <div className="pt-8 border-t text-center">

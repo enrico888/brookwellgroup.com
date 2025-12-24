@@ -11,7 +11,7 @@ export default function AITransitions() {
           className="text-center max-w-2xl mx-auto"
         >
           <p className="text-xs uppercase tracking-[0.2em] text-muted-foreground mb-4">
-            AI-Powered Transitions
+            Advisor Transitions
           </p>
           <h2 className="text-3xl md:text-4xl font-semibold tracking-tight mb-6">
             Move books.

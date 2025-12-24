@@ -46,7 +46,14 @@ export default function About() {
   }, []);
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-background relative">
+      <div
+        className="fixed inset-0 pointer-events-none z-0"
+        style={{
+          backgroundImage: `radial-gradient(circle at 1px 1px, rgba(0, 0, 0, 0.10) 1px, transparent 1px)`,
+          backgroundSize: "24px 24px",
+        }}
+      />
       <Navigation />
 
       <main className="pt-[72px]">
@@ -61,12 +68,12 @@ export default function About() {
                 About Us
               </p>
               <h1 className="text-4xl md:text-5xl font-semibold tracking-tight mb-6">
-                Technology Built to Serve You — Not the Other Way Around
+                Technology built to serve you — not the other way around
               </h1>
               <p className="text-lg text-muted-foreground leading-relaxed">
-                Brookwell was founded on a simple belief: financial services firms should spend their time 
-                serving advisors, not wrestling with outdated systems. We combine deep industry expertise 
-                with cutting-edge technology to make that vision a reality for firms of all sizes.
+                Brookwell was founded on a simple belief: financial services firms should spend their time
+                supporting advisors, not fighting outdated systems. We combine deep industry expertise
+                with modern technology to simplify operations, streamline transitions, and help firms focus on what matters most.
               </p>
             </motion.div>
           </div>

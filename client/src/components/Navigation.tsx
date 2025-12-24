@@ -23,8 +23,8 @@ export default function Navigation({ onNavigate }: NavigationProps) {
   }, []);
 
   const navItems = [
-    { label: "Agentic Operations", href: "#workflows", isRoute: false },
-    { label: "AI Transitions", href: "#transitions", isRoute: false },
+    { label: "Intelligent Operations", href: "#workflows", isRoute: false },
+    { label: "Advisor Transitions", href: "#transitions", isRoute: false },
     { label: "About Us", href: "/about", isRoute: true },
   ];
 
@@ -102,7 +102,7 @@ export default function Navigation({ onNavigate }: NavigationProps) {
                 className="hidden md:inline-flex rounded-full px-6 text-sm font-normal whitespace-nowrap text-muted-foreground hover:text-foreground transition-colors duration-150 gradient-border-btn no-default-hover-elevate no-default-active-elevate"
                 data-testid="button-contact-cta"
               >
-                Talk to an Expert
+                Talk with an Expert
               </Button>
 
               <Button
@@ -158,7 +158,7 @@ export default function Navigation({ onNavigate }: NavigationProps) {
                 className="mt-2 rounded-full font-normal text-muted-foreground hover:text-foreground transition-colors duration-150 gradient-border-btn no-default-hover-elevate no-default-active-elevate"
                 data-testid="button-mobile-contact"
               >
-                Talk to an Expert
+                Talk with an Expert
               </Button>
             </nav>
           </motion.div>
