@@ -160,14 +160,13 @@ export default function Contact({ showTicker = true }: ContactProps) {
             viewport={{ once: true }}
           >
             <p className="text-xs uppercase tracking-[0.2em] text-muted-foreground mb-4">
-              Contact
+              Get in Touch
             </p>
             <h2 className="text-3xl md:text-4xl font-semibold tracking-tight mb-6">
-              Talk to an Expert
+              Talk with an expert
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-8">
-              Ready to transform your operations with AI? Get in touch to discuss 
-              how we can help your firm work smarter.
+              Ready to simplify your operations or manage a high-stakes transition? Let's talk about how we can help.
             </p>
             <div className="flex items-center gap-3 text-muted-foreground">
               <Mail className="h-5 w-5" />
@@ -182,7 +181,7 @@ export default function Contact({ showTicker = true }: ContactProps) {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
           >
-            <Card className="p-8">
+            <Card className="p-8 relative z-10" style={{ backgroundColor: '#ffffff' }}>
               <AnimatePresence mode="wait">
                 {isSubmitted ? (
                   <motion.div

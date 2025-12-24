@@ -59,10 +59,10 @@ export default function TransitionResults() {
             className="text-center"
           >
             <h3 className="text-2xl md:text-3xl font-semibold tracking-tight mb-4">
-              The Result: Transitions That Work
+              The result: Transitions that simply work
             </h3>
             <p className="text-muted-foreground max-w-xl mx-auto">
-              Our AI-powered approach delivers measurable improvements across every aspect of the transition process.
+              A proven approach delivering measurable improvements at every stage of the transition.
             </p>
           </motion.div>
         </div>
@@ -79,7 +79,7 @@ export default function TransitionResults() {
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.1 }}
               >
-                <Card className="p-10 text-center h-full flex flex-col items-center justify-center" data-testid={`card-result-${index}`}>
+                <Card className="p-10 text-center h-full flex flex-col items-center justify-center relative z-10" style={{ backgroundColor: '#ffffff' }} data-testid={`card-result-${index}`}>
                   <p className="text-3xl md:text-4xl font-medium tracking-tight text-foreground/90 mb-3">
                     <AnimatedCounter end={metric.value} suffix={metric.suffix} />
                   </p>

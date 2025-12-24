@@ -25,60 +25,60 @@ const stories: Story[] = [
   {
     id: "broker-dealer-ao",
     company: "Account Opening",
-    title: "Account opening bottlenecked by manual processes",
+    title: "Manual process prone to errors",
     problem: {
       headline: "The Challenge",
-      description: "Very manual process prone to errors with broken APIs creating bottlenecks across the organization.",
+      description: "Manual account opening relied on PDFs, handwritten forms, and fragile APIs. Each breakdown created delays, NIGOs, and a growing backlog across the organization.",
     },
     solution: {
       headline: "Our Approach",
-      description: "We extracted data and handwriting from PDFs, fixed broken APIs, and automated the creation of new accounts in M&O.",
+      description: "We rebuilt the workflow end to end — extracting structured data from PDFs and handwriting, repairing broken integrations, and fully automating account creation in M&O.",
     },
     results: {
       metrics: [
-        { value: "70%", label: "Time Saved" },
-        { value: "95%", label: "Fewer Errors" },
-        { value: "100%", label: "Compliance" },
+        { value: "70%", label: "Faster Account Opening" },
+        { value: "75%", label: "Fewer NIGOs" },
+        { value: "100%", label: "SLA Compliance" },
       ],
     },
   },
   {
     id: "data-centralization",
-    company: "RIA",
-    title: "Centralizing client data across systems",
+    company: "Sync Client Data",
+    title: "Client data scattered across disconnected systems",
     problem: {
       headline: "The Challenge",
-      description: "Data was out of date between systems with no source of truth. Clients weren't working for the firm, and they didn't know who was registered for e-delivery, leading to wasted mail-outs.",
+      description: "Client data drifted out of sync across systems, with no single source of truth. Teams couldn't reliably tell which accounts were active, or who was enrolled in e-delivery—resulting in confusion, wasted mailings, and unnecessary costs.",
     },
     solution: {
       headline: "Our Approach",
-      description: "We used AI to pull data from change of address forms, propagated changes through bi-directional integrations, and built information dashboards to take control of the data.",
+      description: "We automated change-of-address processing, synchronized updates across systems in real time, and built dashboards that gave teams a single, authoritative view of client data.",
     },
     results: {
       metrics: [
-        { value: "100%", label: "Data In Sync" },
-        { value: "Real-time", label: "Dashboards" },
-        { value: "40%", label: "Mail Savings" },
+        { value: "100%", label: "Data Synchronization" },
+        { value: "Real-time", label: "Visibility" },
+        { value: "40%", label: "Reduction in Mail Costs" },
       ],
     },
   },
   {
     id: "check-blotters",
-    company: "Broker-Dealer",
-    title: "Check blotters causing compliance SLA misses",
+    company: "Check Blotters",
+    title: "Manual check blotter putting SLAs at risk",
     problem: {
       headline: "The Challenge",
-      description: "Compliance issues due to missed SLAs. The firm needed to reach out to advisors to fill out missing data within tight timeframes, but the highly manual process made it difficult to keep up.",
+      description: "Missed SLAs created ongoing compliance risk. Advisors needed to supply missing check data within tight deadlines, but manual outreach and follow-ups made it difficult to respond in time.",
     },
     solution: {
       headline: "Our Approach",
-      description: "We automated email notifications tailored to each advisor and populated systems with check data, streamlining the entire process.",
+      description: "We automated advisor notifications, pre-filled systems with available check data, and orchestrated the entire process so nothing fell through the cracks.",
     },
     results: {
       metrics: [
         { value: "100%", label: "SLA Compliance" },
-        { value: "80%", label: "Time Saved" },
-        { value: "Zero", label: "Manual Entry" },
+        { value: "80%", label: "Time Savings" },
+        { value: "Zero", label: "Manual Data Entry" },
       ],
     },
   },
@@ -129,7 +129,7 @@ export default function ClientStories() {
             Client Stories
           </p>
           <h2 className="text-3xl md:text-4xl font-semibold tracking-tight mb-4">
-            Real Results for Real Firms
+            Real results for real firms
           </h2>
           <p className="text-muted-foreground max-w-xl mx-auto">
             See how we've helped financial services firms transform their operations.
@@ -164,7 +164,7 @@ export default function ClientStories() {
             exit={{ opacity: 0, y: -10 }}
             transition={{ duration: 0.3 }}
           >
-            <Card className="p-8 md:p-12">
+            <Card className="p-8 md:p-12 relative z-10" style={{ backgroundColor: '#ffffff' }}>
               <div className="grid md:grid-cols-3 gap-10">
                 <div className="flex flex-col">
                   <div className="flex items-center gap-3 mb-4">
@@ -195,7 +195,7 @@ export default function ClientStories() {
                     <div className="w-10 h-10 rounded-lg bg-muted flex items-center justify-center flex-shrink-0">
                       <TrendingUp className="h-5 w-5 text-muted-foreground" />
                     </div>
-                    <h3 className="font-medium">The Results</h3>
+                    <h3 className="font-medium">The results</h3>
                   </div>
                   <div className="flex justify-between gap-6">
                     {currentStory.results.metrics.map((metric, i) => (

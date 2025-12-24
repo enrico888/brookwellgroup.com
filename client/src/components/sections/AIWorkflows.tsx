@@ -14,13 +14,13 @@ export default function AIWorkflows() {
             Agentic Operations
           </p>
           <h2 className="text-3xl md:text-4xl font-semibold tracking-tight mb-6">
-            Automate the Complex.
+            Turn complexity into clarity.
             <br />
-            Simplify your Life.
+            Automatically.
           </h2>
           <p className="text-muted-foreground leading-relaxed">
-            Our AI-powered solutions transform manual, time-consuming processes into intelligent, 
-            automated systems that scale with your business. From client reporting to compliance 
+            Our AI-powered solutions transform manual, time-consuming processes into integrated,
+            automated systems that scale with your business. From client reporting to compliance
             monitoring, we help you work smarter, not harder.
           </p>
         </motion.div>

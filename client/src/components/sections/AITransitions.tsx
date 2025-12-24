@@ -14,12 +14,12 @@ export default function AITransitions() {
             AI-Powered Transitions
           </p>
           <h2 className="text-3xl md:text-4xl font-semibold tracking-tight mb-6">
-            Move Books.
+            Move books.
             <br />
-            Not Mountains.
+            Not mountains.
           </h2>
           <p className="text-muted-foreground leading-relaxed">
-            Advisor transitions are notoriously complex and stressful. Our transitions team provides white-glove service to streamline the entire process, from break planning to client signature.
+            Advisor transitions are complex and high-stakes. We simplify the entire process—from break planning through client signature—so advisors can stay focused on their clients.
           </p>
         </motion.div>
       </div>

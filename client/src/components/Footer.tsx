@@ -46,7 +46,7 @@ export default function Footer() {
               />
             </a>
             <p className="text-sm text-muted-foreground mt-4 leading-relaxed">
-              AI-powered solutions for financial services firms.
+              Complex operations. Simplified.
             </p>
           </div>
 

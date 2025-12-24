@@ -5,18 +5,18 @@ import { FileWarning, Clock, Users } from "lucide-react";
 const painPoints = [
   {
     icon: FileWarning,
-    title: "Data Fragmentation",
-    description: "Client data scattered across multiple systems, custodians, and platforms makes transitions chaotic and error-prone.",
+    title: "Fragmented data",
+    description: "Client information lives across systems, custodians, and platforms—creating inconsistencies, errors, and unnecessary rework during transitions.",
   },
   {
     icon: Users,
-    title: "Restricted Interaction",
-    description: "Compliance rules prevent firms from working directly with advisors post-break, leading to delays and operational blind spots.",
+    title: "Limited advisor visibility",
+    description: "Post-break compliance restrictions limit direct interaction with advisors, creating delays and blind spots at the most critical stage of the transition.",
   },
   {
     icon: Clock,
-    title: "Time-Consuming Processes",
-    description: "Manual data mapping, paperwork, and coordination consume weeks of valuable time and resources.",
+    title: "Manual, time-intensive work",
+    description: "Data mapping, paperwork, and coordination are handled manually—stretching transitions from days into weeks.",
   },
 ];
 
@@ -30,9 +30,9 @@ export default function PainPoints() {
           viewport={{ once: true }}
           className="mb-12"
         >
-          <h3 className="text-xl font-semibold mb-2">The Pain Points</h3>
+          <h3 className="text-xl font-semibold mb-2">The pain points</h3>
           <p className="text-muted-foreground">
-            Transitions are difficult. Here's what firms typically struggle with.
+            The most common sources of friction for firms.
           </p>
         </motion.div>
 
@@ -46,7 +46,7 @@ export default function PainPoints() {
               transition={{ delay: index * 0.1 }}
               className="h-full"
             >
-              <Card className="p-6 h-full flex flex-col" data-testid={`card-pain-${index}`}>
+              <Card className="p-6 h-full flex flex-col relative z-10" style={{ backgroundColor: '#ffffff' }} data-testid={`card-pain-${index}`}>
                 <div className="w-10 h-10 rounded-lg bg-muted flex items-center justify-center mb-5 flex-shrink-0">
                   <point.icon className="h-5 w-5 text-muted-foreground" />
                 </div>

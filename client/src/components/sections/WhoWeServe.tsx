@@ -3,8 +3,8 @@ import { motion } from "framer-motion";
 import { Building2, Briefcase } from "lucide-react";
 
 const riaFeatures = [
-  "Fragmented data across custodians, CRMs and workflow platforms",
-  "Lean operations and compliance teams managing growing complexity",
+  "Fragmented data across custodians, CRMs and vendors",
+  "Lean compliance teams managing growing complexity",
   "Pressure to scale AUM without adding headcount",
 ];
 
@@ -31,13 +31,14 @@ function AudienceCard({ icon: Icon, title, features, testId, delay }: AudienceCa
       transition={{ delay }}
       className="h-full"
     >
-      <Card className="h-full p-8 flex flex-col" data-testid={testId}>
+      <Card className="h-full p-8 flex flex-col bg-background relative z-10" data-testid={testId}>
         <div className="w-12 h-12 rounded-lg bg-muted flex items-center justify-center mb-6 flex-shrink-0">
           <Icon className="h-6 w-6" />
         </div>
-        <h3 className="text-xl font-semibold mb-6 flex-shrink-0 min-h-[56px] flex items-start">
+        <h3 className="text-xl font-semibold mb-3 flex-shrink-0 min-h-[56px] flex items-start">
           {title}
         </h3>
+        <p className="text-xs uppercase tracking-[0.15em] text-muted-foreground mb-4">Unique Challenges</p>
         <ul className="space-y-5 text-sm text-muted-foreground flex-grow">
           {features.map((feature, index) => (
             <li key={index} className="flex gap-3 leading-relaxed">
@@ -65,7 +66,7 @@ export default function WhoWeServe() {
             Who We Serve
           </p>
           <h2 className="text-3xl md:text-4xl font-semibold tracking-tight mb-4">
-            Built for Financial Services
+            Built for financial services
           </h2>
           <p className="text-muted-foreground max-w-xl mx-auto">
             We specialize in serving RIAs and Broker-Dealers with tailored solutions.

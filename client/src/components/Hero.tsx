@@ -86,20 +86,13 @@ export default function Hero({ onGetStarted, onLearnMore }: HeroProps) {
       className="relative min-h-screen flex flex-col items-center justify-center px-6 md:px-12 lg:px-16 overflow-x-hidden"
       data-testid="section-hero"
     >
-      <div
-        className="absolute inset-0 opacity-[0.02]"
-        style={{
-          backgroundImage: `radial-gradient(circle at 1px 1px, currentColor 1px, transparent 1px)`,
-          backgroundSize: "32px 32px",
-        }}
-      />
 
       <div className="relative z-10 max-w-4xl mx-auto text-center">
         <motion.p
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0 }}
-          className="text-xs uppercase tracking-[0.2em] text-muted-foreground mb-6"
+          className="text-xs uppercase tracking-[0.2em] text-muted-foreground mb-5 sm:mb-6"
           data-testid="text-hero-eyebrow"
         >
           AI Powered Financial Services
@@ -109,7 +102,7 @@ export default function Hero({ onGetStarted, onLearnMore }: HeroProps) {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.1 }}
-          className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-semibold tracking-tight leading-tight mb-6 flex flex-col sm:flex-row sm:flex-nowrap items-center justify-center overflow-visible pb-2"
+          className="text-5xl sm:text-5xl md:text-6xl lg:text-7xl font-semibold tracking-tight leading-tight mb-2 sm:mb-6 flex flex-col sm:flex-row sm:flex-nowrap items-center justify-center overflow-visible pb-2"
           data-testid="text-hero-headline"
         >
           <span className="flex-shrink-0">Agentic</span>
@@ -124,7 +117,7 @@ export default function Hero({ onGetStarted, onLearnMore }: HeroProps) {
           className="text-lg text-muted-foreground max-w-md mx-auto mb-10 leading-relaxed"
           data-testid="text-hero-subheadline"
         >
-          We help financial services firms automate complex workflows and take control of their data.
+          We help financial services firms automate complex workflows, take control of their data, and accelerate advisor transitions.
         </motion.p>
 
         <motion.div
