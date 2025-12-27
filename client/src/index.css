@@ -409,7 +409,7 @@
   .ticker-track {
     display: flex;
     width: fit-content;
-    animation: ticker-scroll 50s linear infinite;
+    animation: ticker-scroll 30s linear infinite;
   }
 
   .ticker-item {
@@ -421,7 +421,13 @@
       transform: translateX(0);
     }
     100% {
-      transform: translateX(-50%);
+      transform: translateX(-25%);
+    }
+  }
+
+  @media (max-width: 768px) {
+    .ticker-track {
+      animation: ticker-scroll 20s linear infinite;
     }
   }
 
