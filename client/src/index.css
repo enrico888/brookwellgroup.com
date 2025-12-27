@@ -426,15 +426,17 @@
   }
 
   @media (max-width: 768px) {
-    .ticker-container {
-      overflow-x: auto;
-      -webkit-overflow-scrolling: touch;
+    .ticker-track {
+      animation: ticker-scroll-mobile 40s linear infinite;
     }
 
-    .ticker-track {
-      animation: none;
-      gap: 1rem;
-      padding: 0 1rem;
+    @keyframes ticker-scroll-mobile {
+      0% {
+        transform: translateX(0);
+      }
+      100% {
+        transform: translateX(-50%);
+      }
     }
   }
 
