@@ -16,6 +16,7 @@ import rightbridgeLogo from "@assets/6d0948863d66a53d716a8555d0668cb2_1766096201
 import redtailLogo from "@assets/redtail-technology-logo-png_seeklogo-409556_1766006489944.png";
 import salesforceLogo from "@assets/Salesforce.com_logo.svg_1766006489944.png";
 import wealthboxLogo from "@assets/wealthbox-logo-padded_1766006489944.webp";
+import docupaceLogo from "@assets/docupace_1766000546291.png";
 
 const integrations = [
   { name: "Fidelity", logo: fidelityLogo, className: "h-14 md:h-16" },
@@ -23,6 +24,7 @@ const integrations = [
   { name: "Charles Schwab", logo: schwabLogo, className: "h-24 md:h-28" },
   { name: "BNY Pershing", logo: pershingLogo, className: "h-8 md:h-10" },
   { name: "Envestnet", logo: envestnetLogo, className: "h-8 md:h-10" },
+  { name: "Docupace", logo: docupaceLogo, className: "h-8 md:h-10" },
   { name: "RightBridge", logo: rightbridgeLogo, className: "h-10 md:h-12" },
   { name: "Redtail", logo: redtailLogo, className: "h-24 md:h-28" },
   { name: "Salesforce", logo: salesforceLogo, className: "h-8 md:h-10" },
@@ -128,12 +130,12 @@ export default function Contact({ showTicker = true }: ContactProps) {
               <p className="text-xs uppercase tracking-[0.2em] text-muted-foreground text-center mb-8">
                 Technologies We Work With
               </p>
-              <div className="ticker-container relative overflow-hidden">
-                <div className="ticker-track">
+              <div className="ticker-container relative overflow-hidden min-h-[60px] md:min-h-[80px]">
+                <div className="ticker-track min-h-[60px] md:min-h-[80px]">
                   {[...integrations, ...integrations, ...integrations, ...integrations].map((integration, index) => (
                     <div
                       key={`${integration.name}-${index}`}
-                      className="ticker-item flex items-center justify-center px-8 md:px-12"
+                      className="ticker-item flex items-center justify-center px-4 md:px-12"
                       data-testid={`ticker-logo-${integration.name.toLowerCase().replace(/\s/g, "-")}-${index}`}
                     >
                       <img
