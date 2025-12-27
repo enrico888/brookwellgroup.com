@@ -426,8 +426,15 @@
   }
 
   @media (max-width: 768px) {
+    .ticker-container {
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+    }
+
     .ticker-track {
-      animation: ticker-scroll 20s linear infinite;
+      animation: none;
+      gap: 1rem;
+      padding: 0 1rem;
     }
   }
 
