@@ -53,18 +53,18 @@ function RotatingWord() {
   }
 
   return (
-    <span 
-      className="relative inline-grid items-center justify-center sm:justify-start w-full sm:w-[320px] md:w-[450px] lg:w-[580px] overflow-visible text-center sm:text-left flex-shrink-0"
-      style={{ minHeight: "1.5em" }}
+    <span
+      className="relative inline-block w-full text-center sm:text-left"
+      style={{ minHeight: "1.2em" }}
     >
-      <AnimatePresence mode="wait">
+      <AnimatePresence mode="wait" initial={false}>
         <motion.span
           key={currentIndex}
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: -20 }}
-          transition={{ duration: 0.25, ease: "easeInOut" }}
-          className="inline-block whitespace-nowrap pb-2 mx-auto sm:mx-0"
+          transition={{ duration: 0.3, ease: "easeInOut" }}
+          className="absolute inset-0 flex items-center justify-center sm:justify-start"
           style={{
             background: "linear-gradient(90deg, #2A34E5 0%, #8B5CF6 25%, #EC4899 50%, #F43F5E 75%, #F97316 100%)",
             WebkitBackgroundClip: "text",
@@ -76,6 +76,8 @@ function RotatingWord() {
           {rotatingWords[currentIndex]}
         </motion.span>
       </AnimatePresence>
+      {/* Invisible text to maintain height */}
+      <span className="invisible">{rotatingWords[2]}</span>
     </span>
   );
 }

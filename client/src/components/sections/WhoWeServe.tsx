@@ -2,27 +2,20 @@ import { Card } from "@/components/ui/card";
 import { motion } from "framer-motion";
 import { Building2, Briefcase } from "lucide-react";
 
-const riaFeatures = [
-  "Fragmented data across custodians, CRMs and vendors",
-  "Lean compliance teams managing growing complexity",
-  "Pressure to scale AUM without adding headcount",
-];
+const riaDescription = "Unify client data and scale your firm—without adding operational complexity.";
 
-const bdFeatures = [
-  "Continuous supervision and internal auditing at scale",
-  "Heavy, time-sensitive regulatory and reporting obligations",
-  "Deeply interconnected legacy systems that limit agility",
-];
+const bdDescription = "Modern supervision and reporting, built to work with the systems you already use.";
 
 interface AudienceCardProps {
   icon: typeof Building2;
   title: string;
-  features: string[];
+  features?: string[];
+  description?: string;
   testId: string;
   delay: number;
 }
 
-function AudienceCard({ icon: Icon, title, features, testId, delay }: AudienceCardProps) {
+function AudienceCard({ icon: Icon, title, features, description, testId, delay }: AudienceCardProps) {
   return (
     <motion.div
       initial={{ opacity: 0, y: 20 }}
@@ -38,15 +31,23 @@ function AudienceCard({ icon: Icon, title, features, testId, delay }: AudienceCa
         <h3 className="text-xl font-semibold mb-3 flex-shrink-0 min-h-[56px] flex items-start">
           {title}
         </h3>
-        <p className="text-xs uppercase tracking-[0.15em] text-muted-foreground mb-4">Unique Challenges</p>
-        <ul className="space-y-5 text-sm text-muted-foreground flex-grow">
-          {features.map((feature, index) => (
-            <li key={index} className="flex gap-3 leading-relaxed">
-              <span className="w-1.5 h-1.5 rounded-full bg-foreground/40 mt-[7px] flex-shrink-0" />
-              <span className="flex-1">{feature}</span>
-            </li>
-          ))}
-        </ul>
+        {features ? (
+          <>
+            <p className="text-xs uppercase tracking-[0.15em] text-muted-foreground mb-4">Unique Challenges</p>
+            <ul className="space-y-5 text-sm text-muted-foreground flex-grow">
+              {features.map((feature, index) => (
+                <li key={index} className="flex gap-3 leading-relaxed">
+                  <span className="w-1.5 h-1.5 rounded-full bg-foreground/40 mt-[7px] flex-shrink-0" />
+                  <span className="flex-1">{feature}</span>
+                </li>
+              ))}
+            </ul>
+          </>
+        ) : description ? (
+          <p className="text-sm text-muted-foreground leading-relaxed flex-grow">
+            {description}
+          </p>
+        ) : null}
       </Card>
     </motion.div>
   );
@@ -77,14 +78,14 @@ export default function WhoWeServe() {
           <AudienceCard
             icon={Building2}
             title="Registered Investment Advisors"
-            features={riaFeatures}
+            description={riaDescription}
             testId="card-ria"
             delay={0}
           />
           <AudienceCard
             icon={Briefcase}
             title="Broker-Dealers"
-            features={bdFeatures}
+            description={bdDescription}
             testId="card-broker-dealer"
             delay={0.1}
           />
